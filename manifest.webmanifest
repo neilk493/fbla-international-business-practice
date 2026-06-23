@@ -1,0 +1,16 @@
+{
+  "name": "FBLA International Business Practice Platform",
+  "short_name": "FBLA Intl Biz",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07101c",
+  "theme_color": "#07101c",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,8338 @@
+{
+  "generatedAt": "2026-06-23T05:55:38.584Z",
+  "officialSimulation": {
+    "questionCount": 100,
+    "timerMinutes": 50,
+    "categoryCounts": [
+      {
+        "id": "A",
+        "label": "Basic International Concepts",
+        "shortLabel": "Basic Concepts",
+        "count": 15
+      },
+      {
+        "id": "B",
+        "label": "Ownership and Management",
+        "shortLabel": "Ownership",
+        "count": 15
+      },
+      {
+        "id": "C",
+        "label": "Legal Issues",
+        "shortLabel": "Legal",
+        "count": 5
+      },
+      {
+        "id": "D",
+        "label": "Communication",
+        "shortLabel": "Communication",
+        "count": 7
+      },
+      {
+        "id": "E",
+        "label": "Marketing",
+        "shortLabel": "Marketing",
+        "count": 15
+      },
+      {
+        "id": "F",
+        "label": "Taxes and Government Regulations",
+        "shortLabel": "Government",
+        "count": 3
+      },
+      {
+        "id": "G",
+        "label": "Treaties and Trade Agreements",
+        "shortLabel": "Trade Agreements",
+        "count": 7
+      },
+      {
+        "id": "H",
+        "label": "Currency Exchange",
+        "shortLabel": "Currency",
+        "count": 3
+      },
+      {
+        "id": "I",
+        "label": "Finance",
+        "shortLabel": "Finance",
+        "count": 15
+      },
+      {
+        "id": "J",
+        "label": "Human Resource Management",
+        "shortLabel": "HR",
+        "count": 5
+      },
+      {
+        "id": "K",
+        "label": "Ethics",
+        "shortLabel": "Ethics",
+        "count": 5
+      },
+      {
+        "id": "L",
+        "label": "International Travel",
+        "shortLabel": "Travel",
+        "count": 3
+      },
+      {
+        "id": "M",
+        "label": "Career Development",
+        "shortLabel": "Careers",
+        "count": 2
+      }
+    ]
+  },
+  "summary": {
+    "totalBanks": 12,
+    "totalQuestions": 940,
+    "duplicateGroupCount": 27,
+    "duplicatedQuestionCount": 55,
+    "answerAdjustments": [
+      {
+        "key": "FBLC_OT1_Bank.md#68",
+        "answerLetter": "A",
+        "reason": "Aligned with the identical OT3 item and the shipping-risk wording in the prompt."
+      },
+      {
+        "key": "FBLC_OT3_Bank.md#29",
+        "answerLetter": "C",
+        "reason": "Aligned with the identical OT1 item and the standard sole-proprietorship disadvantage."
+      }
+    ],
+    "categorySummary": [
+      {
+        "id": "A",
+        "label": "Basic International Concepts",
+        "shortLabel": "Basic Concepts",
+        "officialCount": 15,
+        "availableQuestionCount": 135
+      },
+      {
+        "id": "B",
+        "label": "Ownership and Management",
+        "shortLabel": "Ownership",
+        "officialCount": 15,
+        "availableQuestionCount": 92
+      },
+      {
+        "id": "C",
+        "label": "Legal Issues",
+        "shortLabel": "Legal",
+        "officialCount": 5,
+        "availableQuestionCount": 75
+      },
+      {
+        "id": "D",
+        "label": "Communication",
+        "shortLabel": "Communication",
+        "officialCount": 7,
+        "availableQuestionCount": 50
+      },
+      {
+        "id": "E",
+        "label": "Marketing",
+        "shortLabel": "Marketing",
+        "officialCount": 15,
+        "availableQuestionCount": 125
+      },
+      {
+        "id": "F",
+        "label": "Taxes and Government Regulations",
+        "shortLabel": "Government",
+        "officialCount": 3,
+        "availableQuestionCount": 38
+      },
+      {
+        "id": "G",
+        "label": "Treaties and Trade Agreements",
+        "shortLabel": "Trade Agreements",
+        "officialCount": 7,
+        "availableQuestionCount": 102
+      },
+      {
+        "id": "H",
+        "label": "Currency Exchange",
+        "shortLabel": "Currency",
+        "officialCount": 3,
+        "availableQuestionCount": 58
+      },
+      {
+        "id": "I",
+        "label": "Finance",
+        "shortLabel": "Finance",
+        "officialCount": 15,
+        "availableQuestionCount": 97
+      },
+      {
+        "id": "J",
+        "label": "Human Resource Management",
+        "shortLabel": "HR",
+        "officialCount": 5,
+        "availableQuestionCount": 76
+      },
+      {
+        "id": "K",
+        "label": "Ethics",
+        "shortLabel": "Ethics",
+        "officialCount": 5,
+        "availableQuestionCount": 32
+      },
+      {
+        "id": "L",
+        "label": "International Travel",
+        "shortLabel": "Travel",
+        "officialCount": 3,
+        "availableQuestionCount": 22
+      },
+      {
+        "id": "M",
+        "label": "Career Development",
+        "shortLabel": "Careers",
+        "officialCount": 2,
+        "availableQuestionCount": 38
+      }
+    ]
+  },
+  "banks": [
+    {
+      "fileName": "FBLA_Sample5_Bank.md",
+      "shortLabel": "Sample 5",
+      "categoryLabel": "Sample Bank",
+      "questionCount": 50
+    },
+    {
+      "fileName": "FBLC_ABC_Competency_Specific_Test_Bank.md",
+      "shortLabel": "ABC Competency",
+      "categoryLabel": "Competency Test",
+      "questionCount": 100
+    },
+    {
+      "fileName": "FBLC_DEF_Competency_Specific_Test_Bank.md",
+      "shortLabel": "DEF Competency",
+      "categoryLabel": "Competency Test",
+      "questionCount": 100
+    },
+    {
+      "fileName": "FBLC_GHI_Competency_Specific_Test_Bank.md",
+      "shortLabel": "GHI Competency",
+      "categoryLabel": "Competency Test",
+      "questionCount": 100
+    },
+    {
+      "fileName": "FBLC_JKLM_Competency_Specific_Test_Bank.md",
+      "shortLabel": "JKLM Competency",
+      "categoryLabel": "Competency Test",
+      "questionCount": 100
+    },
+    {
+      "fileName": "FBLC_OT1_Bank.md",
+      "shortLabel": "OT#1",
+      "categoryLabel": "Objective Test",
+      "questionCount": 100
+    },
+    {
+      "fileName": "FBLC_OT2_Bank.md",
+      "shortLabel": "OT#2",
+      "categoryLabel": "Objective Test",
+      "questionCount": 100
+    },
+    {
+      "fileName": "FBLC_OT3_Bank.md",
+      "shortLabel": "OT#3",
+      "categoryLabel": "Objective Test",
+      "questionCount": 100
+    },
+    {
+      "fileName": "FBLC_OT4_Bank.md",
+      "shortLabel": "OT#4",
+      "categoryLabel": "Objective Test",
+      "questionCount": 100
+    },
+    {
+      "fileName": "FBLC_StudyGuide1_Bank.md",
+      "shortLabel": "Study Guide 1",
+      "categoryLabel": "Study Guide",
+      "questionCount": 30
+    },
+    {
+      "fileName": "FBLC_StudyGuide2_Bank.md",
+      "shortLabel": "Study Guide 2",
+      "categoryLabel": "Study Guide",
+      "questionCount": 30
+    },
+    {
+      "fileName": "FBLC_StudyGuide3_Bank.md",
+      "shortLabel": "Study Guide 3",
+      "categoryLabel": "Study Guide",
+      "questionCount": 30
+    }
+  ],
+  "categoryCountsByBank": [
+    {
+      "bankId": "fbla-sample5-bank",
+      "shortLabel": "Sample 5",
+      "categories": [
+        {
+          "id": "A",
+          "count": 5
+        },
+        {
+          "id": "B",
+          "count": 3
+        },
+        {
+          "id": "C",
+          "count": 4
+        },
+        {
+          "id": "D",
+          "count": 4
+        },
+        {
+          "id": "E",
+          "count": 7
+        },
+        {
+          "id": "F",
+          "count": 1
+        },
+        {
+          "id": "G",
+          "count": 6
+        },
+        {
+          "id": "H",
+          "count": 4
+        },
+        {
+          "id": "I",
+          "count": 5
+        },
+        {
+          "id": "J",
+          "count": 4
+        },
+        {
+          "id": "K",
+          "count": 3
+        },
+        {
+          "id": "L",
+          "count": 1
+        },
+        {
+          "id": "M",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-abc-competency-specific-test-bank",
+      "shortLabel": "ABC Competency",
+      "categories": [
+        {
+          "id": "A",
+          "count": 32
+        },
+        {
+          "id": "B",
+          "count": 23
+        },
+        {
+          "id": "C",
+          "count": 25
+        },
+        {
+          "id": "E",
+          "count": 1
+        },
+        {
+          "id": "F",
+          "count": 4
+        },
+        {
+          "id": "G",
+          "count": 7
+        },
+        {
+          "id": "H",
+          "count": 4
+        },
+        {
+          "id": "J",
+          "count": 3
+        },
+        {
+          "id": "L",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-def-competency-specific-test-bank",
+      "shortLabel": "DEF Competency",
+      "categories": [
+        {
+          "id": "A",
+          "count": 6
+        },
+        {
+          "id": "B",
+          "count": 2
+        },
+        {
+          "id": "C",
+          "count": 3
+        },
+        {
+          "id": "D",
+          "count": 21
+        },
+        {
+          "id": "E",
+          "count": 32
+        },
+        {
+          "id": "F",
+          "count": 10
+        },
+        {
+          "id": "G",
+          "count": 19
+        },
+        {
+          "id": "H",
+          "count": 1
+        },
+        {
+          "id": "I",
+          "count": 5
+        },
+        {
+          "id": "J",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-ghi-competency-specific-test-bank",
+      "shortLabel": "GHI Competency",
+      "categories": [
+        {
+          "id": "A",
+          "count": 4
+        },
+        {
+          "id": "B",
+          "count": 3
+        },
+        {
+          "id": "E",
+          "count": 3
+        },
+        {
+          "id": "F",
+          "count": 1
+        },
+        {
+          "id": "G",
+          "count": 21
+        },
+        {
+          "id": "H",
+          "count": 19
+        },
+        {
+          "id": "I",
+          "count": 47
+        },
+        {
+          "id": "J",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-jklm-competency-specific-test-bank",
+      "shortLabel": "JKLM Competency",
+      "categories": [
+        {
+          "id": "A",
+          "count": 1
+        },
+        {
+          "id": "B",
+          "count": 4
+        },
+        {
+          "id": "C",
+          "count": 2
+        },
+        {
+          "id": "D",
+          "count": 6
+        },
+        {
+          "id": "E",
+          "count": 2
+        },
+        {
+          "id": "F",
+          "count": 1
+        },
+        {
+          "id": "G",
+          "count": 3
+        },
+        {
+          "id": "J",
+          "count": 23
+        },
+        {
+          "id": "K",
+          "count": 15
+        },
+        {
+          "id": "L",
+          "count": 17
+        },
+        {
+          "id": "M",
+          "count": 26
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-ot1-bank",
+      "shortLabel": "OT#1",
+      "categories": [
+        {
+          "id": "A",
+          "count": 25
+        },
+        {
+          "id": "B",
+          "count": 11
+        },
+        {
+          "id": "C",
+          "count": 8
+        },
+        {
+          "id": "D",
+          "count": 2
+        },
+        {
+          "id": "E",
+          "count": 14
+        },
+        {
+          "id": "F",
+          "count": 4
+        },
+        {
+          "id": "G",
+          "count": 10
+        },
+        {
+          "id": "H",
+          "count": 8
+        },
+        {
+          "id": "I",
+          "count": 6
+        },
+        {
+          "id": "J",
+          "count": 9
+        },
+        {
+          "id": "M",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-ot2-bank",
+      "shortLabel": "OT#2",
+      "categories": [
+        {
+          "id": "A",
+          "count": 15
+        },
+        {
+          "id": "B",
+          "count": 8
+        },
+        {
+          "id": "C",
+          "count": 9
+        },
+        {
+          "id": "D",
+          "count": 6
+        },
+        {
+          "id": "E",
+          "count": 19
+        },
+        {
+          "id": "F",
+          "count": 6
+        },
+        {
+          "id": "G",
+          "count": 9
+        },
+        {
+          "id": "H",
+          "count": 7
+        },
+        {
+          "id": "I",
+          "count": 9
+        },
+        {
+          "id": "J",
+          "count": 5
+        },
+        {
+          "id": "K",
+          "count": 4
+        },
+        {
+          "id": "L",
+          "count": 1
+        },
+        {
+          "id": "M",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-ot3-bank",
+      "shortLabel": "OT#3",
+      "categories": [
+        {
+          "id": "A",
+          "count": 24
+        },
+        {
+          "id": "B",
+          "count": 11
+        },
+        {
+          "id": "C",
+          "count": 9
+        },
+        {
+          "id": "D",
+          "count": 1
+        },
+        {
+          "id": "E",
+          "count": 14
+        },
+        {
+          "id": "F",
+          "count": 5
+        },
+        {
+          "id": "G",
+          "count": 10
+        },
+        {
+          "id": "H",
+          "count": 5
+        },
+        {
+          "id": "I",
+          "count": 4
+        },
+        {
+          "id": "J",
+          "count": 10
+        },
+        {
+          "id": "K",
+          "count": 4
+        },
+        {
+          "id": "L",
+          "count": 1
+        },
+        {
+          "id": "M",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-ot4-bank",
+      "shortLabel": "OT#4",
+      "categories": [
+        {
+          "id": "A",
+          "count": 12
+        },
+        {
+          "id": "B",
+          "count": 13
+        },
+        {
+          "id": "C",
+          "count": 5
+        },
+        {
+          "id": "D",
+          "count": 5
+        },
+        {
+          "id": "E",
+          "count": 20
+        },
+        {
+          "id": "F",
+          "count": 5
+        },
+        {
+          "id": "G",
+          "count": 10
+        },
+        {
+          "id": "H",
+          "count": 3
+        },
+        {
+          "id": "I",
+          "count": 13
+        },
+        {
+          "id": "J",
+          "count": 10
+        },
+        {
+          "id": "K",
+          "count": 3
+        },
+        {
+          "id": "M",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-studyguide1-bank",
+      "shortLabel": "Study Guide 1",
+      "categories": [
+        {
+          "id": "A",
+          "count": 2
+        },
+        {
+          "id": "B",
+          "count": 6
+        },
+        {
+          "id": "C",
+          "count": 2
+        },
+        {
+          "id": "D",
+          "count": 2
+        },
+        {
+          "id": "E",
+          "count": 4
+        },
+        {
+          "id": "F",
+          "count": 1
+        },
+        {
+          "id": "G",
+          "count": 2
+        },
+        {
+          "id": "H",
+          "count": 1
+        },
+        {
+          "id": "I",
+          "count": 4
+        },
+        {
+          "id": "J",
+          "count": 5
+        },
+        {
+          "id": "K",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-studyguide2-bank",
+      "shortLabel": "Study Guide 2",
+      "categories": [
+        {
+          "id": "A",
+          "count": 4
+        },
+        {
+          "id": "B",
+          "count": 6
+        },
+        {
+          "id": "C",
+          "count": 3
+        },
+        {
+          "id": "D",
+          "count": 1
+        },
+        {
+          "id": "E",
+          "count": 5
+        },
+        {
+          "id": "G",
+          "count": 2
+        },
+        {
+          "id": "H",
+          "count": 5
+        },
+        {
+          "id": "I",
+          "count": 1
+        },
+        {
+          "id": "J",
+          "count": 1
+        },
+        {
+          "id": "K",
+          "count": 1
+        },
+        {
+          "id": "L",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "bankId": "fblc-studyguide3-bank",
+      "shortLabel": "Study Guide 3",
+      "categories": [
+        {
+          "id": "A",
+          "count": 5
+        },
+        {
+          "id": "B",
+          "count": 2
+        },
+        {
+          "id": "C",
+          "count": 5
+        },
+        {
+          "id": "D",
+          "count": 2
+        },
+        {
+          "id": "E",
+          "count": 4
+        },
+        {
+          "id": "G",
+          "count": 3
+        },
+        {
+          "id": "H",
+          "count": 1
+        },
+        {
+          "id": "I",
+          "count": 3
+        },
+        {
+          "id": "J",
+          "count": 3
+        },
+        {
+          "id": "K",
+          "count": 1
+        },
+        {
+          "id": "M",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "adjustedQuestions": [
+    {
+      "id": "fblc-ot1-bank--q68",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 68,
+      "sourceAnswerLetter": "B",
+      "answerLetter": "A",
+      "reason": "Aligned with the identical OT3 item and the shipping-risk wording in the prompt."
+    },
+    {
+      "id": "fblc-ot3-bank--q29",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 29,
+      "sourceAnswerLetter": "B",
+      "answerLetter": "C",
+      "reason": "Aligned with the identical OT1 item and the standard sole-proprietorship disadvantage."
+    }
+  ],
+  "lowConfidenceQuestions": [
+    {
+      "id": "fblc-abc-competency-specific-test-bank--q35",
+      "bankShortLabel": "ABC Competency",
+      "questionNumber": 35,
+      "prompt": "A small business looking into foreign opportunities might first consult:",
+      "categoryId": "B",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 1.28
+        },
+        {
+          "categoryId": "C",
+          "score": 1.28
+        },
+        {
+          "categoryId": "G",
+          "score": 1.28
+        },
+        {
+          "categoryId": "A",
+          "score": 0.9
+        },
+        {
+          "categoryId": "H",
+          "score": 0.83
+        },
+        {
+          "categoryId": "I",
+          "score": 0.83
+        },
+        {
+          "categoryId": "M",
+          "score": 0.75
+        },
+        {
+          "categoryId": "E",
+          "score": 0.16
+        },
+        {
+          "categoryId": "K",
+          "score": 0.08
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-abc-competency-specific-test-bank--q89",
+      "bankShortLabel": "ABC Competency",
+      "questionNumber": 89,
+      "prompt": "Which of the following best represents economies of scale?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.53
+        },
+        {
+          "categoryId": "C",
+          "score": 0.53
+        },
+        {
+          "categoryId": "B",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "I",
+          "score": 0.08
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-def-competency-specific-test-bank--q19",
+      "bankShortLabel": "DEF Competency",
+      "questionNumber": 19,
+      "prompt": "Which factor most influences buying behaviour in tropical climates?",
+      "categoryId": "G",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "G",
+          "score": 1.56
+        },
+        {
+          "categoryId": "H",
+          "score": 1.56
+        },
+        {
+          "categoryId": "A",
+          "score": 1.16
+        },
+        {
+          "categoryId": "D",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.45
+        },
+        {
+          "categoryId": "F",
+          "score": 0.45
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-def-competency-specific-test-bank--q93",
+      "bankShortLabel": "DEF Competency",
+      "questionNumber": 93,
+      "prompt": "Which body sets global quality standards like ISO?",
+      "categoryId": "G",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "G",
+          "score": 1.48
+        },
+        {
+          "categoryId": "I",
+          "score": 1.48
+        },
+        {
+          "categoryId": "B",
+          "score": 1.2
+        },
+        {
+          "categoryId": "D",
+          "score": 1.2
+        },
+        {
+          "categoryId": "J",
+          "score": 1.2
+        },
+        {
+          "categoryId": "E",
+          "score": 0.9
+        },
+        {
+          "categoryId": "F",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q4",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 4,
+      "prompt": "Which motivational approach is most effective in collectivist cultures?",
+      "categoryId": "J",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "F",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q12",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 12,
+      "prompt": "An example of a motivational factor universal across cultures is:",
+      "categoryId": "L",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "L",
+          "score": 0.9
+        },
+        {
+          "categoryId": "M",
+          "score": 0.9
+        },
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q35",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 35,
+      "prompt": "A stakeholder most impacted by a company's pollution is:",
+      "categoryId": "E",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.45
+        },
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "F",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q86",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 86,
+      "prompt": "What is an essential quality for working abroad?",
+      "categoryId": "J",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "J",
+          "score": 1.2
+        },
+        {
+          "categoryId": "L",
+          "score": 1.2
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q97",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 97,
+      "prompt": "What does a global mindset include?",
+      "categoryId": "J",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0.16
+        },
+        {
+          "categoryId": "I",
+          "score": 0.16
+        },
+        {
+          "categoryId": "B",
+          "score": 0.08
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "D",
+          "score": 0.08
+        },
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "H",
+          "score": 0.08
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q99",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 99,
+      "prompt": "What do multinational employers value most?",
+      "categoryId": "B",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "H",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0.53
+        },
+        {
+          "categoryId": "D",
+          "score": 0.45
+        },
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "I",
+          "score": 0.08
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q2",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 2,
+      "prompt": "__: a computer network, exclusive to a company.",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q32",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 32,
+      "prompt": "__________: networks and interconnected components leverage data to bolster business decision making processes.",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "C",
+          "score": 0.45
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q42",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 42,
+      "prompt": "While listening to a potential company's pitch, Sergio the Investor has his hands crossed. In North America, this would mean that Sergio is expressing:",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q43",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 43,
+      "prompt": "If a company is transforming raw materials into finished goods, they are at what part of the supply chain?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q50",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 50,
+      "prompt": "If interest rates increase, consumer spending will:",
+      "categoryId": "C",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 0.75
+        },
+        {
+          "categoryId": "E",
+          "score": 0.75
+        },
+        {
+          "categoryId": "H",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q60",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 60,
+      "prompt": "Supply and demand has the largest influences on:",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "G",
+          "score": 0.45
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q78",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 78,
+      "prompt": "Which of the following is not a consumer characteristic?",
+      "categoryId": "C",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 0.75
+        },
+        {
+          "categoryId": "E",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q85",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 85,
+      "prompt": "Which of the following markets has no barriers to entry?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.75
+        },
+        {
+          "categoryId": "G",
+          "score": 0.75
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q87",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 87,
+      "prompt": "Which of the following countries is closest to an aristocracy?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q98",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 98,
+      "prompt": "Factor income flows:",
+      "categoryId": "E",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.53
+        },
+        {
+          "categoryId": "G",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q22",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 22,
+      "prompt": "Economics is defined as:",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q25",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 25,
+      "prompt": "Property and risks not covered by an insurance policy are known as:",
+      "categoryId": "C",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 0.75
+        },
+        {
+          "categoryId": "J",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q33",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 33,
+      "prompt": "Which of the following is NOT an economic standard affecting the standards of living?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 1.5
+        },
+        {
+          "categoryId": "J",
+          "score": 1.5
+        },
+        {
+          "categoryId": "F",
+          "score": 0.75
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q62",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 62,
+      "prompt": "Changing demographics in a country:",
+      "categoryId": "E",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.53
+        },
+        {
+          "categoryId": "G",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "M",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q68",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 68,
+      "prompt": "Which of the following manufacturing sectors relates to the processing and gathering of raw materials?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q72",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 72,
+      "prompt": "International documents are outlined in both English and _______ for the purpose of precision.",
+      "categoryId": "I",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "L",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q94",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 94,
+      "prompt": "When comparing the market potential between countries, the measure that is typically used is:",
+      "categoryId": "E",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 1.2
+        },
+        {
+          "categoryId": "G",
+          "score": 1.2
+        },
+        {
+          "categoryId": "I",
+          "score": 1.2
+        },
+        {
+          "categoryId": "A",
+          "score": 1.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q13",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 13,
+      "prompt": "________: technique that compares/contrasts two businesses' performance.",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q23",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 23,
+      "prompt": "What are multidomestic companies?",
+      "categoryId": "E",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.45
+        },
+        {
+          "categoryId": "G",
+          "score": 0.45
+        },
+        {
+          "categoryId": "I",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q28",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 28,
+      "prompt": "China accounts for about _____ percent of the global population.",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q35",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 35,
+      "prompt": "Which of the following languages has the most native speakers?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q37",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 37,
+      "prompt": "What is generally an important indicator for a successful market?",
+      "categoryId": "E",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.75
+        },
+        {
+          "categoryId": "G",
+          "score": 0.75
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "J",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q57",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 57,
+      "prompt": "Consumption expenditures flow:",
+      "categoryId": "E",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.53
+        },
+        {
+          "categoryId": "G",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q60",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 60,
+      "prompt": "What does the current account not include?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q62",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 62,
+      "prompt": "Which of the following markets has no barriers to entry?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.75
+        },
+        {
+          "categoryId": "G",
+          "score": 0.75
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q78",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 78,
+      "prompt": "While listening to a potential company's pitch, Sergio the Investor has his head tilted. In North America, this would mean that Sergio is expressing:",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q79",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 79,
+      "prompt": "In a supply chain creating cookies, what step would the processing of the flour, eggs, and milk occur in?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q82",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 82,
+      "prompt": "Which of the following does not contain 1 land, labor, and capital resource?",
+      "categoryId": "C",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 0.75
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "J",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q11",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 11,
+      "prompt": "Which of the following is an international firm?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q25",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 25,
+      "prompt": "___ refers to when a company avoids the risks related to international business by only selling products in its home country.",
+      "categoryId": "B",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q27",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 27,
+      "prompt": "Property or risks not covered by an insurance policy are called",
+      "categoryId": "C",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 0.75
+        },
+        {
+          "categoryId": "J",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q44",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 44,
+      "prompt": "When comparing countries for market potential, one can generally say that:",
+      "categoryId": "E",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.75
+        },
+        {
+          "categoryId": "G",
+          "score": 0.75
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "J",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q76",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 76,
+      "prompt": "Which is not true about an insurable risk?",
+      "categoryId": "B",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q77",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 77,
+      "prompt": "Governments can impose ___ against another country to protest that country's behavior.",
+      "categoryId": "E",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.75
+        },
+        {
+          "categoryId": "F",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "G",
+          "score": 0.45
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q83",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 83,
+      "prompt": "Information on the current performance and the future of stocks and bonds is not published in",
+      "categoryId": "G",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "H",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q85",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 85,
+      "prompt": "Which of the following is not true about an insurable risk?",
+      "categoryId": "B",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q92",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 92,
+      "prompt": "Political instability of a country may cause the number of ethically questionable transactions to:",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.75
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-studyguide1-bank--q4",
+      "bankShortLabel": "Study Guide 1",
+      "questionNumber": 4,
+      "prompt": "Which of the following is not a stage of culture shock?",
+      "categoryId": "A",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-studyguide2-bank--q4",
+      "bankShortLabel": "Study Guide 2",
+      "questionNumber": 4,
+      "prompt": "Which of the following is true of code law?",
+      "categoryId": "C",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 0.75
+        },
+        {
+          "categoryId": "K",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-studyguide2-bank--q14",
+      "bankShortLabel": "Study Guide 2",
+      "questionNumber": 14,
+      "prompt": "Businesses must gather information about __________ in order to determine if they can successfully market products in foreign countries.",
+      "categoryId": "G",
+      "categoryConfidence": 0,
+      "scoreBreakdown": [
+        {
+          "categoryId": "G",
+          "score": 1.5
+        },
+        {
+          "categoryId": "I",
+          "score": 1.5
+        },
+        {
+          "categoryId": "D",
+          "score": 1.36
+        },
+        {
+          "categoryId": "C",
+          "score": 1.2
+        },
+        {
+          "categoryId": "E",
+          "score": 1.2
+        },
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "H",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q50",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 50,
+      "prompt": "An international organization that aims to promote international trade, monetary corporations, and the stabilization of exchange rates is known as:",
+      "categoryId": "I",
+      "categoryConfidence": 0.01,
+      "scoreBreakdown": [
+        {
+          "categoryId": "I",
+          "score": 10.26
+        },
+        {
+          "categoryId": "H",
+          "score": 10.25
+        },
+        {
+          "categoryId": "G",
+          "score": 2.31
+        },
+        {
+          "categoryId": "A",
+          "score": 0.83
+        },
+        {
+          "categoryId": "J",
+          "score": 0.83
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ghi-competency-specific-test-bank--q72",
+      "bankShortLabel": "GHI Competency",
+      "questionNumber": 72,
+      "prompt": "Which financial document serves as a receipt for shipped goods?",
+      "categoryId": "E",
+      "categoryConfidence": 0.04,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 3.6
+        },
+        {
+          "categoryId": "I",
+          "score": 3.56
+        },
+        {
+          "categoryId": "G",
+          "score": 0.45
+        },
+        {
+          "categoryId": "H",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q77",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 77,
+      "prompt": "These acts prevent monopolies from forming in the free enterprise economy:",
+      "categoryId": "I",
+      "categoryConfidence": 0.05,
+      "scoreBreakdown": [
+        {
+          "categoryId": "I",
+          "score": 0.88
+        },
+        {
+          "categoryId": "A",
+          "score": 0.83
+        },
+        {
+          "categoryId": "G",
+          "score": 0.75
+        },
+        {
+          "categoryId": "C",
+          "score": 0.61
+        },
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "F",
+          "score": 0.08
+        },
+        {
+          "categoryId": "J",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ghi-competency-specific-test-bank--q84",
+      "bankShortLabel": "GHI Competency",
+      "questionNumber": 84,
+      "prompt": "A multinational company raising funds in more than one currency is participating in the:",
+      "categoryId": "I",
+      "categoryConfidence": 0.06,
+      "scoreBreakdown": [
+        {
+          "categoryId": "I",
+          "score": 10.01
+        },
+        {
+          "categoryId": "H",
+          "score": 9.95
+        },
+        {
+          "categoryId": "G",
+          "score": 1.78
+        },
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "E",
+          "score": 0.61
+        },
+        {
+          "categoryId": "F",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-abc-competency-specific-test-bank--q68",
+      "bankShortLabel": "ABC Competency",
+      "questionNumber": 68,
+      "prompt": "When a nation's imports exceed exports, it has a:",
+      "categoryId": "A",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 7.01
+        },
+        {
+          "categoryId": "G",
+          "score": 6.93
+        },
+        {
+          "categoryId": "B",
+          "score": 0.45
+        },
+        {
+          "categoryId": "C",
+          "score": 0.45
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-abc-competency-specific-test-bank--q83",
+      "bankShortLabel": "ABC Competency",
+      "questionNumber": 83,
+      "prompt": "Why is quality management important in international markets?",
+      "categoryId": "B",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 1.28
+        },
+        {
+          "categoryId": "A",
+          "score": 1.2
+        },
+        {
+          "categoryId": "F",
+          "score": 0.88
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "C",
+          "score": 0.61
+        },
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-abc-competency-specific-test-bank--q92",
+      "bankShortLabel": "ABC Competency",
+      "questionNumber": 92,
+      "prompt": "Trademarks are primarily used to protect:",
+      "categoryId": "C",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 1.28
+        },
+        {
+          "categoryId": "E",
+          "score": 1.2
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "B",
+          "score": 0.45
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q6",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 6,
+      "prompt": "A company introducing safety equipment in a developing country may face challenges due to:",
+      "categoryId": "J",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "J",
+          "score": 1.28
+        },
+        {
+          "categoryId": "A",
+          "score": 1.2
+        },
+        {
+          "categoryId": "I",
+          "score": 1.2
+        },
+        {
+          "categoryId": "D",
+          "score": 0.53
+        },
+        {
+          "categoryId": "B",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "H",
+          "score": 0.08
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q34",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 34,
+      "prompt": "Which factor can pressure companies to behave unethically?",
+      "categoryId": "J",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "J",
+          "score": 0.53
+        },
+        {
+          "categoryId": "B",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q74",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 74,
+      "prompt": "What is an important soft skill for international professionals?",
+      "categoryId": "M",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "M",
+          "score": 0.53
+        },
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q75",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 75,
+      "prompt": "A candidate researching global companies should use:",
+      "categoryId": "K",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "K",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "G",
+          "score": 0.45
+        },
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.16
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q13",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 13,
+      "prompt": "Which of the functions of money does a shell have?",
+      "categoryId": "H",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "H",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q16",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 16,
+      "prompt": "Which of the following options hold only oligopolies?",
+      "categoryId": "E",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.61
+        },
+        {
+          "categoryId": "G",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q47",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 47,
+      "prompt": "Which of the following is not a trait of a sweatshop?",
+      "categoryId": "D",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "D",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q54",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 54,
+      "prompt": "What are the four factors of production?",
+      "categoryId": "J",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "J",
+          "score": 0.61
+        },
+        {
+          "categoryId": "C",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q62",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 62,
+      "prompt": "The ________ ensures that all products are balanced and safe internationally.",
+      "categoryId": "J",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "J",
+          "score": 0.61
+        },
+        {
+          "categoryId": "E",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q90",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 90,
+      "prompt": "When companies mass-produce, they experience:",
+      "categoryId": "A",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q16",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 16,
+      "prompt": "What is the first step of the decision making process?",
+      "categoryId": "E",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q29",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 29,
+      "prompt": "Which of the following is NOT a dimension of culture affecting trade?",
+      "categoryId": "A",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.83
+        },
+        {
+          "categoryId": "G",
+          "score": 0.75
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q47",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 47,
+      "prompt": "Which of the following countries have - on average - the largest number of extended families?",
+      "categoryId": "A",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q83",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 83,
+      "prompt": "Money does not necessarily mean:",
+      "categoryId": "I",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "H",
+          "score": 0.16
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q38",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 38,
+      "prompt": "Which of the following is not a function of money?",
+      "categoryId": "H",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "H",
+          "score": 0.16
+        },
+        {
+          "categoryId": "I",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q55",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 55,
+      "prompt": "What is the formula for finding real interest rate called?",
+      "categoryId": "A",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q58",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 58,
+      "prompt": "When companies mass-produce, they experience:",
+      "categoryId": "A",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q94",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 94,
+      "prompt": "________: A practice that involves buyers who purchase items for resale or additional production.",
+      "categoryId": "E",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.16
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "I",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q97",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 97,
+      "prompt": "Making, buying, and selling goods and services within a country is a(n):",
+      "categoryId": "B",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q6",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 6,
+      "prompt": "Which country would have the greatest number of extended families?",
+      "categoryId": "A",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q35",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 35,
+      "prompt": "___ protect the rights to inventions in the United States but may not be honored in other parts of the world.",
+      "categoryId": "A",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.83
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "C",
+          "score": 0.61
+        },
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q54",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 54,
+      "prompt": "___ involves buyers who purchase items for resale or additional production",
+      "categoryId": "E",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.16
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "I",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q69",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 69,
+      "prompt": "Money is not",
+      "categoryId": "I",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "H",
+          "score": 0.16
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-studyguide2-bank--q6",
+      "bankShortLabel": "Study Guide 2",
+      "questionNumber": 6,
+      "prompt": "Domestication often leads to:",
+      "categoryId": "C",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 1.06
+        },
+        {
+          "categoryId": "B",
+          "score": 0.98
+        },
+        {
+          "categoryId": "H",
+          "score": 0.61
+        },
+        {
+          "categoryId": "G",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "F",
+          "score": 0.16
+        },
+        {
+          "categoryId": "J",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-studyguide2-bank--q17",
+      "bankShortLabel": "Study Guide 2",
+      "questionNumber": 17,
+      "prompt": "A company in Denmark having to pay for imported goods with Mexican pesos is an example of:",
+      "categoryId": "H",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "H",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-studyguide3-bank--q21",
+      "bankShortLabel": "Study Guide 3",
+      "questionNumber": 21,
+      "prompt": "Money is not:",
+      "categoryId": "I",
+      "categoryConfidence": 0.08,
+      "scoreBreakdown": [
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "H",
+          "score": 0.16
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ghi-competency-specific-test-bank--q21",
+      "bankShortLabel": "GHI Competency",
+      "questionNumber": 21,
+      "prompt": "What is the effect of a weak domestic currency on exports?",
+      "categoryId": "H",
+      "categoryConfidence": 0.1,
+      "scoreBreakdown": [
+        {
+          "categoryId": "H",
+          "score": 9.95
+        },
+        {
+          "categoryId": "G",
+          "score": 9.85
+        },
+        {
+          "categoryId": "L",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q10",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 10,
+      "prompt": "Managers and families moving to other parts of the world take part in __ to understand the local culture.",
+      "categoryId": "D",
+      "categoryConfidence": 0.1,
+      "scoreBreakdown": [
+        {
+          "categoryId": "D",
+          "score": 0.9
+        },
+        {
+          "categoryId": "C",
+          "score": 0.8
+        },
+        {
+          "categoryId": "E",
+          "score": 0.75
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ghi-competency-specific-test-bank--q14",
+      "bankShortLabel": "GHI Competency",
+      "questionNumber": 14,
+      "prompt": "Which government body assists U.S. companies in exporting?",
+      "categoryId": "F",
+      "categoryConfidence": 0.13,
+      "scoreBreakdown": [
+        {
+          "categoryId": "F",
+          "score": 7.13
+        },
+        {
+          "categoryId": "B",
+          "score": 7
+        },
+        {
+          "categoryId": "G",
+          "score": 6.28
+        },
+        {
+          "categoryId": "D",
+          "score": 0.75
+        },
+        {
+          "categoryId": "H",
+          "score": 0.45
+        },
+        {
+          "categoryId": "I",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-studyguide1-bank--q9",
+      "bankShortLabel": "Study Guide 1",
+      "questionNumber": 9,
+      "prompt": "What is one advantage of a corporation?",
+      "categoryId": "C",
+      "categoryConfidence": 0.13,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 7.13
+        },
+        {
+          "categoryId": "B",
+          "score": 7
+        },
+        {
+          "categoryId": "A",
+          "score": 0.75
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q81",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 81,
+      "prompt": "What is the formula for a balance of payments?",
+      "categoryId": "A",
+      "categoryConfidence": 0.14,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.75
+        },
+        {
+          "categoryId": "I",
+          "score": 0.61
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-def-competency-specific-test-bank--q58",
+      "bankShortLabel": "DEF Competency",
+      "questionNumber": 58,
+      "prompt": "Which is a common complication of using interpreters?",
+      "categoryId": "D",
+      "categoryConfidence": 0.15,
+      "scoreBreakdown": [
+        {
+          "categoryId": "D",
+          "score": 0.9
+        },
+        {
+          "categoryId": "C",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.45
+        },
+        {
+          "categoryId": "F",
+          "score": 0.45
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-def-competency-specific-test-bank--q37",
+      "bankShortLabel": "DEF Competency",
+      "questionNumber": 37,
+      "prompt": "Political instability may cause:",
+      "categoryId": "E",
+      "categoryConfidence": 0.17,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 1.73
+        },
+        {
+          "categoryId": "H",
+          "score": 1.56
+        },
+        {
+          "categoryId": "A",
+          "score": 1.2
+        },
+        {
+          "categoryId": "I",
+          "score": 0.83
+        },
+        {
+          "categoryId": "D",
+          "score": 0.45
+        },
+        {
+          "categoryId": "F",
+          "score": 0.45
+        },
+        {
+          "categoryId": "G",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-def-competency-specific-test-bank--q66",
+      "bankShortLabel": "DEF Competency",
+      "questionNumber": 66,
+      "prompt": "Which factor often extends the growth stage of a product internationally?",
+      "categoryId": "A",
+      "categoryConfidence": 0.17,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 1.98
+        },
+        {
+          "categoryId": "E",
+          "score": 1.81
+        },
+        {
+          "categoryId": "H",
+          "score": 1.48
+        },
+        {
+          "categoryId": "I",
+          "score": 0.9
+        },
+        {
+          "categoryId": "D",
+          "score": 0.45
+        },
+        {
+          "categoryId": "F",
+          "score": 0.45
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-def-competency-specific-test-bank--q47",
+      "bankShortLabel": "DEF Competency",
+      "questionNumber": 47,
+      "prompt": "Which government regulation protects product ideas internationally?",
+      "categoryId": "C",
+      "categoryConfidence": 0.18,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 7.13
+        },
+        {
+          "categoryId": "F",
+          "score": 6.95
+        },
+        {
+          "categoryId": "G",
+          "score": 1.4
+        },
+        {
+          "categoryId": "J",
+          "score": 0.8
+        },
+        {
+          "categoryId": "D",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ghi-competency-specific-test-bank--q57",
+      "bankShortLabel": "GHI Competency",
+      "questionNumber": 57,
+      "prompt": "Which financial instrument represents ownership in a company?",
+      "categoryId": "B",
+      "categoryConfidence": 0.19,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 7
+        },
+        {
+          "categoryId": "I",
+          "score": 6.81
+        },
+        {
+          "categoryId": "F",
+          "score": 0.75
+        },
+        {
+          "categoryId": "H",
+          "score": 0.53
+        },
+        {
+          "categoryId": "G",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q86",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 86,
+      "prompt": "________: order written by an exporter instructing an importer to pay a specified amount of money at a specified time.",
+      "categoryId": "E",
+      "categoryConfidence": 0.19,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 0.8
+        },
+        {
+          "categoryId": "I",
+          "score": 0.61
+        },
+        {
+          "categoryId": "H",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-abc-competency-specific-test-bank--q25",
+      "bankShortLabel": "ABC Competency",
+      "questionNumber": 25,
+      "prompt": "Which cultural factor most affects work schedules internationally?",
+      "categoryId": "J",
+      "categoryConfidence": 0.2,
+      "scoreBreakdown": [
+        {
+          "categoryId": "J",
+          "score": 5
+        },
+        {
+          "categoryId": "A",
+          "score": 4.8
+        },
+        {
+          "categoryId": "D",
+          "score": 2.03
+        },
+        {
+          "categoryId": "H",
+          "score": 1.56
+        },
+        {
+          "categoryId": "B",
+          "score": 0.45
+        },
+        {
+          "categoryId": "C",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.45
+        },
+        {
+          "categoryId": "I",
+          "score": 0.08
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q10",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 10,
+      "prompt": "Which strategy helps reduce misunderstandings in international HR management?",
+      "categoryId": "B",
+      "categoryConfidence": 0.22,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "L",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "D",
+          "score": 0.45
+        },
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.16
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q12",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 12,
+      "prompt": "Of the following statements, the one that does not describe a multinational company is that",
+      "categoryId": "B",
+      "categoryConfidence": 0.22,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "E",
+          "score": 0.53
+        },
+        {
+          "categoryId": "G",
+          "score": 0.45
+        },
+        {
+          "categoryId": "I",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q26",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 26,
+      "prompt": "Self insurance of ___ occurs when a company takes responsibility for losses from certain risks.",
+      "categoryId": "K",
+      "categoryConfidence": 0.22,
+      "scoreBreakdown": [
+        {
+          "categoryId": "K",
+          "score": 0.75
+        },
+        {
+          "categoryId": "B",
+          "score": 0.53
+        },
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q56",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 56,
+      "prompt": "A country may use ________ to put pressure on a country in a conflict.",
+      "categoryId": "G",
+      "categoryConfidence": 0.28,
+      "scoreBreakdown": [
+        {
+          "categoryId": "G",
+          "score": 1.56
+        },
+        {
+          "categoryId": "F",
+          "score": 1.28
+        },
+        {
+          "categoryId": "J",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fbla-sample5-bank--q48",
+      "bankShortLabel": "Sample 5",
+      "questionNumber": 48,
+      "prompt": "Networking in international business often involves:",
+      "categoryId": "M",
+      "categoryConfidence": 0.29,
+      "scoreBreakdown": [
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0.16
+        },
+        {
+          "categoryId": "D",
+          "score": 0.16
+        },
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "K",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q88",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 88,
+      "prompt": "How do multinational companies recruit globally?",
+      "categoryId": "B",
+      "categoryConfidence": 0.3,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot1-bank--q99",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 99,
+      "prompt": "The majority of businesses in the United States are organized as:",
+      "categoryId": "A",
+      "categoryConfidence": 0.3,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 0.75
+        },
+        {
+          "categoryId": "B",
+          "score": 0.45
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q81",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 81,
+      "prompt": "In international business, governments can protest the behaviors of another country by imposing:",
+      "categoryId": "F",
+      "categoryConfidence": 0.3,
+      "scoreBreakdown": [
+        {
+          "categoryId": "F",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "G",
+          "score": 0.45
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-abc-competency-specific-test-bank--q88",
+      "bankShortLabel": "ABC Competency",
+      "questionNumber": 88,
+      "prompt": "In an oligopoly, firms often compete through:",
+      "categoryId": "B",
+      "categoryConfidence": 0.32,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 7.45
+        },
+        {
+          "categoryId": "E",
+          "score": 7.13
+        },
+        {
+          "categoryId": "C",
+          "score": 0.53
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "F",
+          "score": 0.16
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ghi-competency-specific-test-bank--q70",
+      "bankShortLabel": "GHI Competency",
+      "questionNumber": 70,
+      "prompt": "Which of the following best defines balance of payments?",
+      "categoryId": "A",
+      "categoryConfidence": 0.32,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 1.83
+        },
+        {
+          "categoryId": "I",
+          "score": 1.51
+        },
+        {
+          "categoryId": "G",
+          "score": 1.25
+        },
+        {
+          "categoryId": "H",
+          "score": 0.53
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q8",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 8,
+      "prompt": "Which of the following is an advantage of conducting international business?",
+      "categoryId": "A",
+      "categoryConfidence": 0.32,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 1.2
+        },
+        {
+          "categoryId": "F",
+          "score": 0.88
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "M",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q98",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 98,
+      "prompt": "Which communication skill improves employability globally?",
+      "categoryId": "M",
+      "categoryConfidence": 0.34,
+      "scoreBreakdown": [
+        {
+          "categoryId": "M",
+          "score": 9.95
+        },
+        {
+          "categoryId": "D",
+          "score": 9.61
+        },
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q74",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 74,
+      "prompt": "Fong's Burgers is a restaurant in Chile. The restaurant hopes to expand to the United States as the tastes and resources are very similar. It hopes to operate similarly as the one in Chile. Which type of international business is this?",
+      "categoryId": "A",
+      "categoryConfidence": 0.34,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 1.5
+        },
+        {
+          "categoryId": "B",
+          "score": 1.16
+        },
+        {
+          "categoryId": "E",
+          "score": 0.75
+        },
+        {
+          "categoryId": "J",
+          "score": 0.75
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-abc-competency-specific-test-bank--q50",
+      "bankShortLabel": "ABC Competency",
+      "questionNumber": 50,
+      "prompt": "ISO 14000 standards focus on:",
+      "categoryId": "F",
+      "categoryConfidence": 0.35,
+      "scoreBreakdown": [
+        {
+          "categoryId": "F",
+          "score": 2
+        },
+        {
+          "categoryId": "B",
+          "score": 1.65
+        },
+        {
+          "categoryId": "J",
+          "score": 0.83
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "C",
+          "score": 0.45
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-def-competency-specific-test-bank--q46",
+      "bankShortLabel": "DEF Competency",
+      "questionNumber": 46,
+      "prompt": "Which factor can discourage foreign investment in a country?",
+      "categoryId": "I",
+      "categoryConfidence": 0.36,
+      "scoreBreakdown": [
+        {
+          "categoryId": "I",
+          "score": 6.66
+        },
+        {
+          "categoryId": "F",
+          "score": 6.3
+        },
+        {
+          "categoryId": "B",
+          "score": 1.5
+        },
+        {
+          "categoryId": "A",
+          "score": 1.16
+        },
+        {
+          "categoryId": "D",
+          "score": 0.9
+        },
+        {
+          "categoryId": "C",
+          "score": 0.75
+        },
+        {
+          "categoryId": "G",
+          "score": 0.75
+        },
+        {
+          "categoryId": "H",
+          "score": 0.75
+        },
+        {
+          "categoryId": "E",
+          "score": 0.45
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ghi-competency-specific-test-bank--q92",
+      "bankShortLabel": "GHI Competency",
+      "questionNumber": 92,
+      "prompt": "Which is a role of export credit agencies?",
+      "categoryId": "G",
+      "categoryConfidence": 0.36,
+      "scoreBreakdown": [
+        {
+          "categoryId": "G",
+          "score": 7.01
+        },
+        {
+          "categoryId": "I",
+          "score": 6.65
+        },
+        {
+          "categoryId": "F",
+          "score": 1.58
+        },
+        {
+          "categoryId": "L",
+          "score": 0.83
+        },
+        {
+          "categoryId": "B",
+          "score": 0.45
+        },
+        {
+          "categoryId": "H",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-def-competency-specific-test-bank--q69",
+      "bankShortLabel": "DEF Competency",
+      "questionNumber": 69,
+      "prompt": "Which of the following is a cost advantage of using freight forwarders?",
+      "categoryId": "E",
+      "categoryConfidence": 0.37,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 1.95
+        },
+        {
+          "categoryId": "A",
+          "score": 1.58
+        },
+        {
+          "categoryId": "G",
+          "score": 1.48
+        },
+        {
+          "categoryId": "D",
+          "score": 0.53
+        },
+        {
+          "categoryId": "F",
+          "score": 0.45
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-def-competency-specific-test-bank--q77",
+      "bankShortLabel": "DEF Competency",
+      "questionNumber": 77,
+      "prompt": "Which U.S. federal agency regulates customs?",
+      "categoryId": "E",
+      "categoryConfidence": 0.37,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 1.65
+        },
+        {
+          "categoryId": "F",
+          "score": 1.28
+        },
+        {
+          "categoryId": "G",
+          "score": 1.28
+        },
+        {
+          "categoryId": "L",
+          "score": 1.28
+        },
+        {
+          "categoryId": "C",
+          "score": 0.45
+        },
+        {
+          "categoryId": "D",
+          "score": 0.45
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-jklm-competency-specific-test-bank--q25",
+      "bankShortLabel": "JKLM Competency",
+      "questionNumber": 25,
+      "prompt": "A business that bribes foreign officials risks:",
+      "categoryId": "C",
+      "categoryConfidence": 0.37,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 1.2
+        },
+        {
+          "categoryId": "G",
+          "score": 0.83
+        },
+        {
+          "categoryId": "I",
+          "score": 0.83
+        },
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "H",
+          "score": 0.75
+        },
+        {
+          "categoryId": "J",
+          "score": 0.45
+        },
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "L",
+          "score": 0.45
+        },
+        {
+          "categoryId": "M",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.16
+        },
+        {
+          "categoryId": "F",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q3",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 3,
+      "prompt": "A product that is used to produce tools and machinery is called a:",
+      "categoryId": "I",
+      "categoryConfidence": 0.37,
+      "scoreBreakdown": [
+        {
+          "categoryId": "I",
+          "score": 0.53
+        },
+        {
+          "categoryId": "E",
+          "score": 0.16
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot3-bank--q15",
+      "bankShortLabel": "OT#3",
+      "questionNumber": 15,
+      "prompt": "Before leaving on an international business trip, one should:",
+      "categoryId": "K",
+      "categoryConfidence": 0.37,
+      "scoreBreakdown": [
+        {
+          "categoryId": "K",
+          "score": 0.45
+        },
+        {
+          "categoryId": "I",
+          "score": 0.08
+        },
+        {
+          "categoryId": "L",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot2-bank--q75",
+      "bankShortLabel": "OT#2",
+      "questionNumber": 75,
+      "prompt": "International businesses focus on:",
+      "categoryId": "E",
+      "categoryConfidence": 0.4,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 1.28
+        },
+        {
+          "categoryId": "J",
+          "score": 0.88
+        },
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "D",
+          "score": 0.08
+        },
+        {
+          "categoryId": "F",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ot4-bank--q18",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 18,
+      "prompt": "Global corporations focus on:",
+      "categoryId": "E",
+      "categoryConfidence": 0.4,
+      "scoreBreakdown": [
+        {
+          "categoryId": "E",
+          "score": 1.28
+        },
+        {
+          "categoryId": "J",
+          "score": 0.88
+        },
+        {
+          "categoryId": "A",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0.08
+        },
+        {
+          "categoryId": "D",
+          "score": 0.08
+        },
+        {
+          "categoryId": "F",
+          "score": 0.08
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "I",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-def-competency-specific-test-bank--q88",
+      "bankShortLabel": "DEF Competency",
+      "questionNumber": 88,
+      "prompt": "Which factor most discourages foreign investors?",
+      "categoryId": "A",
+      "categoryConfidence": 0.41,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 1.61
+        },
+        {
+          "categoryId": "I",
+          "score": 1.2
+        },
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "C",
+          "score": 0.75
+        },
+        {
+          "categoryId": "G",
+          "score": 0.75
+        },
+        {
+          "categoryId": "H",
+          "score": 0.75
+        },
+        {
+          "categoryId": "F",
+          "score": 0.53
+        },
+        {
+          "categoryId": "D",
+          "score": 0.45
+        },
+        {
+          "categoryId": "E",
+          "score": 0.45
+        },
+        {
+          "categoryId": "J",
+          "score": 0.08
+        },
+        {
+          "categoryId": "M",
+          "score": 0.08
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ghi-competency-specific-test-bank--q32",
+      "bankShortLabel": "GHI Competency",
+      "questionNumber": 32,
+      "prompt": "Which financial institution stabilizes exchange rates globally?",
+      "categoryId": "H",
+      "categoryConfidence": 0.44,
+      "scoreBreakdown": [
+        {
+          "categoryId": "H",
+          "score": 10.7
+        },
+        {
+          "categoryId": "I",
+          "score": 10.26
+        },
+        {
+          "categoryId": "G",
+          "score": 1.93
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    }
+  ]
+}

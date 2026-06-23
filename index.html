@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FBLA International Business Practice Platform</title>
+  <meta name="theme-color" content="#07101c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="FBLA Intl Biz">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="question_bank_compiled.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero panel">
+      <div class="hero-copy">
+        <span class="eyebrow">FBLA International Business</span>
+        <h1>Practice Platform</h1>
+        <p>Official simulation, bank drills, and review cleanup in one offline-friendly build with instant feedback, flags, stars, and persistent local memory.</p>
+      </div>
+      <div id="heroStats" class="hero-stats"></div>
+    </header>
+
+    <main class="view-stack">
+      <section id="setupView" class="view">
+        <div class="stack">
+          <section class="panel launch-panel">
+            <div class="panel-copy">
+              <span class="section-kicker">Start A Run</span>
+              <h2>Choose a simpler practice mode</h2>
+              <p>The official simulation is fixed to the real event format: 100 questions in 50 minutes with the required category mix.</p>
+            </div>
+
+            <div id="modeSwitch" class="mode-switch" role="tablist" aria-label="Practice mode selector">
+              <button class="mode-card" data-mode="simulation" type="button">
+                <span class="mode-card-top">Official</span>
+                <strong>Simulation</strong>
+                <small>100 questions, 50 minutes</small>
+              </button>
+              <button class="mode-card" data-mode="bank" type="button">
+                <span class="mode-card-top">Focused</span>
+                <strong>Specific Bank</strong>
+                <small>Drill one source bank</small>
+              </button>
+              <button class="mode-card" data-mode="review" type="button">
+                <span class="mode-card-top">Recovery</span>
+                <strong>Review Queue</strong>
+                <small>Flagged or missed only</small>
+              </button>
+            </div>
+
+            <div id="modeNote" class="mode-note"></div>
+
+            <div class="setup-fields">
+              <label id="bankField" class="field hidden">
+                <span>Bank</span>
+                <select id="bankSelect"></select>
+              </label>
+
+              <label id="questionCountField" class="field">
+                <span>Question Count</span>
+                <input id="questionCountInput" type="number" min="1" max="200" value="25">
+              </label>
+
+              <label class="field">
+                <span>Feedback</span>
+                <select id="feedbackModeSelect">
+                  <option value="immediate">Instant feedback</option>
+                  <option value="deferred">Grade at the end</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Answer Order</span>
+                <select id="choiceOrderSelect">
+                  <option value="shuffle">Shuffle choices</option>
+                  <option value="fixed">Keep source order</option>
+                </select>
+              </label>
+
+              <label id="timerEnabledField" class="field checkbox-field">
+                <span>Use Timer</span>
+                <input id="timerEnabledInput" type="checkbox">
+              </label>
+
+              <label id="timerMinutesField" class="field">
+                <span>Timer Minutes</span>
+                <input id="timerMinutesInput" type="number" min="1" max="180" value="25">
+              </label>
+            </div>
+
+            <div id="setupNotice" class="setup-notice hidden"></div>
+
+            <div class="action-row">
+              <button id="startSessionBtn" class="primary-button" type="button">Start Run</button>
+              <button id="resetProgressBtn" class="ghost-button" type="button">Reset Memory</button>
+            </div>
+          </section>
+
+          <section class="panel dashboard-panel">
+            <div class="dashboard-grid">
+              <section class="dashboard-block">
+                <div class="subsection-head">
+                  <div>
+                    <span class="section-kicker">Overview</span>
+                    <h3>Local progress</h3>
+                  </div>
+                </div>
+                <div id="overviewStats" class="stats-grid"></div>
+              </section>
+
+              <section class="dashboard-block">
+                <div class="subsection-head">
+                  <div>
+                    <span class="section-kicker">Review Queue</span>
+                    <h3>Saved follow-up questions</h3>
+                  </div>
+                  <button id="openReviewQueueInfoBtn" class="icon-button" type="button" aria-label="Open review queue details">i</button>
+                </div>
+                <p id="reviewQueueSummary" class="muted-text"></p>
+                <div id="reviewReasonBadges" class="chip-row"></div>
+              </section>
+
+              <section class="dashboard-block">
+                <div class="subsection-head">
+                  <div>
+                    <span class="section-kicker">Official Mix</span>
+                    <h3>Event breakdown</h3>
+                  </div>
+                </div>
+                <div id="officialBreakdown" class="breakdown-grid"></div>
+              </section>
+
+              <section class="dashboard-block">
+                <div class="subsection-head">
+                  <div>
+                    <span class="section-kicker">Recent Runs</span>
+                    <h3>Local session history</h3>
+                  </div>
+                </div>
+                <div id="recentSessionsList" class="stack-list empty-state"></div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="sessionView" class="view hidden">
+        <div class="stack">
+          <section class="panel session-bar">
+            <div class="session-heading">
+              <span id="sessionModeChip" class="chip">Simulation</span>
+              <h2 id="sessionTitle">Session</h2>
+              <p id="sessionSubtitle" class="muted-text"></p>
+            </div>
+
+            <div class="session-stats">
+              <article class="stat-card">
+                <span class="label">Progress</span>
+                <strong id="progressValue">1 / 1</strong>
+              </article>
+              <article class="stat-card">
+                <span class="label">Answered</span>
+                <strong id="answeredValue">0</strong>
+              </article>
+              <article class="stat-card">
+                <span class="label">Review Triggers</span>
+                <strong id="reviewValue">0</strong>
+              </article>
+              <article class="stat-card">
+                <span class="label">Time</span>
+                <strong id="timerDisplay">50:00</strong>
+              </article>
+            </div>
+
+            <div class="action-row compact-actions">
+              <button id="backToSetupBtn" class="ghost-button" type="button">Leave Session</button>
+              <button id="submitSessionBtn" class="primary-button" type="button">Submit</button>
+            </div>
+          </section>
+
+          <section class="panel question-panel">
+            <div class="question-topbar">
+              <div>
+                <p id="questionPosition" class="question-position">Question 1 of 1</p>
+                <div class="chip-row">
+                  <span id="questionSourceChip" class="chip">OT#1 | Q1</span>
+                  <span id="questionCategoryChip" class="chip muted-chip">A | Basic Concepts</span>
+                </div>
+              </div>
+              <div class="question-actions">
+                <button id="starBtn" class="wide-icon-button" type="button" aria-label="Star question">Star</button>
+                <button id="flagBtn" class="wide-icon-button" type="button" aria-label="Flag question">Flag</button>
+                <button id="questionInfoBtn" class="icon-button" type="button" aria-label="Question details">i</button>
+              </div>
+            </div>
+
+            <h3 id="questionPrompt" class="question-prompt"></h3>
+            <div id="answerList" class="answer-list"></div>
+            <section id="feedbackCard" class="feedback-card hidden"></section>
+
+            <div class="nav-row">
+              <button id="prevQuestionBtn" class="secondary-button" type="button">Previous</button>
+              <button id="nextQuestionBtn" class="primary-button" type="button">Next</button>
+            </div>
+
+            <div class="question-utility-row">
+              <button id="jumpFlaggedBtn" class="ghost-button small-button" type="button">Jump To Flagged</button>
+              <p id="sessionHint" class="muted-text">Flagged or missed questions are automatically saved into your review queue.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="resultsView" class="view hidden">
+        <div class="stack">
+          <section class="panel results-summary-panel">
+            <div class="panel-copy">
+              <span class="section-kicker">Results</span>
+              <h2 id="resultsHeadline">Run Complete</h2>
+              <p id="resultsSubline" class="muted-text"></p>
+            </div>
+
+            <div id="resultsStats" class="stats-grid"></div>
+
+            <div class="action-row">
+              <button id="resultsBackBtn" class="secondary-button" type="button">Back To Home</button>
+              <button id="resultsReviewRunBtn" class="primary-button" type="button">Run Review Queue</button>
+            </div>
+          </section>
+
+          <section class="panel results-review-panel">
+            <div class="panel-copy">
+              <span class="section-kicker">Follow-Up</span>
+              <h2>Questions That Need Attention</h2>
+              <p class="muted-text">Incorrect, unanswered, flagged, or starred questions stay easy to find after each run.</p>
+            </div>
+            <div id="resultsReviewList" class="results-review-list empty-state"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden" role="presentation">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <div>
+          <span id="modalEyebrow" class="section-kicker">Details</span>
+          <h2 id="modalTitle">Details</h2>
+        </div>
+        <button id="closeModalBtn" class="icon-button" type="button" aria-label="Close dialog">x</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <noscript>This platform requires JavaScript to load the compiled question bank and persistent review memory.</noscript>
+</body>
+</html>
