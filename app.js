@@ -15,7 +15,6 @@
     review: "Review Queue",
   };
 
-  const questionsById = new Map(loader.questions.map((question) => [question.id, question]));
   const banksById = new Map(loader.banks.map((bank) => [bank.id, bank]));
   const categoriesById = new Map((loader.categories || []).map((category) => [category.id, category]));
   const defaultBankId = loader.banks[0] ? loader.banks[0].id : "";
@@ -24,13 +23,21 @@
     timerMinutes: 50,
     categoryCounts: [],
   };
+  const OFFICIAL_QUESTION_TOTAL = officialSimulation.questionCount
+    || officialSimulation.categoryCounts.reduce((sum, category) => sum + category.count, 0)
+    || 100;
+  const CATEGORY_AVAILABILITY_BY_ID = new Map(
+    (loader.summary?.categorySummary || [])
+      .map((category) => [category.id, category.availableQuestionCount]),
+  );
+  const MAX_SIMULATION_QUESTION_COUNT = getMaxSimulationQuestionCount();
 
   const defaultPreferences = {
     mode: "simulation",
     bankId: defaultBankId,
-    questionCount: 25,
-    timerEnabled: false,
-    timerMinutes: 25,
+    questionCount: OFFICIAL_QUESTION_TOTAL,
+    timerEnabled: true,
+    timerMinutes: officialSimulation.timerMinutes || 50,
     feedbackMode: "immediate",
     choiceOrder: "shuffle",
   };
@@ -81,8 +88,8 @@
     questionPosition: document.getElementById("questionPosition"),
     questionSourceChip: document.getElementById("questionSourceChip"),
     questionCategoryChip: document.getElementById("questionCategoryChip"),
-    starBtn: document.getElementById("starBtn"),
     flagBtn: document.getElementById("flagBtn"),
+    flagBtnLabel: document.getElementById("flagBtnLabel"),
     questionInfoBtn: document.getElementById("questionInfoBtn"),
     questionPrompt: document.getElementById("questionPrompt"),
     answerList: document.getElementById("answerList"),
@@ -165,6 +172,28 @@
     return Math.max(min, Math.min(max, parsed));
   }
 
+  function getCategoryAvailability(categoryId) {
+    if (CATEGORY_AVAILABILITY_BY_ID.has(categoryId)) {
+      return CATEGORY_AVAILABILITY_BY_ID.get(categoryId);
+    }
+
+    const count = loader.questions.filter((question) => question.categoryId === categoryId).length;
+    CATEGORY_AVAILABILITY_BY_ID.set(categoryId, count);
+    return count;
+  }
+
+  function getMaxSimulationQuestionCount() {
+    const weightedCaps = officialSimulation.categoryCounts
+      .filter((category) => category.count > 0)
+      .map((category) => Math.floor((getCategoryAvailability(category.id) * OFFICIAL_QUESTION_TOTAL) / category.count));
+
+    if (!weightedCaps.length) {
+      return loader.questions.length;
+    }
+
+    return Math.max(1, Math.min(loader.questions.length, ...weightedCaps));
+  }
+
   function getQuestionState(questionId) {
     const existing = state.storage.questionStates[questionId];
     if (existing) {
@@ -172,7 +201,6 @@
     }
 
     const created = {
-      starred: false,
       flagged: false,
       reviewMissed: false,
       seenCount: 0,
@@ -193,7 +221,6 @@
     return {
       flagged: Boolean(questionState.flagged),
       reviewMissed: Boolean(questionState.reviewMissed),
-      starred: Boolean(questionState.starred),
       isReview: Boolean(questionState.flagged || questionState.reviewMissed),
     };
   }
@@ -242,8 +269,8 @@
     return [...questions].sort((left, right) => {
       const leftStatus = getReviewStatus(left.id);
       const rightStatus = getReviewStatus(right.id);
-      const leftScore = (leftStatus.flagged ? 2 : 0) + (leftStatus.reviewMissed ? 1 : 0) + (leftStatus.starred ? 1 : 0);
-      const rightScore = (rightStatus.flagged ? 2 : 0) + (rightStatus.reviewMissed ? 1 : 0) + (rightStatus.starred ? 1 : 0);
+      const leftScore = (leftStatus.flagged ? 2 : 0) + (leftStatus.reviewMissed ? 1 : 0);
+      const rightScore = (rightStatus.flagged ? 2 : 0) + (rightStatus.reviewMissed ? 1 : 0);
       if (leftScore !== rightScore) {
         return rightScore - leftScore;
       }
@@ -266,22 +293,14 @@
     const feedbackMode = merged.feedbackMode === "deferred" ? "deferred" : "immediate";
     const choiceOrder = merged.choiceOrder === "fixed" ? "fixed" : "shuffle";
 
-    if (mode === "simulation") {
-      return {
-        mode,
-        bankId,
-        questionCount: officialSimulation.questionCount,
-        timerEnabled: true,
-        timerMinutes: officialSimulation.timerMinutes,
-        feedbackMode,
-        choiceOrder,
-      };
-    }
-
     return {
       mode,
       bankId,
-      questionCount: clampNumber(merged.questionCount, 1, 200),
+      questionCount: clampNumber(
+        merged.questionCount,
+        1,
+        mode === "simulation" ? MAX_SIMULATION_QUESTION_COUNT : 200,
+      ),
       timerEnabled: Boolean(merged.timerEnabled),
       timerMinutes: clampNumber(merged.timerMinutes, 1, 180),
       feedbackMode,
@@ -336,7 +355,6 @@
       reviewCount: 0,
       flaggedCount: 0,
       missedCount: 0,
-      starredCount: 0,
     };
 
     loader.questions.forEach((question) => {
@@ -344,7 +362,6 @@
       if (reviewStatus.isReview) summary.reviewCount += 1;
       if (reviewStatus.flagged) summary.flaggedCount += 1;
       if (reviewStatus.reviewMissed) summary.missedCount += 1;
-      if (reviewStatus.starred) summary.starredCount += 1;
     });
 
     return summary;
@@ -370,13 +387,52 @@
       .join("");
   }
 
-  function renderOverview() {
+  function buildSimulationCategoryTargets(totalCount) {
+    const requestedCount = clampNumber(totalCount, 1, MAX_SIMULATION_QUESTION_COUNT);
+    const targets = officialSimulation.categoryCounts.map((category, index) => ({
+      ...category,
+      index,
+      available: getCategoryAvailability(category.id),
+      exact: (category.count / OFFICIAL_QUESTION_TOTAL) * requestedCount,
+      count: 0,
+    }));
+
+    for (let assigned = 0; assigned < requestedCount; assigned += 1) {
+      const candidate = targets
+        .filter((target) => target.count < target.available)
+        .sort((left, right) => {
+          const leftGap = left.exact - left.count;
+          const rightGap = right.exact - right.count;
+          if (rightGap !== leftGap) {
+            return rightGap - leftGap;
+          }
+          if (right.exact !== left.exact) {
+            return right.exact - left.exact;
+          }
+          return left.index - right.index;
+        })[0];
+
+      if (!candidate) {
+        throw new Error("Simulation target exceeded the available category supply.");
+      }
+
+      candidate.count += 1;
+    }
+
+    return targets.map(({ id, label, shortLabel, count }) => ({
+      id,
+      label,
+      shortLabel,
+      count,
+    }));
+  }
+
+  function renderOverview(settings = getEffectiveSettings(state.storage.preferences)) {
     const overview = buildOverview();
     const stats = [
       { label: "Banks", value: overview.totalBanks },
       { label: "Review", value: overview.reviewCount },
       { label: "Flagged", value: overview.flaggedCount },
-      { label: "Starred", value: overview.starredCount },
     ];
 
     dom.overviewStats.innerHTML = stats
@@ -399,15 +455,18 @@
     dom.reviewReasonBadges.innerHTML = [
       `<span class="chip">Flagged: ${escapeHtml(overview.flaggedCount)}</span>`,
       `<span class="chip">Missed: ${escapeHtml(overview.missedCount)}</span>`,
-      `<span class="chip">Starred: ${escapeHtml(overview.starredCount)}</span>`,
     ].join("");
 
-    dom.officialBreakdown.innerHTML = officialSimulation.categoryCounts
+    const displayedBreakdown = settings.mode === "simulation"
+      ? buildSimulationCategoryTargets(settings.questionCount)
+      : officialSimulation.categoryCounts;
+
+    dom.officialBreakdown.innerHTML = displayedBreakdown
       .map(
         (category) => `
           <article class="breakdown-chip">
             <span class="label">${escapeHtml(category.id)} | ${escapeHtml(category.shortLabel)}</span>
-            <strong>${escapeHtml(category.count)} questions</strong>
+            <strong>${escapeHtml(category.count)}</strong>
           </article>
         `,
       )
@@ -439,13 +498,14 @@
 
   function buildModeNote(settings) {
     if (settings.mode === "simulation") {
-      return `Official simulation uses the FBLA International Business test format: ${officialSimulation.questionCount} questions in ${officialSimulation.timerMinutes} minutes with the required A-M category distribution. Higher-confidence category matches are used first so the mix stays clean.`;
+      const timerText = settings.timerEnabled ? `${settings.timerMinutes} minute timer` : "untimed mode";
+      return `Simulation starts from the official ${OFFICIAL_QUESTION_TOTAL}-question / ${officialSimulation.timerMinutes}-minute event. You can run ${settings.questionCount} question(s) in ${timerText}, and the A-M mix stays as close to the official percentages as possible.`;
     }
 
     if (settings.mode === "bank") {
       const bank = banksById.get(settings.bankId);
       const count = loader.questions.filter((question) => question.bankId === settings.bankId).length;
-      return `Specific Bank mode keeps things simple: one bank, your chosen question count, and the same long-term flag/star/review memory. ${bank ? bank.shortLabel : "This bank"} currently has ${count} question(s).`;
+      return `Specific Bank mode keeps things simple: one bank, your chosen question count, and the same long-term flag/review memory. ${bank ? bank.shortLabel : "This bank"} currently has ${count} question(s).`;
     }
 
     return "Review Queue mode only pulls questions you flagged or answered incorrectly. Answer them correctly and unflag them to clean the queue out.";
@@ -459,6 +519,12 @@
     };
 
     if (mode !== currentMode) {
+      if (mode === "simulation") {
+        nextPreferences.questionCount = OFFICIAL_QUESTION_TOTAL;
+        nextPreferences.timerEnabled = true;
+        nextPreferences.timerMinutes = officialSimulation.timerMinutes || 50;
+      }
+
       if (mode === "bank") {
         nextPreferences.questionCount = 25;
         nextPreferences.timerEnabled = false;
@@ -486,20 +552,23 @@
     const reviewQuestions = getReviewQuestions();
     const bankPoolSize = loader.questions.filter((question) => question.bankId === settings.bankId).length;
     const availableCount = settings.mode === "simulation"
-      ? officialSimulation.questionCount
+      ? MAX_SIMULATION_QUESTION_COUNT
       : settings.mode === "bank"
         ? bankPoolSize
         : reviewQuestions.length;
 
     dom.modeNote.textContent = buildModeNote(settings);
     dom.bankField.classList.toggle("hidden", settings.mode !== "bank");
-    dom.questionCountField.classList.toggle("hidden", settings.mode === "simulation");
-    dom.timerEnabledField.classList.toggle("hidden", settings.mode === "simulation");
-    dom.timerMinutesField.classList.toggle("hidden", settings.mode === "simulation" || !settings.timerEnabled);
+    dom.questionCountField.classList.remove("hidden");
+    dom.timerEnabledField.classList.remove("hidden");
+    dom.timerMinutesField.classList.toggle("hidden", !settings.timerEnabled);
 
     dom.questionCountInput.max = String(Math.max(1, availableCount || 1));
-    dom.startSessionBtn.textContent = MODE_LABELS[settings.mode] === MODE_LABELS.simulation
-      ? "Start Official Simulation"
+    dom.questionCountInput.value = String(settings.questionCount);
+    dom.timerEnabledInput.checked = settings.timerEnabled;
+    dom.timerMinutesInput.value = String(settings.timerMinutes);
+    dom.startSessionBtn.textContent = settings.mode === "simulation"
+      ? "Start Simulation"
       : settings.mode === "bank"
         ? "Start Bank Drill"
         : "Start Review Run";
@@ -507,20 +576,21 @@
     let notice = "";
     if (settings.mode === "review" && availableCount === 0) {
       notice = "Your review queue is empty right now. Flag a question or answer one incorrectly to save it here.";
-    } else if (settings.mode !== "simulation" && settings.questionCount > availableCount) {
+    } else if (settings.questionCount > availableCount) {
       notice = `Only ${availableCount} question(s) are currently available for this mode. The run will automatically use that amount.`;
     }
 
     dom.setupNotice.textContent = notice;
     dom.setupNotice.classList.toggle("hidden", !notice);
     renderHero();
-    renderOverview();
+    renderOverview(settings);
   }
 
-  function buildSimulationQuestionSet() {
+  function buildSimulationQuestionSet(requestedCount) {
+    const categoryTargets = buildSimulationCategoryTargets(requestedCount);
     const selected = [];
 
-    officialSimulation.categoryCounts.forEach((categoryTarget) => {
+    categoryTargets.forEach((categoryTarget) => {
       const pool = loader.questions.filter((question) => question.categoryId === categoryTarget.id);
       const strong = shuffleArray(pool.filter((question) => question.categoryConfidence >= OFFICIAL_SIMULATION_MIN_CONFIDENCE));
       const medium = shuffleArray(pool.filter((question) => question.categoryConfidence < OFFICIAL_SIMULATION_MIN_CONFIDENCE && question.categoryConfidence >= 1));
@@ -539,14 +609,14 @@
 
   function getRequestedCount(settings, poolLength) {
     if (settings.mode === "simulation") {
-      return officialSimulation.questionCount;
+      return Math.max(1, Math.min(settings.questionCount, MAX_SIMULATION_QUESTION_COUNT));
     }
     return Math.max(1, Math.min(settings.questionCount, poolLength));
   }
 
   function buildQuestionPool(settings) {
     if (settings.mode === "simulation") {
-      return buildSimulationQuestionSet();
+      return buildSimulationQuestionSet(settings.questionCount);
     }
 
     if (settings.mode === "bank") {
@@ -704,20 +774,6 @@
     renderSession();
   }
 
-  function toggleStarForCurrentQuestion() {
-    const entry = getCurrentEntry();
-    if (!entry) {
-      return;
-    }
-
-    const questionState = getQuestionState(entry.question.id);
-    questionState.starred = !questionState.starred;
-    saveStorage();
-    renderSession();
-    renderHero();
-    renderOverview();
-  }
-
   function toggleFlagForCurrentQuestion() {
     const entry = getCurrentEntry();
     if (!entry) {
@@ -799,10 +855,7 @@
     dom.questionCategoryChip.textContent = `${entry.question.categoryId} | ${entry.question.categoryShortLabel}`;
     dom.questionPrompt.textContent = entry.question.prompt;
 
-    dom.starBtn.textContent = reviewStatus.starred ? "Starred" : "Star";
-    dom.starBtn.classList.toggle("is-active", reviewStatus.starred);
-    dom.starBtn.classList.toggle("is-starred", reviewStatus.starred);
-    dom.flagBtn.textContent = reviewStatus.flagged ? "Flagged" : "Flag";
+    dom.flagBtnLabel.textContent = reviewStatus.flagged ? "Flagged" : "Flag";
     dom.flagBtn.classList.toggle("is-active", reviewStatus.flagged);
     dom.flagBtn.classList.toggle("is-flagged", reviewStatus.flagged);
     dom.jumpFlaggedBtn.disabled = !state.session.entries.some((sessionEntry) => getReviewStatus(sessionEntry.question.id).flagged);
@@ -886,7 +939,6 @@
         correct,
         unanswered,
         flagged: reviewStatus.flagged,
-        starred: reviewStatus.starred,
       };
     });
 
@@ -1004,10 +1056,10 @@
       .join("");
 
     const priorityEntries = [...result.reviewEntries]
-      .filter((entry) => !entry.correct || entry.unanswered || entry.flagged || entry.starred)
+      .filter((entry) => entry.flagged || (!entry.correct && !entry.unanswered))
       .sort((left, right) => {
-        const leftScore = (left.correct ? 0 : 3) + (left.flagged ? 2 : 0) + (left.starred ? 1 : 0);
-        const rightScore = (right.correct ? 0 : 3) + (right.flagged ? 2 : 0) + (right.starred ? 1 : 0);
+        const leftScore = (left.correct ? 0 : 3) + (left.flagged ? 2 : 0);
+        const rightScore = (right.correct ? 0 : 3) + (right.flagged ? 2 : 0);
         if (leftScore !== rightScore) {
           return rightScore - leftScore;
         }
@@ -1024,7 +1076,6 @@
         const statusPills = [];
         statusPills.push(`<span class="status-pill ${entry.correct ? "correct" : "incorrect"}">${escapeHtml(entry.correct ? "Correct" : entry.unanswered ? "Unanswered" : "Incorrect")}</span>`);
         if (entry.flagged) statusPills.push('<span class="status-pill flagged">Flagged</span>');
-        if (entry.starred) statusPills.push('<span class="status-pill starred">Starred</span>');
 
         return `
           <article class="review-card">
@@ -1083,10 +1134,6 @@
           <article class="fact-card">
             <span>Review Status</span>
             <strong>${escapeHtml(reviewStatus.isReview ? "In review queue" : "Not in review queue")}</strong>
-          </article>
-          <article class="fact-card">
-            <span>Starred</span>
-            <strong>${escapeHtml(reviewStatus.starred ? "Yes" : "No")}</strong>
           </article>
           <article class="fact-card">
             <span>Flagged</span>
@@ -1162,7 +1209,6 @@
         const reasons = [];
         if (reviewStatus.flagged) reasons.push('<span class="status-pill flagged">Flagged</span>');
         if (reviewStatus.reviewMissed) reasons.push('<span class="status-pill incorrect">Missed</span>');
-        if (reviewStatus.starred) reasons.push('<span class="status-pill starred">Starred</span>');
 
         return `
           <article class="review-card">
@@ -1189,7 +1235,7 @@
   }
 
   function resetProgress() {
-    const confirmed = window.confirm("Reset all local stars, flags, review memory, and recent session history?");
+    const confirmed = window.confirm("Reset all local flags, review memory, and recent session history?");
     if (!confirmed) {
       return;
     }
@@ -1211,7 +1257,7 @@
       return;
     }
 
-    const confirmed = window.confirm("Leave this run and discard its current answers? Your saved flags, stars, and prior review memory will stay on this device.");
+    const confirmed = window.confirm("Leave this run and discard its current answers? Your saved flags and prior review memory will stay on this device.");
     if (!confirmed) {
       return;
     }
@@ -1267,7 +1313,6 @@
     dom.prevQuestionBtn.addEventListener("click", () => moveQuestion(-1));
     dom.nextQuestionBtn.addEventListener("click", () => moveQuestion(1));
     dom.jumpFlaggedBtn.addEventListener("click", jumpToFlagged);
-    dom.starBtn.addEventListener("click", toggleStarForCurrentQuestion);
     dom.flagBtn.addEventListener("click", toggleFlagForCurrentQuestion);
     dom.questionInfoBtn.addEventListener("click", openCurrentQuestionInfo);
     dom.resultsBackBtn.addEventListener("click", () => {

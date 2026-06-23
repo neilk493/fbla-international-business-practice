@@ -1,4 +1,4 @@
-const CACHE_NAME = "fbla-intl-practice-v3";
+const CACHE_NAME = "fbla-intl-practice-v4";
 const APP_SHELL = [
   "./",
   "./index.html",

@@ -21,7 +21,7 @@
       <div class="hero-copy">
         <span class="eyebrow">FBLA International Business</span>
         <h1>Practice Platform</h1>
-        <p>Official simulation, bank drills, and review cleanup in one offline-friendly build with instant feedback, flags, stars, and persistent local memory.</p>
+        <p>Official simulation, bank drills, and review cleanup in one offline-friendly build with instant feedback, flags, and persistent local memory.</p>
       </div>
       <div id="heroStats" class="hero-stats"></div>
     </header>
@@ -40,7 +40,7 @@
               <button class="mode-card" data-mode="simulation" type="button">
                 <span class="mode-card-top">Official</span>
                 <strong>Simulation</strong>
-                <small>100 questions, 50 minutes</small>
+                <small>Default 100 questions, 50 minutes</small>
               </button>
               <button class="mode-card" data-mode="bank" type="button">
                 <span class="mode-card-top">Focused</span>
@@ -104,7 +104,7 @@
 
           <section class="panel dashboard-panel">
             <div class="dashboard-grid">
-              <section class="dashboard-block">
+              <section class="dashboard-block dashboard-block--overview">
                 <div class="subsection-head">
                   <div>
                     <span class="section-kicker">Overview</span>
@@ -114,7 +114,7 @@
                 <div id="overviewStats" class="stats-grid"></div>
               </section>
 
-              <section class="dashboard-block">
+              <section class="dashboard-block dashboard-block--review">
                 <div class="subsection-head">
                   <div>
                     <span class="section-kicker">Review Queue</span>
@@ -126,7 +126,7 @@
                 <div id="reviewReasonBadges" class="chip-row"></div>
               </section>
 
-              <section class="dashboard-block">
+              <section class="dashboard-block dashboard-block--breakdown">
                 <div class="subsection-head">
                   <div>
                     <span class="section-kicker">Official Mix</span>
@@ -136,7 +136,7 @@
                 <div id="officialBreakdown" class="breakdown-grid"></div>
               </section>
 
-              <section class="dashboard-block">
+              <section class="dashboard-block dashboard-block--recent">
                 <div class="subsection-head">
                   <div>
                     <span class="section-kicker">Recent Runs</span>
@@ -194,8 +194,10 @@
                 </div>
               </div>
               <div class="question-actions">
-                <button id="starBtn" class="wide-icon-button" type="button" aria-label="Star question">Star</button>
-                <button id="flagBtn" class="wide-icon-button" type="button" aria-label="Flag question">Flag</button>
+                <button id="flagBtn" class="wide-icon-button flag-button" type="button" aria-label="Flag question">
+                  <span class="flag-icon" aria-hidden="true"></span>
+                  <span id="flagBtnLabel">Flag</span>
+                </button>
                 <button id="questionInfoBtn" class="icon-button" type="button" aria-label="Question details">i</button>
               </div>
             </div>
@@ -238,7 +240,7 @@
             <div class="panel-copy">
               <span class="section-kicker">Follow-Up</span>
               <h2>Questions That Need Attention</h2>
-              <p class="muted-text">Incorrect, unanswered, flagged, or starred questions stay easy to find after each run.</p>
+              <p class="muted-text">Flagged or incorrect questions stay easy to find after each run.</p>
             </div>
             <div id="resultsReviewList" class="results-review-list empty-state"></div>
           </section>
