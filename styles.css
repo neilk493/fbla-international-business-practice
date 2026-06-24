@@ -495,7 +495,6 @@ select:focus-visible {
   grid-column: span 8;
 }
 
-.dashboard-block--breakdown,
 .dashboard-block--recent {
   grid-column: 1 / -1;
 }
@@ -530,29 +529,64 @@ select:focus-visible {
   font-family: var(--font-heading);
 }
 
-.breakdown-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+.breakdown-section-panel {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
 }
 
-.breakdown-chip {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.breakdown-panel-head {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.breakdown-panel-head h3 {
+  font-size: clamp(1.7rem, 3.6vw, 2.5rem);
+}
+
+.breakdown-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  padding: 12px 14px;
+}
+
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 0;
+  padding: 14px 16px;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.025);
 }
 
-.breakdown-chip .label {
-  line-height: 1.35;
-  letter-spacing: 0.09em;
+.breakdown-row-label {
+  min-width: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
 
-.breakdown-chip strong {
-  font-size: 1.15rem;
-  white-space: nowrap;
+.breakdown-row-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(95, 147, 221, 0.22);
+  background: rgba(95, 147, 221, 0.14);
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--text);
 }
 
 .session-heading {
@@ -563,7 +597,7 @@ select:focus-visible {
 .question-topbar {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
   align-items: flex-start;
 }
 
@@ -574,6 +608,17 @@ select:focus-visible {
   justify-content: flex-end;
 }
 
+.question-topbar .chip-row {
+  gap: 8px;
+}
+
+#questionSourceChip,
+#questionCategoryChip {
+  padding: 6px 10px;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+}
+
 .question-position {
   margin-bottom: 10px;
   color: var(--text-soft);
@@ -581,7 +626,7 @@ select:focus-visible {
 }
 
 .question-prompt {
-  margin-top: 18px;
+  margin-top: 24px;
   font-size: clamp(1.35rem, 2.8vw, 2rem);
 }
 
@@ -702,6 +747,7 @@ select:focus-visible {
 .review-meta {
   margin-top: 6px;
   font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 .facts-grid {
@@ -742,12 +788,23 @@ select:focus-visible {
   justify-content: space-between;
   gap: 12px;
   align-items: flex-start;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.modal-head > div {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.modal-head h2 {
+  font-size: clamp(1.9rem, 4.2vw, 2.95rem);
+  line-height: 1.02;
 }
 
 .modal-body {
   display: grid;
-  gap: 18px;
+  gap: 22px;
 }
 
 .modal-section {
@@ -769,8 +826,8 @@ select:focus-visible {
     grid-column: span 6;
   }
 
-  .breakdown-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .breakdown-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -780,7 +837,7 @@ select:focus-visible {
   .setup-fields,
   .stats-grid,
   .session-stats,
-  .breakdown-grid,
+  .breakdown-list,
   .facts-grid {
     grid-template-columns: 1fr;
   }
@@ -803,15 +860,47 @@ select:focus-visible {
   }
 
   .nav-row > button,
-  .question-actions > button,
   .compact-actions > button {
     width: 100%;
+  }
+
+  .question-actions {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .question-actions .flag-button {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    justify-content: flex-start;
+  }
+
+  .question-actions .icon-button {
+    width: 44px;
+    min-width: 44px;
+    flex: 0 0 44px;
+  }
+
+  #questionSourceChip,
+  #questionCategoryChip {
+    font-size: 0.62rem;
+  }
+
+  .breakdown-section-panel {
+    padding: 18px;
+  }
+
+  .breakdown-panel-head h3 {
+    font-size: clamp(1.6rem, 6vw, 2.15rem);
   }
 }
 
 @media (max-width: 640px) {
   .app-shell {
-    padding-inline: 12px;
+    padding: 10px 10px 28px;
   }
 
   .hero,
@@ -823,5 +912,79 @@ select:focus-visible {
   .results-review-panel,
   .modal-card {
     padding: 18px;
+  }
+
+  .modal-backdrop {
+    padding: 10px;
+  }
+
+  .modal-card {
+    max-height: calc(100vh - 20px);
+  }
+
+  .question-topbar {
+    gap: 16px;
+  }
+
+  .question-position {
+    margin-bottom: 8px;
+  }
+
+  .question-prompt {
+    margin-top: 22px;
+    font-size: clamp(1.45rem, 8vw, 1.9rem);
+  }
+
+  .review-meta {
+    font-size: 0.84rem;
+  }
+
+  .modal-head {
+    margin-bottom: 22px;
+  }
+
+  .modal-head > div {
+    gap: 16px;
+  }
+
+  .modal-head h2 {
+    font-size: clamp(1.65rem, 8vw, 2.3rem);
+  }
+
+  .modal-body {
+    gap: 20px;
+  }
+
+  .breakdown-section-panel {
+    padding: 16px;
+  }
+
+  .breakdown-panel-head {
+    gap: 8px;
+  }
+
+  .breakdown-panel-head h3 {
+    font-size: clamp(1.55rem, 8vw, 2rem);
+  }
+
+  .breakdown-list {
+    gap: 10px;
+  }
+
+  .breakdown-row {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .breakdown-row-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  .breakdown-row-count {
+    min-width: 34px;
+    height: 34px;
+    padding: 0 8px;
+    font-size: 0.98rem;
   }
 }

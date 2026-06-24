@@ -14,6 +14,7 @@
     bank: "Specific Bank",
     review: "Review Queue",
   };
+  const SW_VERSION = "20260623-13";
 
   const banksById = new Map(loader.banks.map((bank) => [bank.id, bank]));
   const categoriesById = new Map((loader.categories || []).map((category) => [category.id, category]));
@@ -232,6 +233,22 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
+  }
+
+  function formatCategoryText(categoryId, label) {
+    return `${label} (${categoryId})`;
+  }
+
+  function formatSourceText(bankShortLabel, questionNumber) {
+    return `Q${questionNumber}: ${bankShortLabel}`;
+  }
+
+  function formatReviewMeta(bankShortLabel, questionNumber, categoryId, categoryLabel) {
+    return `${formatSourceText(bankShortLabel, questionNumber)}, ${formatCategoryText(categoryId, categoryLabel)}`;
+  }
+
+  function formatQuestionTitle(bankShortLabel, questionNumber) {
+    return `Question ${questionNumber}: ${bankShortLabel}`;
   }
 
   function formatDateTime(timestamp) {
@@ -464,9 +481,9 @@
     dom.officialBreakdown.innerHTML = displayedBreakdown
       .map(
         (category) => `
-          <article class="breakdown-chip">
-            <span class="label">${escapeHtml(category.id)} | ${escapeHtml(category.shortLabel)}</span>
-            <strong>${escapeHtml(category.count)}</strong>
+          <article class="breakdown-row">
+            <span class="breakdown-row-label">${escapeHtml(formatCategoryText(category.id, category.shortLabel))}</span>
+            <strong class="breakdown-row-count">${escapeHtml(category.count)}</strong>
           </article>
         `,
       )
@@ -851,8 +868,8 @@
     }
 
     dom.questionPosition.textContent = `Question ${state.session.currentIndex + 1} of ${state.session.entries.length}`;
-    dom.questionSourceChip.textContent = `${entry.question.bankShortLabel} | Q${entry.question.questionNumber}`;
-    dom.questionCategoryChip.textContent = `${entry.question.categoryId} | ${entry.question.categoryShortLabel}`;
+    dom.questionSourceChip.textContent = formatSourceText(entry.question.bankShortLabel, entry.question.questionNumber);
+    dom.questionCategoryChip.textContent = formatCategoryText(entry.question.categoryId, entry.question.categoryShortLabel);
     dom.questionPrompt.textContent = entry.question.prompt;
 
     dom.flagBtnLabel.textContent = reviewStatus.flagged ? "Flagged" : "Flag";
@@ -1082,7 +1099,7 @@
             <div class="review-card-head">
               <div>
                 <h4>${escapeHtml(entry.prompt)}</h4>
-                <div class="review-meta">${escapeHtml(`${entry.bankShortLabel} | Q${entry.questionNumber} | ${entry.categoryId} ${entry.categoryShortLabel}`)}</div>
+                <div class="review-meta">${escapeHtml(formatReviewMeta(entry.bankShortLabel, entry.questionNumber, entry.categoryId, entry.categoryShortLabel))}</div>
               </div>
               <div class="status-row">${statusPills.join("")}</div>
             </div>
@@ -1129,7 +1146,7 @@
           </article>
           <article class="fact-card">
             <span>Category</span>
-            <strong>${escapeHtml(category ? `${category.id} | ${category.label}` : `${question.categoryId} | ${question.categoryLabel}`)}</strong>
+            <strong>${escapeHtml(category ? formatCategoryText(category.id, category.label) : formatCategoryText(question.categoryId, question.categoryLabel))}</strong>
           </article>
           <article class="fact-card">
             <span>Review Status</span>
@@ -1185,7 +1202,7 @@
 
     openModal({
       eyebrow: "Question Details",
-      title: `${entry.question.bankShortLabel} | Question ${entry.question.questionNumber}`,
+      title: formatQuestionTitle(entry.question.bankShortLabel, entry.question.questionNumber),
       bodyHtml: buildQuestionFacts(entry.question),
     });
   }
@@ -1215,7 +1232,7 @@
             <div class="review-card-head">
               <div>
                 <h4>${escapeHtml(question.prompt)}</h4>
-                <div class="review-meta">${escapeHtml(`${question.bankShortLabel} | Q${question.questionNumber} | ${question.categoryId} ${question.categoryShortLabel}`)}</div>
+                <div class="review-meta">${escapeHtml(formatReviewMeta(question.bankShortLabel, question.questionNumber, question.categoryId, question.categoryShortLabel))}</div>
               </div>
               <div class="status-row">${reasons.join("")}</div>
             </div>
@@ -1283,9 +1300,22 @@
       return;
     }
 
-    navigator.serviceWorker.register("./service-worker.js").catch((error) => {
-      console.warn("Service worker registration failed.", error);
+    let hasReloadedForServiceWorker = false;
+
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (hasReloadedForServiceWorker) {
+        return;
+      }
+      hasReloadedForServiceWorker = true;
+      window.location.reload();
     });
+
+    navigator.serviceWorker
+      .register(`./service-worker.js?v=${SW_VERSION}`)
+      .then((registration) => registration.update())
+      .catch((error) => {
+        console.warn("Service worker registration failed.", error);
+      });
   }
 
   function bindEvents() {

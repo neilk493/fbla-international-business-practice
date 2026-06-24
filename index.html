@@ -9,11 +9,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="FBLA Intl Biz">
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="manifest" href="manifest.webmanifest?v=20260623-13">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="question_bank_compiled.js" defer></script>
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260623-13">
+  <script src="question_bank_compiled.js?v=20260623-13" defer></script>
+  <script src="app.js?v=20260623-13" defer></script>
 </head>
 <body>
   <div class="app-shell">
@@ -126,16 +126,6 @@
                 <div id="reviewReasonBadges" class="chip-row"></div>
               </section>
 
-              <section class="dashboard-block dashboard-block--breakdown">
-                <div class="subsection-head">
-                  <div>
-                    <span class="section-kicker">Official Mix</span>
-                    <h3>Event breakdown</h3>
-                  </div>
-                </div>
-                <div id="officialBreakdown" class="breakdown-grid"></div>
-              </section>
-
               <section class="dashboard-block dashboard-block--recent">
                 <div class="subsection-head">
                   <div>
@@ -146,6 +136,14 @@
                 <div id="recentSessionsList" class="stack-list empty-state"></div>
               </section>
             </div>
+          </section>
+
+          <section class="panel breakdown-section-panel">
+            <div class="breakdown-panel-head">
+              <span class="section-kicker">Official Mix</span>
+              <h3>Event breakdown</h3>
+            </div>
+            <div id="officialBreakdown" class="breakdown-list"></div>
           </section>
         </div>
       </section>
@@ -189,8 +187,8 @@
               <div>
                 <p id="questionPosition" class="question-position">Question 1 of 1</p>
                 <div class="chip-row">
-                  <span id="questionSourceChip" class="chip">OT#1 | Q1</span>
-                  <span id="questionCategoryChip" class="chip muted-chip">A | Basic Concepts</span>
+                  <span id="questionSourceChip" class="chip">Q1: OT#1</span>
+                  <span id="questionCategoryChip" class="chip muted-chip">Basic Concepts (A)</span>
                 </div>
               </div>
               <div class="question-actions">

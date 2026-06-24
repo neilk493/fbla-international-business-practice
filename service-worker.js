@@ -1,11 +1,12 @@
-const CACHE_NAME = "fbla-intl-practice-v4";
+const CACHE_NAME = "fbla-intl-practice-v13";
+const ASSET_VERSION = "20260623-13";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
-  "./question_bank_compiled.js",
-  "./manifest.webmanifest",
+  `./styles.css?v=${ASSET_VERSION}`,
+  `./app.js?v=${ASSET_VERSION}`,
+  `./question_bank_compiled.js?v=${ASSET_VERSION}`,
+  `./manifest.webmanifest?v=${ASSET_VERSION}`,
   "./icons/icon.svg",
 ];
 
