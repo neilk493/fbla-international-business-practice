@@ -14,10 +14,12 @@
     bank: "Specific Bank",
     review: "Review Queue",
   };
-  const SW_VERSION = "20260629-03";
+  const SW_VERSION = "20260629-04";
+  const PROGRESS_EXPORT_SCHEMA_VERSION = 1;
 
   const banksById = new Map(loader.banks.map((bank) => [bank.id, bank]));
   const categoriesById = new Map((loader.categories || []).map((category) => [category.id, category]));
+  const questionIds = new Set(loader.questions.map((question) => question.id));
   const defaultBankId = loader.banks[0] ? loader.banks[0].id : "";
   const officialSimulation = loader.officialSimulation || {
     questionCount: 100,
@@ -66,6 +68,9 @@
     setupNotice: document.getElementById("setupNotice"),
     startSessionBtn: document.getElementById("startSessionBtn"),
     resetProgressBtn: document.getElementById("resetProgressBtn"),
+    exportProgressBtn: document.getElementById("exportProgressBtn"),
+    importProgressBtn: document.getElementById("importProgressBtn"),
+    importProgressInput: document.getElementById("importProgressInput"),
     overviewStats: document.getElementById("overviewStats"),
     corpusProgress: document.getElementById("corpusProgress"),
     reviewQueueSummary: document.getElementById("reviewQueueSummary"),
@@ -119,13 +124,24 @@
     }
   }
 
+  function createInstallId() {
+    if (window.crypto && typeof window.crypto.randomUUID === "function") {
+      return window.crypto.randomUUID();
+    }
+
+    return `install-${Date.now()}-${Math.random().toString(36).slice(2, 11)}`;
+  }
+
   function normalizeStorage(raw) {
     const storage = raw && typeof raw === "object" ? raw : {};
     const preferences = storage.preferences && typeof storage.preferences === "object" ? storage.preferences : {};
     const questionStates = storage.questionStates && typeof storage.questionStates === "object" ? storage.questionStates : {};
     const recentSessions = Array.isArray(storage.recentSessions) ? storage.recentSessions.slice(0, MAX_RECENT_SESSIONS) : [];
+    const importedExportIds = storage.importedExportIds && typeof storage.importedExportIds === "object" ? storage.importedExportIds : {};
+    const importedSourceSnapshots = storage.importedSourceSnapshots && typeof storage.importedSourceSnapshots === "object" ? storage.importedSourceSnapshots : {};
 
     return {
+      installId: typeof storage.installId === "string" && storage.installId ? storage.installId : createInstallId(),
       preferences: {
         ...defaultPreferences,
         ...preferences,
@@ -133,6 +149,8 @@
       },
       questionStates,
       recentSessions,
+      importedExportIds,
+      importedSourceSnapshots,
     };
   }
 
@@ -197,6 +215,88 @@
     };
     state.storage.questionStates[questionId] = created;
     return created;
+  }
+
+  function normalizeQuestionStateSnapshot(rawState = {}) {
+    return {
+      flagged: Boolean(rawState.flagged),
+      reviewMissed: Boolean(rawState.reviewMissed),
+      seenCount: clampNumber(rawState.seenCount, 0, Number.MAX_SAFE_INTEGER),
+      correctCount: clampNumber(rawState.correctCount, 0, Number.MAX_SAFE_INTEGER),
+      incorrectCount: clampNumber(rawState.incorrectCount, 0, Number.MAX_SAFE_INTEGER),
+      unansweredCount: clampNumber(rawState.unansweredCount, 0, Number.MAX_SAFE_INTEGER),
+      lastOutcome: typeof rawState.lastOutcome === "string" ? rawState.lastOutcome : null,
+      lastSeenAt: typeof rawState.lastSeenAt === "string" ? rawState.lastSeenAt : null,
+      lastAnsweredAt: typeof rawState.lastAnsweredAt === "string" ? rawState.lastAnsweredAt : null,
+      lastSessionMode: typeof rawState.lastSessionMode === "string" ? rawState.lastSessionMode : null,
+    };
+  }
+
+  function normalizeRecentSession(rawSession = {}) {
+    const endedAtMs = Number(rawSession.endedAt);
+    return {
+      id: typeof rawSession.id === "string" && rawSession.id ? rawSession.id : `imported-session-${Math.random().toString(36).slice(2, 11)}`,
+      mode: MODE_LABELS[rawSession.mode] ? rawSession.mode : "bank",
+      total: clampNumber(rawSession.total, 0, Number.MAX_SAFE_INTEGER),
+      correctCount: clampNumber(rawSession.correctCount, 0, Number.MAX_SAFE_INTEGER),
+      incorrectCount: clampNumber(rawSession.incorrectCount, 0, Number.MAX_SAFE_INTEGER),
+      unansweredCount: clampNumber(rawSession.unansweredCount, 0, Number.MAX_SAFE_INTEGER),
+      percent: clampNumber(rawSession.percent, 0, 100),
+      endedAt: Number.isFinite(endedAtMs) ? endedAtMs : Date.now(),
+    };
+  }
+
+  function normalizeImportedSourceSnapshot(rawSnapshot = {}) {
+    const rawQuestionStates = rawSnapshot.questionStates && typeof rawSnapshot.questionStates === "object"
+      ? rawSnapshot.questionStates
+      : {};
+    const questionStates = Object.fromEntries(
+      Object.entries(rawQuestionStates)
+        .filter(([questionId]) => questionIds.has(questionId))
+        .map(([questionId, rawState]) => [questionId, normalizeQuestionStateSnapshot(rawState)]),
+    );
+
+    return {
+      questionStates,
+      exportId: typeof rawSnapshot.exportId === "string" ? rawSnapshot.exportId : null,
+      importedAt: typeof rawSnapshot.importedAt === "string" ? rawSnapshot.importedAt : null,
+    };
+  }
+
+  function sanitizeImportedPayload(rawPayload) {
+    if (!rawPayload || typeof rawPayload !== "object") {
+      throw new Error("Imported file is not valid progress data.");
+    }
+
+    const rawQuestionStates = rawPayload.questionStates && typeof rawPayload.questionStates === "object"
+      ? rawPayload.questionStates
+      : {};
+    const questionStates = Object.fromEntries(
+      Object.entries(rawQuestionStates)
+        .filter(([questionId]) => questionIds.has(questionId))
+        .map(([questionId, rawState]) => [questionId, normalizeQuestionStateSnapshot(rawState)]),
+    );
+    const recentSessions = Array.isArray(rawPayload.recentSessions)
+      ? rawPayload.recentSessions.map((session) => normalizeRecentSession(session))
+      : [];
+
+    return {
+      schemaVersion: Number(rawPayload.schemaVersion) || 0,
+      corpusId: typeof rawPayload.corpusId === "string" ? rawPayload.corpusId : "",
+      sourceInstallId: typeof rawPayload.sourceInstallId === "string" ? rawPayload.sourceInstallId : "",
+      exportId: typeof rawPayload.exportId === "string" ? rawPayload.exportId : "",
+      exportedAt: typeof rawPayload.exportedAt === "string" ? rawPayload.exportedAt : null,
+      questionStates,
+      recentSessions,
+    };
+  }
+
+  function compareTimestamps(left, right) {
+    const leftParsed = left ? Date.parse(left) : 0;
+    const rightParsed = right ? Date.parse(right) : 0;
+    const leftMs = Number.isFinite(leftParsed) ? leftParsed : 0;
+    const rightMs = Number.isFinite(rightParsed) ? rightParsed : 0;
+    return leftMs - rightMs;
   }
 
   function getReviewStatus(questionId) {
@@ -1324,6 +1424,257 @@
     });
   }
 
+  function buildProgressExportPayload() {
+    const overview = buildOverview();
+    return {
+      schemaVersion: PROGRESS_EXPORT_SCHEMA_VERSION,
+      appId: "fbla-intl-practice-progress",
+      corpusId: loader.corpusId || "fbla-international-business-practice",
+      sourceInstallId: state.storage.installId,
+      exportId: `${state.storage.installId}-${Date.now()}`,
+      exportedAt: new Date().toISOString(),
+      summary: {
+        totalQuestions: overview.totalQuestions,
+        correctCount: overview.correctCount,
+        reviewCount: overview.reviewCount,
+        unseenCount: overview.unseenCount,
+      },
+      questionStates: state.storage.questionStates,
+      recentSessions: state.storage.recentSessions,
+    };
+  }
+
+  function downloadTextFile(fileName, textContent) {
+    const blob = new Blob([textContent], { type: "text/plain;charset=utf-8" });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  }
+
+  function exportProgress() {
+    const payload = buildProgressExportPayload();
+    const timestamp = payload.exportedAt
+      .replace(/[-:]/g, "")
+      .replace(/\.\d+Z$/, "Z")
+      .replace("T", "-")
+      .replace("Z", "");
+    const fileName = `fbla-intl-progress-${timestamp}.txt`;
+    downloadTextFile(fileName, `${JSON.stringify(payload, null, 2)}\n`);
+    openModal({
+      eyebrow: "Progress Exported",
+      title: "Progress File Ready",
+      bodyHtml: `
+        <p>Your current progress was exported as a text file.</p>
+        <p><strong>What it includes:</strong> question memory, review state, and recent runs.</p>
+        <p><strong>What it does not do:</strong> it does not reset or change the memory already saved on this device.</p>
+      `,
+    });
+  }
+
+  function buildMergedSourceSnapshot(previousSnapshot, importedPayload) {
+    const mergedQuestionStates = {};
+    const questionIdsToMerge = new Set([
+      ...Object.keys(previousSnapshot.questionStates || {}),
+      ...Object.keys(importedPayload.questionStates || {}),
+    ]);
+
+    questionIdsToMerge.forEach((questionId) => {
+      const previousState = previousSnapshot.questionStates[questionId] || normalizeQuestionStateSnapshot();
+      const incomingState = importedPayload.questionStates[questionId] || normalizeQuestionStateSnapshot();
+      const useIncomingAnswered = compareTimestamps(previousState.lastAnsweredAt, incomingState.lastAnsweredAt) < 0;
+      mergedQuestionStates[questionId] = {
+        flagged: previousState.flagged || incomingState.flagged,
+        reviewMissed: previousState.reviewMissed || incomingState.reviewMissed,
+        seenCount: Math.max(previousState.seenCount, incomingState.seenCount),
+        correctCount: Math.max(previousState.correctCount, incomingState.correctCount),
+        incorrectCount: Math.max(previousState.incorrectCount, incomingState.incorrectCount),
+        unansweredCount: Math.max(previousState.unansweredCount, incomingState.unansweredCount),
+        lastOutcome: useIncomingAnswered ? incomingState.lastOutcome : previousState.lastOutcome,
+        lastSeenAt: compareTimestamps(previousState.lastSeenAt, incomingState.lastSeenAt) < 0 ? incomingState.lastSeenAt : previousState.lastSeenAt,
+        lastAnsweredAt: useIncomingAnswered ? incomingState.lastAnsweredAt : previousState.lastAnsweredAt,
+        lastSessionMode: useIncomingAnswered ? incomingState.lastSessionMode : previousState.lastSessionMode,
+      };
+    });
+
+    return {
+      questionStates: mergedQuestionStates,
+      exportId: importedPayload.exportId,
+      importedAt: new Date().toISOString(),
+    };
+  }
+
+  function mergeImportedProgress(importedPayload) {
+    const payload = sanitizeImportedPayload(importedPayload);
+
+    if (payload.schemaVersion !== PROGRESS_EXPORT_SCHEMA_VERSION) {
+      throw new Error("This progress file uses an unsupported version.");
+    }
+
+    if ((payload.corpusId || "") !== (loader.corpusId || "fbla-international-business-practice")) {
+      throw new Error("This progress file is for a different question bank.");
+    }
+
+    if (!payload.sourceInstallId) {
+      throw new Error("This progress file is missing its source install ID.");
+    }
+
+    if (payload.sourceInstallId === state.storage.installId) {
+      throw new Error("This progress file came from this same install, so importing it would risk duplicate memory.");
+    }
+
+    if (!payload.exportId) {
+      throw new Error("This progress file is missing its export ID.");
+    }
+
+    if (state.storage.importedExportIds[payload.exportId]) {
+      return {
+        duplicate: true,
+      };
+    }
+
+    const previousSnapshot = normalizeImportedSourceSnapshot(state.storage.importedSourceSnapshots[payload.sourceInstallId]);
+    const mergeSummary = {
+      newSeen: 0,
+      newCorrect: 0,
+      newIncorrect: 0,
+      newUnanswered: 0,
+      newlyFlagged: 0,
+      newlyReview: 0,
+      mergedQuestions: 0,
+      mergedSessions: 0,
+    };
+
+    Object.entries(payload.questionStates).forEach(([questionId, incomingState]) => {
+      const localState = getQuestionState(questionId);
+      const previousImportedState = previousSnapshot.questionStates[questionId] || normalizeQuestionStateSnapshot();
+      let touched = false;
+
+      const seenDelta = Math.max(0, incomingState.seenCount - previousImportedState.seenCount);
+      const correctDelta = Math.max(0, incomingState.correctCount - previousImportedState.correctCount);
+      const incorrectDelta = Math.max(0, incomingState.incorrectCount - previousImportedState.incorrectCount);
+      const unansweredDelta = Math.max(0, incomingState.unansweredCount - previousImportedState.unansweredCount);
+
+      if (seenDelta > 0) {
+        localState.seenCount += seenDelta;
+        mergeSummary.newSeen += seenDelta;
+        touched = true;
+      }
+
+      if (correctDelta > 0) {
+        localState.correctCount += correctDelta;
+        mergeSummary.newCorrect += correctDelta;
+        touched = true;
+      }
+
+      if (incorrectDelta > 0) {
+        localState.incorrectCount += incorrectDelta;
+        mergeSummary.newIncorrect += incorrectDelta;
+        touched = true;
+      }
+
+      if (unansweredDelta > 0) {
+        localState.unansweredCount += unansweredDelta;
+        mergeSummary.newUnanswered += unansweredDelta;
+        touched = true;
+      }
+
+      if (incomingState.flagged && !previousImportedState.flagged && !localState.flagged) {
+        localState.flagged = true;
+        mergeSummary.newlyFlagged += 1;
+        touched = true;
+      }
+
+      if (incomingState.reviewMissed && !previousImportedState.reviewMissed && !localState.reviewMissed) {
+        localState.reviewMissed = true;
+        mergeSummary.newlyReview += 1;
+        touched = true;
+      }
+
+      if (compareTimestamps(localState.lastSeenAt, incomingState.lastSeenAt) < 0) {
+        localState.lastSeenAt = incomingState.lastSeenAt;
+        touched = true;
+      }
+
+      if (compareTimestamps(localState.lastAnsweredAt, incomingState.lastAnsweredAt) < 0) {
+        localState.lastAnsweredAt = incomingState.lastAnsweredAt;
+        localState.lastOutcome = incomingState.lastOutcome;
+        localState.lastSessionMode = incomingState.lastSessionMode;
+        touched = true;
+      }
+
+      if (touched) {
+        mergeSummary.mergedQuestions += 1;
+      }
+    });
+
+    const existingSessionIds = new Set(state.storage.recentSessions.map((session) => session.id));
+    payload.recentSessions.forEach((session) => {
+      if (existingSessionIds.has(session.id)) {
+        return;
+      }
+      existingSessionIds.add(session.id);
+      state.storage.recentSessions.push(session);
+      mergeSummary.mergedSessions += 1;
+    });
+
+    state.storage.recentSessions = state.storage.recentSessions
+      .sort((left, right) => right.endedAt - left.endedAt)
+      .slice(0, MAX_RECENT_SESSIONS);
+
+    state.storage.importedExportIds[payload.exportId] = new Date().toISOString();
+    state.storage.importedSourceSnapshots[payload.sourceInstallId] = buildMergedSourceSnapshot(previousSnapshot, payload);
+    saveStorage();
+
+    return {
+      duplicate: false,
+      mergeSummary,
+      exportedAt: payload.exportedAt,
+    };
+  }
+
+  async function handleImportProgressFile(event) {
+    const file = event.target.files && event.target.files[0];
+    if (!file) {
+      return;
+    }
+
+    try {
+      const fileText = await file.text();
+      const parsed = JSON.parse(fileText);
+      const result = mergeImportedProgress(parsed);
+
+      if (result.duplicate) {
+        openModal({
+          eyebrow: "Import Skipped",
+          title: "Already Imported",
+          bodyHtml: "<p>This exact export file was already merged on this device, so nothing changed.</p>",
+        });
+      } else {
+        renderSetup();
+        openModal({
+          eyebrow: "Import Complete",
+          title: "Progress Merged Safely",
+          bodyHtml: `
+            <p>The imported progress was merged into your current memory without replacing it.</p>
+            <p><strong>Questions touched:</strong> ${escapeHtml(result.mergeSummary.mergedQuestions)}</p>
+            <p><strong>New correct answers added:</strong> ${escapeHtml(result.mergeSummary.newCorrect)}</p>
+            <p><strong>New review triggers added:</strong> ${escapeHtml(result.mergeSummary.newlyFlagged + result.mergeSummary.newlyReview)}</p>
+            <p><strong>Recent sessions merged:</strong> ${escapeHtml(result.mergeSummary.mergedSessions)}</p>
+          `,
+        });
+      }
+    } catch (error) {
+      window.alert(error instanceof Error ? error.message : "Unable to import that progress file.");
+    } finally {
+      event.target.value = "";
+    }
+  }
+
   function resetProgress() {
     const confirmed = window.confirm("Reset all local flags, review memory, and recent session history?");
     if (!confirmed) {
@@ -1410,6 +1761,9 @@
 
     dom.startSessionBtn.addEventListener("click", () => startSession());
     dom.resetProgressBtn.addEventListener("click", resetProgress);
+    dom.exportProgressBtn.addEventListener("click", exportProgress);
+    dom.importProgressBtn.addEventListener("click", () => dom.importProgressInput.click());
+    dom.importProgressInput.addEventListener("change", handleImportProgressFile);
     dom.openReviewQueueInfoBtn.addEventListener("click", openReviewQueueInfo);
     dom.backToSetupBtn.addEventListener("click", leaveSession);
     dom.submitSessionBtn.addEventListener("click", () => submitSession());

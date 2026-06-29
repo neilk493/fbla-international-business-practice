@@ -369,6 +369,10 @@ select:focus-visible {
   justify-content: flex-end;
 }
 
+.sync-actions {
+  margin-top: 10px;
+}
+
 .primary-button,
 .secondary-button,
 .ghost-button,

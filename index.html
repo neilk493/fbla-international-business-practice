@@ -9,11 +9,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="FBLA Intl Biz">
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="manifest" href="manifest.webmanifest?v=20260629-03">
+  <link rel="manifest" href="manifest.webmanifest?v=20260629-04">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260629-03">
-  <script src="question_bank_compiled.js?v=20260629-03" defer></script>
-  <script src="app.js?v=20260629-03" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260629-04">
+  <script src="question_bank_compiled.js?v=20260629-04" defer></script>
+  <script src="app.js?v=20260629-04" defer></script>
 </head>
 <body>
   <div class="app-shell">
@@ -100,6 +100,11 @@
               <button id="startSessionBtn" class="primary-button" type="button">Start Run</button>
               <button id="resetProgressBtn" class="ghost-button" type="button">Reset Memory</button>
             </div>
+            <div class="action-row sync-actions">
+              <button id="exportProgressBtn" class="ghost-button" type="button">Export Progress</button>
+              <button id="importProgressBtn" class="ghost-button" type="button">Import Progress</button>
+            </div>
+            <input id="importProgressInput" class="hidden" type="file" accept=".txt,.json,application/json,text/plain">
           </section>
 
           <section class="panel dashboard-panel">
