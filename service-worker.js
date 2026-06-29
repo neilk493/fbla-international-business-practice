@@ -1,5 +1,5 @@
-const CACHE_NAME = "fbla-intl-practice-v13";
-const ASSET_VERSION = "20260623-13";
+const CACHE_NAME = "fbla-intl-practice-v18";
+const ASSET_VERSION = "20260629-03";
 const APP_SHELL = [
   "./",
   "./index.html",

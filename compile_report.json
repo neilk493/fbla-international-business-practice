@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T05:55:38.584Z",
+  "generatedAt": "2026-06-24T17:54:53.087Z",
   "officialSimulation": {
     "questionCount": 100,
     "timerMinutes": 50,
@@ -86,10 +86,16 @@
   },
   "summary": {
     "totalBanks": 12,
-    "totalQuestions": 940,
+    "totalQuestions": 929,
+    "excludedQuestionCount": 11,
     "duplicateGroupCount": 27,
     "duplicatedQuestionCount": 55,
     "answerAdjustments": [
+      {
+        "key": "FBLC_OT1_Bank.md#14",
+        "answerLetter": "A",
+        "reason": "WTO headquarters is Geneva, Switzerland; OT2 uses the correct location."
+      },
       {
         "key": "FBLC_OT1_Bank.md#68",
         "answerLetter": "A",
@@ -99,6 +105,332 @@
         "key": "FBLC_OT3_Bank.md#29",
         "answerLetter": "C",
         "reason": "Aligned with the identical OT1 item and the standard sole-proprietorship disadvantage."
+      },
+      {
+        "key": "FBLC_OT4_Bank.md#12",
+        "answerLetter": "B",
+        "reason": "A multinational company does not maintain only a local perspective; choice C can still describe local-market adaptation."
+      }
+    ],
+    "excludedQuestions": [
+      {
+        "id": "fblc-ot1-bank--q36",
+        "bankShortLabel": "OT#1",
+        "bankFileName": "FBLC_OT1_Bank.md",
+        "questionNumber": 36,
+        "prompt": "Which of the following is not an extrinsic motivation?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Promotion"
+          },
+          {
+            "id": "B",
+            "text": "Bonuses"
+          },
+          {
+            "id": "C",
+            "text": "Status"
+          },
+          {
+            "id": "D",
+            "text": "Grades"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "Status",
+        "reason": "Broken item: promotion, bonuses, status, and grades are all extrinsic motivators."
+      },
+      {
+        "id": "fblc-ot2-bank--q6",
+        "bankShortLabel": "OT#2",
+        "bankFileName": "FBLC_OT2_Bank.md",
+        "questionNumber": 6,
+        "prompt": "The world's largest and most widely used network is the:",
+        "choices": [
+          {
+            "id": "A",
+            "text": "internet"
+          },
+          {
+            "id": "B",
+            "text": "World Wide Web"
+          },
+          {
+            "id": "C",
+            "text": "intranet"
+          },
+          {
+            "id": "D",
+            "text": "extranet"
+          }
+        ],
+        "sourceAnswerLetter": "B",
+        "effectiveAnswerLetter": "B",
+        "effectiveCorrectChoiceText": "World Wide Web",
+        "reason": "Ambiguous item: the Internet is the network, but the wording is sloppy enough that many readers will interpret it as the World Wide Web."
+      },
+      {
+        "id": "fblc-ot2-bank--q71",
+        "bankShortLabel": "OT#2",
+        "bankFileName": "FBLC_OT2_Bank.md",
+        "questionNumber": 71,
+        "prompt": "The most popularly spoken language in the world is:",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Spanish"
+          },
+          {
+            "id": "B",
+            "text": "Chinese (Mandarin)"
+          },
+          {
+            "id": "C",
+            "text": "English"
+          },
+          {
+            "id": "D",
+            "text": "Hindi"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "English",
+        "reason": "Ambiguous item: 'most popularly spoken language' does not distinguish native speakers from total speakers."
+      },
+      {
+        "id": "fblc-ot3-bank--q11",
+        "bankShortLabel": "OT#3",
+        "bankFileName": "FBLC_OT3_Bank.md",
+        "questionNumber": 11,
+        "prompt": "Which of the following is not a valid identification document for domestic travel?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "firearms license"
+          },
+          {
+            "id": "B",
+            "text": "birth certificate"
+          },
+          {
+            "id": "C",
+            "text": "hunting license"
+          },
+          {
+            "id": "D",
+            "text": "work permit"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "hunting license",
+        "reason": "Ambiguous item: the travel-ID context is unclear, and multiple answer choices can be invalid depending on the standard used."
+      },
+      {
+        "id": "fblc-ot3-bank--q37",
+        "bankShortLabel": "OT#3",
+        "bankFileName": "FBLC_OT3_Bank.md",
+        "questionNumber": 37,
+        "prompt": "What is generally an important indicator for a successful market?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "cheap labor costs"
+          },
+          {
+            "id": "B",
+            "text": "population size"
+          },
+          {
+            "id": "C",
+            "text": "per capita income"
+          },
+          {
+            "id": "D",
+            "text": "none of the above"
+          }
+        ],
+        "sourceAnswerLetter": "D",
+        "effectiveAnswerLetter": "D",
+        "effectiveCorrectChoiceText": "none of the above",
+        "reason": "Broken item: population size and per capita income can both be important market indicators, so 'none of the above' is not defensible."
+      },
+      {
+        "id": "fblc-ot3-bank--q60",
+        "bankShortLabel": "OT#3",
+        "bankFileName": "FBLC_OT3_Bank.md",
+        "questionNumber": 60,
+        "prompt": "What does the current account not include?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bonds"
+          },
+          {
+            "id": "B",
+            "text": "Remittances"
+          },
+          {
+            "id": "C",
+            "text": "Factor income"
+          },
+          {
+            "id": "D",
+            "text": "Reserves"
+          }
+        ],
+        "sourceAnswerLetter": "A",
+        "effectiveAnswerLetter": "A",
+        "effectiveCorrectChoiceText": "Bonds",
+        "reason": "Ambiguous item: both bonds and reserves are outside the current account."
+      },
+      {
+        "id": "fblc-ot3-bank--q82",
+        "bankShortLabel": "OT#3",
+        "bankFileName": "FBLC_OT3_Bank.md",
+        "questionNumber": 82,
+        "prompt": "Which of the following does not contain 1 land, labor, and capital resource?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Wheat, blender, driver"
+          },
+          {
+            "id": "B",
+            "text": "Saw, wood, architect"
+          },
+          {
+            "id": "C",
+            "text": "Computer, programmer, paper"
+          },
+          {
+            "id": "D",
+            "text": "Water, chef, oven"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "Computer, programmer, paper",
+        "reason": "Broken item: every answer choice includes a land, labor, and capital example."
+      },
+      {
+        "id": "fblc-ot4-bank--q37",
+        "bankShortLabel": "OT#4",
+        "bankFileName": "FBLC_OT4_Bank.md",
+        "questionNumber": 37,
+        "prompt": "The language that has the greatest number of speakers throughout the world is",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Spanish"
+          },
+          {
+            "id": "B",
+            "text": "English"
+          },
+          {
+            "id": "C",
+            "text": "Chinese Mandarin"
+          },
+          {
+            "id": "D",
+            "text": "Hindi"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "Chinese Mandarin",
+        "reason": "Ambiguous item: 'greatest number of speakers throughout the world' does not distinguish native speakers from total speakers."
+      },
+      {
+        "id": "fblc-ot4-bank--q61",
+        "bankShortLabel": "OT#4",
+        "bankFileName": "FBLC_OT4_Bank.md",
+        "questionNumber": 61,
+        "prompt": "The World Trade Organization has more than",
+        "choices": [
+          {
+            "id": "A",
+            "text": "200 members."
+          },
+          {
+            "id": "B",
+            "text": "140 members."
+          },
+          {
+            "id": "C",
+            "text": "240 members."
+          },
+          {
+            "id": "D",
+            "text": "100 members."
+          }
+        ],
+        "sourceAnswerLetter": "B",
+        "effectiveAnswerLetter": "B",
+        "effectiveCorrectChoiceText": "140 members.",
+        "reason": "Outdated and ambiguous WTO membership threshold wording makes multiple choices true."
+      },
+      {
+        "id": "fblc-studyguide3-bank--q11",
+        "bankShortLabel": "Study Guide 3",
+        "bankFileName": "FBLC_StudyGuide3_Bank.md",
+        "questionNumber": 11,
+        "prompt": "The language that has the greatest number of speakers throughout the world is which one of the following?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hindi"
+          },
+          {
+            "id": "B",
+            "text": "Spanish"
+          },
+          {
+            "id": "C",
+            "text": "Chinese Mandarin"
+          },
+          {
+            "id": "D",
+            "text": "English"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "Chinese Mandarin",
+        "reason": "Ambiguous item: 'greatest number of speakers throughout the world' does not distinguish native speakers from total speakers."
+      },
+      {
+        "id": "fblc-studyguide3-bank--q27",
+        "bankShortLabel": "Study Guide 3",
+        "bankFileName": "FBLC_StudyGuide3_Bank.md",
+        "questionNumber": 27,
+        "prompt": "____ protect the rights to intellectual property in the United States but may not be honored in other parts of the world.",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trademarks"
+          },
+          {
+            "id": "B",
+            "text": "Patents"
+          },
+          {
+            "id": "C",
+            "text": "Copyrights"
+          },
+          {
+            "id": "D",
+            "text": "Trade secrets"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "Copyrights",
+        "reason": "Ambiguous item: patents, trademarks, and copyrights all protect intellectual property rights."
       }
     ],
     "categorySummary": [
@@ -107,7 +439,7 @@
         "label": "Basic International Concepts",
         "shortLabel": "Basic Concepts",
         "officialCount": 15,
-        "availableQuestionCount": 135
+        "availableQuestionCount": 134
       },
       {
         "id": "B",
@@ -121,21 +453,21 @@
         "label": "Legal Issues",
         "shortLabel": "Legal",
         "officialCount": 5,
-        "availableQuestionCount": 75
+        "availableQuestionCount": 73
       },
       {
         "id": "D",
         "label": "Communication",
         "shortLabel": "Communication",
         "officialCount": 7,
-        "availableQuestionCount": 50
+        "availableQuestionCount": 47
       },
       {
         "id": "E",
         "label": "Marketing",
         "shortLabel": "Marketing",
         "officialCount": 15,
-        "availableQuestionCount": 125
+        "availableQuestionCount": 124
       },
       {
         "id": "F",
@@ -149,7 +481,7 @@
         "label": "Treaties and Trade Agreements",
         "shortLabel": "Trade Agreements",
         "officialCount": 7,
-        "availableQuestionCount": 102
+        "availableQuestionCount": 101
       },
       {
         "id": "H",
@@ -163,14 +495,14 @@
         "label": "Finance",
         "shortLabel": "Finance",
         "officialCount": 15,
-        "availableQuestionCount": 97
+        "availableQuestionCount": 96
       },
       {
         "id": "J",
         "label": "Human Resource Management",
         "shortLabel": "HR",
         "officialCount": 5,
-        "availableQuestionCount": 76
+        "availableQuestionCount": 75
       },
       {
         "id": "K",
@@ -184,7 +516,7 @@
         "label": "International Travel",
         "shortLabel": "Travel",
         "officialCount": 3,
-        "availableQuestionCount": 22
+        "availableQuestionCount": 21
       },
       {
         "id": "M",
@@ -230,25 +562,25 @@
       "fileName": "FBLC_OT1_Bank.md",
       "shortLabel": "OT#1",
       "categoryLabel": "Objective Test",
-      "questionCount": 100
+      "questionCount": 99
     },
     {
       "fileName": "FBLC_OT2_Bank.md",
       "shortLabel": "OT#2",
       "categoryLabel": "Objective Test",
-      "questionCount": 100
+      "questionCount": 98
     },
     {
       "fileName": "FBLC_OT3_Bank.md",
       "shortLabel": "OT#3",
       "categoryLabel": "Objective Test",
-      "questionCount": 100
+      "questionCount": 96
     },
     {
       "fileName": "FBLC_OT4_Bank.md",
       "shortLabel": "OT#4",
       "categoryLabel": "Objective Test",
-      "questionCount": 100
+      "questionCount": 98
     },
     {
       "fileName": "FBLC_StudyGuide1_Bank.md",
@@ -266,7 +598,7 @@
       "fileName": "FBLC_StudyGuide3_Bank.md",
       "shortLabel": "Study Guide 3",
       "categoryLabel": "Study Guide",
-      "questionCount": 30
+      "questionCount": 28
     }
   ],
   "categoryCountsByBank": [
@@ -546,7 +878,7 @@
         },
         {
           "id": "J",
-          "count": 9
+          "count": 8
         },
         {
           "id": "M",
@@ -572,7 +904,7 @@
         },
         {
           "id": "D",
-          "count": 6
+          "count": 5
         },
         {
           "id": "E",
@@ -592,7 +924,7 @@
         },
         {
           "id": "I",
-          "count": 9
+          "count": 8
         },
         {
           "id": "J",
@@ -618,7 +950,7 @@
       "categories": [
         {
           "id": "A",
-          "count": 24
+          "count": 23
         },
         {
           "id": "B",
@@ -626,7 +958,7 @@
         },
         {
           "id": "C",
-          "count": 9
+          "count": 8
         },
         {
           "id": "D",
@@ -634,7 +966,7 @@
         },
         {
           "id": "E",
-          "count": 14
+          "count": 13
         },
         {
           "id": "F",
@@ -661,10 +993,6 @@
           "count": 4
         },
         {
-          "id": "L",
-          "count": 1
-        },
-        {
           "id": "M",
           "count": 2
         }
@@ -688,7 +1016,7 @@
         },
         {
           "id": "D",
-          "count": 5
+          "count": 4
         },
         {
           "id": "E",
@@ -700,7 +1028,7 @@
         },
         {
           "id": "G",
-          "count": 10
+          "count": 9
         },
         {
           "id": "H",
@@ -838,11 +1166,11 @@
         },
         {
           "id": "C",
-          "count": 5
+          "count": 4
         },
         {
           "id": "D",
-          "count": 2
+          "count": 1
         },
         {
           "id": "E",
@@ -877,6 +1205,14 @@
   ],
   "adjustedQuestions": [
     {
+      "id": "fblc-ot1-bank--q14",
+      "bankShortLabel": "OT#1",
+      "questionNumber": 14,
+      "sourceAnswerLetter": "C",
+      "answerLetter": "A",
+      "reason": "WTO headquarters is Geneva, Switzerland; OT2 uses the correct location."
+    },
+    {
       "id": "fblc-ot1-bank--q68",
       "bankShortLabel": "OT#1",
       "questionNumber": 68,
@@ -891,6 +1227,335 @@
       "sourceAnswerLetter": "B",
       "answerLetter": "C",
       "reason": "Aligned with the identical OT1 item and the standard sole-proprietorship disadvantage."
+    },
+    {
+      "id": "fblc-ot4-bank--q12",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 12,
+      "sourceAnswerLetter": "C",
+      "answerLetter": "B",
+      "reason": "A multinational company does not maintain only a local perspective; choice C can still describe local-market adaptation."
+    }
+  ],
+  "excludedQuestions": [
+    {
+      "id": "fblc-ot1-bank--q36",
+      "bankShortLabel": "OT#1",
+      "bankFileName": "FBLC_OT1_Bank.md",
+      "questionNumber": 36,
+      "prompt": "Which of the following is not an extrinsic motivation?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Promotion"
+        },
+        {
+          "id": "B",
+          "text": "Bonuses"
+        },
+        {
+          "id": "C",
+          "text": "Status"
+        },
+        {
+          "id": "D",
+          "text": "Grades"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "Status",
+      "reason": "Broken item: promotion, bonuses, status, and grades are all extrinsic motivators."
+    },
+    {
+      "id": "fblc-ot2-bank--q6",
+      "bankShortLabel": "OT#2",
+      "bankFileName": "FBLC_OT2_Bank.md",
+      "questionNumber": 6,
+      "prompt": "The world's largest and most widely used network is the:",
+      "choices": [
+        {
+          "id": "A",
+          "text": "internet"
+        },
+        {
+          "id": "B",
+          "text": "World Wide Web"
+        },
+        {
+          "id": "C",
+          "text": "intranet"
+        },
+        {
+          "id": "D",
+          "text": "extranet"
+        }
+      ],
+      "sourceAnswerLetter": "B",
+      "effectiveAnswerLetter": "B",
+      "effectiveCorrectChoiceText": "World Wide Web",
+      "reason": "Ambiguous item: the Internet is the network, but the wording is sloppy enough that many readers will interpret it as the World Wide Web."
+    },
+    {
+      "id": "fblc-ot2-bank--q71",
+      "bankShortLabel": "OT#2",
+      "bankFileName": "FBLC_OT2_Bank.md",
+      "questionNumber": 71,
+      "prompt": "The most popularly spoken language in the world is:",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Spanish"
+        },
+        {
+          "id": "B",
+          "text": "Chinese (Mandarin)"
+        },
+        {
+          "id": "C",
+          "text": "English"
+        },
+        {
+          "id": "D",
+          "text": "Hindi"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "English",
+      "reason": "Ambiguous item: 'most popularly spoken language' does not distinguish native speakers from total speakers."
+    },
+    {
+      "id": "fblc-ot3-bank--q11",
+      "bankShortLabel": "OT#3",
+      "bankFileName": "FBLC_OT3_Bank.md",
+      "questionNumber": 11,
+      "prompt": "Which of the following is not a valid identification document for domestic travel?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "firearms license"
+        },
+        {
+          "id": "B",
+          "text": "birth certificate"
+        },
+        {
+          "id": "C",
+          "text": "hunting license"
+        },
+        {
+          "id": "D",
+          "text": "work permit"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "hunting license",
+      "reason": "Ambiguous item: the travel-ID context is unclear, and multiple answer choices can be invalid depending on the standard used."
+    },
+    {
+      "id": "fblc-ot3-bank--q37",
+      "bankShortLabel": "OT#3",
+      "bankFileName": "FBLC_OT3_Bank.md",
+      "questionNumber": 37,
+      "prompt": "What is generally an important indicator for a successful market?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "cheap labor costs"
+        },
+        {
+          "id": "B",
+          "text": "population size"
+        },
+        {
+          "id": "C",
+          "text": "per capita income"
+        },
+        {
+          "id": "D",
+          "text": "none of the above"
+        }
+      ],
+      "sourceAnswerLetter": "D",
+      "effectiveAnswerLetter": "D",
+      "effectiveCorrectChoiceText": "none of the above",
+      "reason": "Broken item: population size and per capita income can both be important market indicators, so 'none of the above' is not defensible."
+    },
+    {
+      "id": "fblc-ot3-bank--q60",
+      "bankShortLabel": "OT#3",
+      "bankFileName": "FBLC_OT3_Bank.md",
+      "questionNumber": 60,
+      "prompt": "What does the current account not include?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Bonds"
+        },
+        {
+          "id": "B",
+          "text": "Remittances"
+        },
+        {
+          "id": "C",
+          "text": "Factor income"
+        },
+        {
+          "id": "D",
+          "text": "Reserves"
+        }
+      ],
+      "sourceAnswerLetter": "A",
+      "effectiveAnswerLetter": "A",
+      "effectiveCorrectChoiceText": "Bonds",
+      "reason": "Ambiguous item: both bonds and reserves are outside the current account."
+    },
+    {
+      "id": "fblc-ot3-bank--q82",
+      "bankShortLabel": "OT#3",
+      "bankFileName": "FBLC_OT3_Bank.md",
+      "questionNumber": 82,
+      "prompt": "Which of the following does not contain 1 land, labor, and capital resource?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Wheat, blender, driver"
+        },
+        {
+          "id": "B",
+          "text": "Saw, wood, architect"
+        },
+        {
+          "id": "C",
+          "text": "Computer, programmer, paper"
+        },
+        {
+          "id": "D",
+          "text": "Water, chef, oven"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "Computer, programmer, paper",
+      "reason": "Broken item: every answer choice includes a land, labor, and capital example."
+    },
+    {
+      "id": "fblc-ot4-bank--q37",
+      "bankShortLabel": "OT#4",
+      "bankFileName": "FBLC_OT4_Bank.md",
+      "questionNumber": 37,
+      "prompt": "The language that has the greatest number of speakers throughout the world is",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Spanish"
+        },
+        {
+          "id": "B",
+          "text": "English"
+        },
+        {
+          "id": "C",
+          "text": "Chinese Mandarin"
+        },
+        {
+          "id": "D",
+          "text": "Hindi"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "Chinese Mandarin",
+      "reason": "Ambiguous item: 'greatest number of speakers throughout the world' does not distinguish native speakers from total speakers."
+    },
+    {
+      "id": "fblc-ot4-bank--q61",
+      "bankShortLabel": "OT#4",
+      "bankFileName": "FBLC_OT4_Bank.md",
+      "questionNumber": 61,
+      "prompt": "The World Trade Organization has more than",
+      "choices": [
+        {
+          "id": "A",
+          "text": "200 members."
+        },
+        {
+          "id": "B",
+          "text": "140 members."
+        },
+        {
+          "id": "C",
+          "text": "240 members."
+        },
+        {
+          "id": "D",
+          "text": "100 members."
+        }
+      ],
+      "sourceAnswerLetter": "B",
+      "effectiveAnswerLetter": "B",
+      "effectiveCorrectChoiceText": "140 members.",
+      "reason": "Outdated and ambiguous WTO membership threshold wording makes multiple choices true."
+    },
+    {
+      "id": "fblc-studyguide3-bank--q11",
+      "bankShortLabel": "Study Guide 3",
+      "bankFileName": "FBLC_StudyGuide3_Bank.md",
+      "questionNumber": 11,
+      "prompt": "The language that has the greatest number of speakers throughout the world is which one of the following?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Hindi"
+        },
+        {
+          "id": "B",
+          "text": "Spanish"
+        },
+        {
+          "id": "C",
+          "text": "Chinese Mandarin"
+        },
+        {
+          "id": "D",
+          "text": "English"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "Chinese Mandarin",
+      "reason": "Ambiguous item: 'greatest number of speakers throughout the world' does not distinguish native speakers from total speakers."
+    },
+    {
+      "id": "fblc-studyguide3-bank--q27",
+      "bankShortLabel": "Study Guide 3",
+      "bankFileName": "FBLC_StudyGuide3_Bank.md",
+      "questionNumber": 27,
+      "prompt": "____ protect the rights to intellectual property in the United States but may not be honored in other parts of the world.",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Trademarks"
+        },
+        {
+          "id": "B",
+          "text": "Patents"
+        },
+        {
+          "id": "C",
+          "text": "Copyrights"
+        },
+        {
+          "id": "D",
+          "text": "Trade secrets"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "Copyrights",
+      "reason": "Ambiguous item: patents, trademarks, and copyrights all protect intellectual property rights."
     }
   ],
   "lowConfidenceQuestions": [
@@ -2817,68 +3482,6 @@
       ]
     },
     {
-      "id": "fblc-ot3-bank--q37",
-      "bankShortLabel": "OT#3",
-      "questionNumber": 37,
-      "prompt": "What is generally an important indicator for a successful market?",
-      "categoryId": "E",
-      "categoryConfidence": 0,
-      "scoreBreakdown": [
-        {
-          "categoryId": "E",
-          "score": 0.75
-        },
-        {
-          "categoryId": "G",
-          "score": 0.75
-        },
-        {
-          "categoryId": "I",
-          "score": 0.75
-        },
-        {
-          "categoryId": "C",
-          "score": 0.08
-        },
-        {
-          "categoryId": "J",
-          "score": 0.08
-        },
-        {
-          "categoryId": "A",
-          "score": 0
-        },
-        {
-          "categoryId": "B",
-          "score": 0
-        },
-        {
-          "categoryId": "D",
-          "score": 0
-        },
-        {
-          "categoryId": "F",
-          "score": 0
-        },
-        {
-          "categoryId": "H",
-          "score": 0
-        },
-        {
-          "categoryId": "K",
-          "score": 0
-        },
-        {
-          "categoryId": "L",
-          "score": 0
-        },
-        {
-          "categoryId": "M",
-          "score": 0
-        }
-      ]
-    },
-    {
       "id": "fblc-ot3-bank--q57",
       "bankShortLabel": "OT#3",
       "questionNumber": 57,
@@ -2920,68 +3523,6 @@
         },
         {
           "categoryId": "H",
-          "score": 0
-        },
-        {
-          "categoryId": "J",
-          "score": 0
-        },
-        {
-          "categoryId": "K",
-          "score": 0
-        },
-        {
-          "categoryId": "L",
-          "score": 0
-        },
-        {
-          "categoryId": "M",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "id": "fblc-ot3-bank--q60",
-      "bankShortLabel": "OT#3",
-      "questionNumber": 60,
-      "prompt": "What does the current account not include?",
-      "categoryId": "A",
-      "categoryConfidence": 0,
-      "scoreBreakdown": [
-        {
-          "categoryId": "A",
-          "score": 0
-        },
-        {
-          "categoryId": "B",
-          "score": 0
-        },
-        {
-          "categoryId": "C",
-          "score": 0
-        },
-        {
-          "categoryId": "D",
-          "score": 0
-        },
-        {
-          "categoryId": "E",
-          "score": 0
-        },
-        {
-          "categoryId": "F",
-          "score": 0
-        },
-        {
-          "categoryId": "G",
-          "score": 0
-        },
-        {
-          "categoryId": "H",
-          "score": 0
-        },
-        {
-          "categoryId": "I",
           "score": 0
         },
         {
@@ -3172,68 +3713,6 @@
         },
         {
           "categoryId": "J",
-          "score": 0
-        },
-        {
-          "categoryId": "K",
-          "score": 0
-        },
-        {
-          "categoryId": "L",
-          "score": 0
-        },
-        {
-          "categoryId": "M",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "id": "fblc-ot3-bank--q82",
-      "bankShortLabel": "OT#3",
-      "questionNumber": 82,
-      "prompt": "Which of the following does not contain 1 land, labor, and capital resource?",
-      "categoryId": "C",
-      "categoryConfidence": 0,
-      "scoreBreakdown": [
-        {
-          "categoryId": "C",
-          "score": 0.75
-        },
-        {
-          "categoryId": "I",
-          "score": 0.75
-        },
-        {
-          "categoryId": "J",
-          "score": 0.75
-        },
-        {
-          "categoryId": "A",
-          "score": 0
-        },
-        {
-          "categoryId": "B",
-          "score": 0
-        },
-        {
-          "categoryId": "D",
-          "score": 0
-        },
-        {
-          "categoryId": "E",
-          "score": 0
-        },
-        {
-          "categoryId": "F",
-          "score": 0
-        },
-        {
-          "categoryId": "G",
-          "score": 0
-        },
-        {
-          "categoryId": "H",
           "score": 0
         },
         {
@@ -6351,6 +6830,68 @@
       ]
     },
     {
+      "id": "fblc-ot4-bank--q12",
+      "bankShortLabel": "OT#4",
+      "questionNumber": 12,
+      "prompt": "Of the following statements, the one that does not describe a multinational company is that",
+      "categoryId": "B",
+      "categoryConfidence": 0.14,
+      "scoreBreakdown": [
+        {
+          "categoryId": "B",
+          "score": 0.75
+        },
+        {
+          "categoryId": "E",
+          "score": 0.61
+        },
+        {
+          "categoryId": "G",
+          "score": 0.08
+        },
+        {
+          "categoryId": "I",
+          "score": 0.08
+        },
+        {
+          "categoryId": "A",
+          "score": 0
+        },
+        {
+          "categoryId": "C",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
       "id": "fblc-def-competency-specific-test-bank--q58",
       "bankShortLabel": "DEF Competency",
       "questionNumber": 58,
@@ -6842,68 +7383,6 @@
         },
         {
           "categoryId": "I",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "id": "fblc-ot4-bank--q12",
-      "bankShortLabel": "OT#4",
-      "questionNumber": 12,
-      "prompt": "Of the following statements, the one that does not describe a multinational company is that",
-      "categoryId": "B",
-      "categoryConfidence": 0.22,
-      "scoreBreakdown": [
-        {
-          "categoryId": "B",
-          "score": 0.75
-        },
-        {
-          "categoryId": "E",
-          "score": 0.53
-        },
-        {
-          "categoryId": "G",
-          "score": 0.45
-        },
-        {
-          "categoryId": "I",
-          "score": 0.45
-        },
-        {
-          "categoryId": "A",
-          "score": 0
-        },
-        {
-          "categoryId": "C",
-          "score": 0
-        },
-        {
-          "categoryId": "D",
-          "score": 0
-        },
-        {
-          "categoryId": "F",
-          "score": 0
-        },
-        {
-          "categoryId": "H",
-          "score": 0
-        },
-        {
-          "categoryId": "J",
-          "score": 0
-        },
-        {
-          "categoryId": "K",
-          "score": 0
-        },
-        {
-          "categoryId": "L",
-          "score": 0
-        },
-        {
-          "categoryId": "M",
           "score": 0
         }
       ]
@@ -8326,6 +8805,192 @@
         },
         {
           "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-ghi-competency-specific-test-bank--q36",
+      "bankShortLabel": "GHI Competency",
+      "questionNumber": 36,
+      "prompt": "A global recession would most directly affect:",
+      "categoryId": "I",
+      "categoryConfidence": 0.44,
+      "scoreBreakdown": [
+        {
+          "categoryId": "I",
+          "score": 1.8
+        },
+        {
+          "categoryId": "E",
+          "score": 1.36
+        },
+        {
+          "categoryId": "A",
+          "score": 0.45
+        },
+        {
+          "categoryId": "G",
+          "score": 0.45
+        },
+        {
+          "categoryId": "H",
+          "score": 0.45
+        },
+        {
+          "categoryId": "C",
+          "score": 0.08
+        },
+        {
+          "categoryId": "B",
+          "score": 0
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-abc-competency-specific-test-bank--q22",
+      "bankShortLabel": "ABC Competency",
+      "questionNumber": 22,
+      "prompt": "Entrepreneurs in international markets are important because they:",
+      "categoryId": "A",
+      "categoryConfidence": 0.45,
+      "scoreBreakdown": [
+        {
+          "categoryId": "A",
+          "score": 1.73
+        },
+        {
+          "categoryId": "B",
+          "score": 1.28
+        },
+        {
+          "categoryId": "I",
+          "score": 0.75
+        },
+        {
+          "categoryId": "C",
+          "score": 0.53
+        },
+        {
+          "categoryId": "F",
+          "score": 0.45
+        },
+        {
+          "categoryId": "D",
+          "score": 0.08
+        },
+        {
+          "categoryId": "E",
+          "score": 0
+        },
+        {
+          "categoryId": "G",
+          "score": 0
+        },
+        {
+          "categoryId": "H",
+          "score": 0
+        },
+        {
+          "categoryId": "J",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
+          "score": 0
+        },
+        {
+          "categoryId": "L",
+          "score": 0
+        },
+        {
+          "categoryId": "M",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fblc-abc-competency-specific-test-bank--q57",
+      "bankShortLabel": "ABC Competency",
+      "questionNumber": 57,
+      "prompt": "A multinational company failing to comply with its labour laws abroad risks:",
+      "categoryId": "C",
+      "categoryConfidence": 0.45,
+      "scoreBreakdown": [
+        {
+          "categoryId": "C",
+          "score": 1.73
+        },
+        {
+          "categoryId": "B",
+          "score": 1.28
+        },
+        {
+          "categoryId": "G",
+          "score": 0.96
+        },
+        {
+          "categoryId": "J",
+          "score": 0.75
+        },
+        {
+          "categoryId": "L",
+          "score": 0.75
+        },
+        {
+          "categoryId": "A",
+          "score": 0.53
+        },
+        {
+          "categoryId": "E",
+          "score": 0.08
+        },
+        {
+          "categoryId": "H",
+          "score": 0.08
+        },
+        {
+          "categoryId": "I",
+          "score": 0.08
+        },
+        {
+          "categoryId": "D",
+          "score": 0
+        },
+        {
+          "categoryId": "F",
+          "score": 0
+        },
+        {
+          "categoryId": "K",
           "score": 0
         },
         {

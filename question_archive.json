@@ -1,0 +1,325 @@
+{
+  "generatedAt": "2026-06-24T17:54:53.087Z",
+  "excludedQuestionCount": 11,
+  "excludedQuestions": [
+    {
+      "id": "fblc-ot1-bank--q36",
+      "bankShortLabel": "OT#1",
+      "bankFileName": "FBLC_OT1_Bank.md",
+      "questionNumber": 36,
+      "prompt": "Which of the following is not an extrinsic motivation?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Promotion"
+        },
+        {
+          "id": "B",
+          "text": "Bonuses"
+        },
+        {
+          "id": "C",
+          "text": "Status"
+        },
+        {
+          "id": "D",
+          "text": "Grades"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "Status",
+      "reason": "Broken item: promotion, bonuses, status, and grades are all extrinsic motivators."
+    },
+    {
+      "id": "fblc-ot2-bank--q6",
+      "bankShortLabel": "OT#2",
+      "bankFileName": "FBLC_OT2_Bank.md",
+      "questionNumber": 6,
+      "prompt": "The world's largest and most widely used network is the:",
+      "choices": [
+        {
+          "id": "A",
+          "text": "internet"
+        },
+        {
+          "id": "B",
+          "text": "World Wide Web"
+        },
+        {
+          "id": "C",
+          "text": "intranet"
+        },
+        {
+          "id": "D",
+          "text": "extranet"
+        }
+      ],
+      "sourceAnswerLetter": "B",
+      "effectiveAnswerLetter": "B",
+      "effectiveCorrectChoiceText": "World Wide Web",
+      "reason": "Ambiguous item: the Internet is the network, but the wording is sloppy enough that many readers will interpret it as the World Wide Web."
+    },
+    {
+      "id": "fblc-ot2-bank--q71",
+      "bankShortLabel": "OT#2",
+      "bankFileName": "FBLC_OT2_Bank.md",
+      "questionNumber": 71,
+      "prompt": "The most popularly spoken language in the world is:",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Spanish"
+        },
+        {
+          "id": "B",
+          "text": "Chinese (Mandarin)"
+        },
+        {
+          "id": "C",
+          "text": "English"
+        },
+        {
+          "id": "D",
+          "text": "Hindi"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "English",
+      "reason": "Ambiguous item: 'most popularly spoken language' does not distinguish native speakers from total speakers."
+    },
+    {
+      "id": "fblc-ot3-bank--q11",
+      "bankShortLabel": "OT#3",
+      "bankFileName": "FBLC_OT3_Bank.md",
+      "questionNumber": 11,
+      "prompt": "Which of the following is not a valid identification document for domestic travel?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "firearms license"
+        },
+        {
+          "id": "B",
+          "text": "birth certificate"
+        },
+        {
+          "id": "C",
+          "text": "hunting license"
+        },
+        {
+          "id": "D",
+          "text": "work permit"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "hunting license",
+      "reason": "Ambiguous item: the travel-ID context is unclear, and multiple answer choices can be invalid depending on the standard used."
+    },
+    {
+      "id": "fblc-ot3-bank--q37",
+      "bankShortLabel": "OT#3",
+      "bankFileName": "FBLC_OT3_Bank.md",
+      "questionNumber": 37,
+      "prompt": "What is generally an important indicator for a successful market?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "cheap labor costs"
+        },
+        {
+          "id": "B",
+          "text": "population size"
+        },
+        {
+          "id": "C",
+          "text": "per capita income"
+        },
+        {
+          "id": "D",
+          "text": "none of the above"
+        }
+      ],
+      "sourceAnswerLetter": "D",
+      "effectiveAnswerLetter": "D",
+      "effectiveCorrectChoiceText": "none of the above",
+      "reason": "Broken item: population size and per capita income can both be important market indicators, so 'none of the above' is not defensible."
+    },
+    {
+      "id": "fblc-ot3-bank--q60",
+      "bankShortLabel": "OT#3",
+      "bankFileName": "FBLC_OT3_Bank.md",
+      "questionNumber": 60,
+      "prompt": "What does the current account not include?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Bonds"
+        },
+        {
+          "id": "B",
+          "text": "Remittances"
+        },
+        {
+          "id": "C",
+          "text": "Factor income"
+        },
+        {
+          "id": "D",
+          "text": "Reserves"
+        }
+      ],
+      "sourceAnswerLetter": "A",
+      "effectiveAnswerLetter": "A",
+      "effectiveCorrectChoiceText": "Bonds",
+      "reason": "Ambiguous item: both bonds and reserves are outside the current account."
+    },
+    {
+      "id": "fblc-ot3-bank--q82",
+      "bankShortLabel": "OT#3",
+      "bankFileName": "FBLC_OT3_Bank.md",
+      "questionNumber": 82,
+      "prompt": "Which of the following does not contain 1 land, labor, and capital resource?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Wheat, blender, driver"
+        },
+        {
+          "id": "B",
+          "text": "Saw, wood, architect"
+        },
+        {
+          "id": "C",
+          "text": "Computer, programmer, paper"
+        },
+        {
+          "id": "D",
+          "text": "Water, chef, oven"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "Computer, programmer, paper",
+      "reason": "Broken item: every answer choice includes a land, labor, and capital example."
+    },
+    {
+      "id": "fblc-ot4-bank--q37",
+      "bankShortLabel": "OT#4",
+      "bankFileName": "FBLC_OT4_Bank.md",
+      "questionNumber": 37,
+      "prompt": "The language that has the greatest number of speakers throughout the world is",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Spanish"
+        },
+        {
+          "id": "B",
+          "text": "English"
+        },
+        {
+          "id": "C",
+          "text": "Chinese Mandarin"
+        },
+        {
+          "id": "D",
+          "text": "Hindi"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "Chinese Mandarin",
+      "reason": "Ambiguous item: 'greatest number of speakers throughout the world' does not distinguish native speakers from total speakers."
+    },
+    {
+      "id": "fblc-ot4-bank--q61",
+      "bankShortLabel": "OT#4",
+      "bankFileName": "FBLC_OT4_Bank.md",
+      "questionNumber": 61,
+      "prompt": "The World Trade Organization has more than",
+      "choices": [
+        {
+          "id": "A",
+          "text": "200 members."
+        },
+        {
+          "id": "B",
+          "text": "140 members."
+        },
+        {
+          "id": "C",
+          "text": "240 members."
+        },
+        {
+          "id": "D",
+          "text": "100 members."
+        }
+      ],
+      "sourceAnswerLetter": "B",
+      "effectiveAnswerLetter": "B",
+      "effectiveCorrectChoiceText": "140 members.",
+      "reason": "Outdated and ambiguous WTO membership threshold wording makes multiple choices true."
+    },
+    {
+      "id": "fblc-studyguide3-bank--q11",
+      "bankShortLabel": "Study Guide 3",
+      "bankFileName": "FBLC_StudyGuide3_Bank.md",
+      "questionNumber": 11,
+      "prompt": "The language that has the greatest number of speakers throughout the world is which one of the following?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Hindi"
+        },
+        {
+          "id": "B",
+          "text": "Spanish"
+        },
+        {
+          "id": "C",
+          "text": "Chinese Mandarin"
+        },
+        {
+          "id": "D",
+          "text": "English"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "Chinese Mandarin",
+      "reason": "Ambiguous item: 'greatest number of speakers throughout the world' does not distinguish native speakers from total speakers."
+    },
+    {
+      "id": "fblc-studyguide3-bank--q27",
+      "bankShortLabel": "Study Guide 3",
+      "bankFileName": "FBLC_StudyGuide3_Bank.md",
+      "questionNumber": 27,
+      "prompt": "____ protect the rights to intellectual property in the United States but may not be honored in other parts of the world.",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Trademarks"
+        },
+        {
+          "id": "B",
+          "text": "Patents"
+        },
+        {
+          "id": "C",
+          "text": "Copyrights"
+        },
+        {
+          "id": "D",
+          "text": "Trade secrets"
+        }
+      ],
+      "sourceAnswerLetter": "C",
+      "effectiveAnswerLetter": "C",
+      "effectiveCorrectChoiceText": "Copyrights",
+      "reason": "Ambiguous item: patents, trademarks, and copyrights all protect intellectual property rights."
+    }
+  ]
+}

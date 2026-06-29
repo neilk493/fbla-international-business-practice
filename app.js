@@ -14,7 +14,7 @@
     bank: "Specific Bank",
     review: "Review Queue",
   };
-  const SW_VERSION = "20260623-13";
+  const SW_VERSION = "20260629-03";
 
   const banksById = new Map(loader.banks.map((bank) => [bank.id, bank]));
   const categoriesById = new Map((loader.categories || []).map((category) => [category.id, category]));
@@ -27,11 +27,6 @@
   const OFFICIAL_QUESTION_TOTAL = officialSimulation.questionCount
     || officialSimulation.categoryCounts.reduce((sum, category) => sum + category.count, 0)
     || 100;
-  const CATEGORY_AVAILABILITY_BY_ID = new Map(
-    (loader.summary?.categorySummary || [])
-      .map((category) => [category.id, category.availableQuestionCount]),
-  );
-  const MAX_SIMULATION_QUESTION_COUNT = getMaxSimulationQuestionCount();
 
   const defaultPreferences = {
     mode: "simulation",
@@ -72,6 +67,7 @@
     startSessionBtn: document.getElementById("startSessionBtn"),
     resetProgressBtn: document.getElementById("resetProgressBtn"),
     overviewStats: document.getElementById("overviewStats"),
+    corpusProgress: document.getElementById("corpusProgress"),
     reviewQueueSummary: document.getElementById("reviewQueueSummary"),
     reviewReasonBadges: document.getElementById("reviewReasonBadges"),
     openReviewQueueInfoBtn: document.getElementById("openReviewQueueInfoBtn"),
@@ -173,26 +169,12 @@
     return Math.max(min, Math.min(max, parsed));
   }
 
-  function getCategoryAvailability(categoryId) {
-    if (CATEGORY_AVAILABILITY_BY_ID.has(categoryId)) {
-      return CATEGORY_AVAILABILITY_BY_ID.get(categoryId);
-    }
-
-    const count = loader.questions.filter((question) => question.categoryId === categoryId).length;
-    CATEGORY_AVAILABILITY_BY_ID.set(categoryId, count);
-    return count;
-  }
-
-  function getMaxSimulationQuestionCount() {
-    const weightedCaps = officialSimulation.categoryCounts
-      .filter((category) => category.count > 0)
-      .map((category) => Math.floor((getCategoryAvailability(category.id) * OFFICIAL_QUESTION_TOTAL) / category.count));
-
-    if (!weightedCaps.length) {
-      return loader.questions.length;
-    }
-
-    return Math.max(1, Math.min(loader.questions.length, ...weightedCaps));
+  function buildReviewStatus(questionState) {
+    return {
+      flagged: Boolean(questionState.flagged),
+      reviewMissed: Boolean(questionState.reviewMissed),
+      isReview: Boolean(questionState.flagged || questionState.reviewMissed),
+    };
   }
 
   function getQuestionState(questionId) {
@@ -218,12 +200,60 @@
   }
 
   function getReviewStatus(questionId) {
+    return buildReviewStatus(getQuestionState(questionId));
+  }
+
+  function isQuestionCleared(questionId) {
     const questionState = getQuestionState(questionId);
-    return {
-      flagged: Boolean(questionState.flagged),
-      reviewMissed: Boolean(questionState.reviewMissed),
-      isReview: Boolean(questionState.flagged || questionState.reviewMissed),
-    };
+    return questionState.correctCount > 0 && !questionState.flagged && !questionState.reviewMissed;
+  }
+
+  function getRegularEligibleQuestions() {
+    return loader.questions.filter((question) => !isQuestionCleared(question.id));
+  }
+
+  function getRegularCategoryAvailability(categoryId) {
+    return loader.questions.filter((question) => question.categoryId === categoryId && !isQuestionCleared(question.id)).length;
+  }
+
+  function getRegularBankAvailability(bankId) {
+    return loader.questions.filter((question) => question.bankId === bankId && !isQuestionCleared(question.id)).length;
+  }
+
+  function getMaxSimulationQuestionCount() {
+    const weightedCaps = officialSimulation.categoryCounts
+      .filter((category) => category.count > 0)
+      .map((category) => Math.floor((getRegularCategoryAvailability(category.id) * OFFICIAL_QUESTION_TOTAL) / category.count));
+
+    if (!weightedCaps.length) {
+      return getRegularEligibleQuestions().length;
+    }
+
+    return Math.max(0, Math.min(getRegularEligibleQuestions().length, ...weightedCaps));
+  }
+
+  function getAvailableCountForSettings(settings) {
+    if (settings.mode === "simulation") {
+      return getMaxSimulationQuestionCount();
+    }
+
+    if (settings.mode === "bank") {
+      return getRegularBankAvailability(settings.bankId);
+    }
+
+    return getReviewQuestions().length;
+  }
+
+  function hasQuestionHistory(questionState) {
+    return Boolean(
+      questionState.seenCount
+      || questionState.correctCount
+      || questionState.incorrectCount
+      || questionState.unansweredCount
+      || questionState.lastOutcome
+      || questionState.lastSeenAt
+      || questionState.lastAnsweredAt,
+    );
   }
 
   function escapeHtml(text) {
@@ -316,7 +346,7 @@
       questionCount: clampNumber(
         merged.questionCount,
         1,
-        mode === "simulation" ? MAX_SIMULATION_QUESTION_COUNT : 200,
+        mode === "simulation" ? Math.max(1, getMaxSimulationQuestionCount()) : 200,
       ),
       timerEnabled: Boolean(merged.timerEnabled),
       timerMinutes: clampNumber(merged.timerMinutes, 1, 180),
@@ -372,14 +402,20 @@
       reviewCount: 0,
       flaggedCount: 0,
       missedCount: 0,
+      correctCount: 0,
+      unseenCount: 0,
     };
 
     loader.questions.forEach((question) => {
-      const reviewStatus = getReviewStatus(question.id);
+      const questionState = getQuestionState(question.id);
+      const reviewStatus = buildReviewStatus(questionState);
+      if (questionState.correctCount > 0 && !reviewStatus.isReview) summary.correctCount += 1;
       if (reviewStatus.isReview) summary.reviewCount += 1;
       if (reviewStatus.flagged) summary.flaggedCount += 1;
       if (reviewStatus.reviewMissed) summary.missedCount += 1;
     });
+
+    summary.unseenCount = Math.max(0, summary.totalQuestions - summary.correctCount - summary.reviewCount);
 
     return summary;
   }
@@ -405,11 +441,11 @@
   }
 
   function buildSimulationCategoryTargets(totalCount) {
-    const requestedCount = clampNumber(totalCount, 1, MAX_SIMULATION_QUESTION_COUNT);
+    const requestedCount = clampNumber(totalCount, 1, Math.max(1, getMaxSimulationQuestionCount()));
     const targets = officialSimulation.categoryCounts.map((category, index) => ({
       ...category,
       index,
-      available: getCategoryAvailability(category.id),
+      available: getRegularCategoryAvailability(category.id),
       exact: (category.count / OFFICIAL_QUESTION_TOTAL) * requestedCount,
       count: 0,
     }));
@@ -447,9 +483,9 @@
   function renderOverview(settings = getEffectiveSettings(state.storage.preferences)) {
     const overview = buildOverview();
     const stats = [
-      { label: "Banks", value: overview.totalBanks },
-      { label: "Review", value: overview.reviewCount },
-      { label: "Flagged", value: overview.flaggedCount },
+      { label: "Correct", value: overview.correctCount },
+      { label: "Under Review", value: overview.reviewCount },
+      { label: "Unseen", value: overview.unseenCount },
     ];
 
     dom.overviewStats.innerHTML = stats
@@ -462,6 +498,36 @@
         `,
       )
       .join("");
+
+    const correctPercent = overview.totalQuestions ? Math.round((overview.correctCount / overview.totalQuestions) * 100) : 0;
+    const reviewPercent = overview.totalQuestions ? Math.round((overview.reviewCount / overview.totalQuestions) * 100) : 0;
+    const unseenPercent = Math.max(0, 100 - correctPercent - reviewPercent);
+    dom.corpusProgress.innerHTML = `
+      <div class="progress-summary">
+        <div class="progress-summary-copy">
+          <span class="progress-kicker">All Active Questions</span>
+          <h4>${escapeHtml(`${overview.correctCount} of ${overview.totalQuestions} fully covered`)}</h4>
+          <p class="muted-text">Fully covered means answered correctly at least once and not currently flagged or missed.</p>
+        </div>
+        <div class="progress-badges">
+          <span class="chip">Correct: ${escapeHtml(overview.correctCount)}</span>
+          <span class="chip">Under Review: ${escapeHtml(overview.reviewCount)}</span>
+          <span class="chip">Unseen: ${escapeHtml(overview.unseenCount)}</span>
+        </div>
+      </div>
+      <div class="progress-meter">
+        <div class="progress-meter-head">
+          <span>Progress Across The 929 Active Questions</span>
+          <strong>${escapeHtml(`${overview.correctCount} correct, ${overview.reviewCount} review, ${overview.unseenCount} unseen`)}</strong>
+        </div>
+        <div class="progress-track progress-track--stacked" role="progressbar" aria-label="Overall question progress" aria-valuemin="0" aria-valuemax="${escapeHtml(overview.totalQuestions)}" aria-valuenow="${escapeHtml(overview.correctCount)}">
+          <span class="progress-fill progress-fill--cleared" style="width: ${escapeHtml(correctPercent)}%"></span>
+          <span class="progress-fill progress-fill--review" style="width: ${escapeHtml(reviewPercent)}%"></span>
+          <span class="progress-fill progress-fill--unseen" style="width: ${escapeHtml(unseenPercent)}%"></span>
+        </div>
+        <p class="progress-caption">${escapeHtml(`${correctPercent}% fully covered, ${reviewPercent}% currently in review, ${unseenPercent}% still untouched.`)}</p>
+      </div>
+    `;
 
     const reviewSummary = [
       `${overview.reviewCount} question(s) currently in the queue.`,
@@ -516,13 +582,18 @@
   function buildModeNote(settings) {
     if (settings.mode === "simulation") {
       const timerText = settings.timerEnabled ? `${settings.timerMinutes} minute timer` : "untimed mode";
+      const availableCount = getMaxSimulationQuestionCount();
+      if (availableCount === 0) {
+        return "Simulation uses the official A-M mix, but every currently eligible simulation question has already been cleared. Flag questions, miss questions, or reset memory if you want them to cycle back in.";
+      }
       return `Simulation starts from the official ${OFFICIAL_QUESTION_TOTAL}-question / ${officialSimulation.timerMinutes}-minute event. You can run ${settings.questionCount} question(s) in ${timerText}, and the A-M mix stays as close to the official percentages as possible.`;
     }
 
     if (settings.mode === "bank") {
       const bank = banksById.get(settings.bankId);
-      const count = loader.questions.filter((question) => question.bankId === settings.bankId).length;
-      return `Specific Bank mode keeps things simple: one bank, your chosen question count, and the same long-term flag/review memory. ${bank ? bank.shortLabel : "This bank"} currently has ${count} question(s).`;
+      const activeCount = getRegularBankAvailability(settings.bankId);
+      const totalCount = loader.questions.filter((question) => question.bankId === settings.bankId).length;
+      return `Specific Bank mode keeps things simple: one bank, your chosen question count, and the same long-term flag/review memory. ${bank ? bank.shortLabel : "This bank"} currently has ${activeCount} active question(s) out of ${totalCount} total.`;
     }
 
     return "Review Queue mode only pulls questions you flagged or answered incorrectly. Answer them correctly and unflag them to clean the queue out.";
@@ -566,13 +637,7 @@
     state.storage.preferences = settings;
     saveStorage();
 
-    const reviewQuestions = getReviewQuestions();
-    const bankPoolSize = loader.questions.filter((question) => question.bankId === settings.bankId).length;
-    const availableCount = settings.mode === "simulation"
-      ? MAX_SIMULATION_QUESTION_COUNT
-      : settings.mode === "bank"
-        ? bankPoolSize
-        : reviewQuestions.length;
+    const availableCount = getAvailableCountForSettings(settings);
 
     dom.modeNote.textContent = buildModeNote(settings);
     dom.bankField.classList.toggle("hidden", settings.mode !== "bank");
@@ -589,10 +654,13 @@
       : settings.mode === "bank"
         ? "Start Bank Drill"
         : "Start Review Run";
+    dom.startSessionBtn.disabled = availableCount === 0;
 
     let notice = "";
     if (settings.mode === "review" && availableCount === 0) {
       notice = "Your review queue is empty right now. Flag a question or answer one incorrectly to save it here.";
+    } else if (settings.mode !== "review" && availableCount === 0) {
+      notice = "You have already cleared every currently available question for this mode. Flag questions, miss questions, switch banks, or reset memory to recycle them.";
     } else if (settings.questionCount > availableCount) {
       notice = `Only ${availableCount} question(s) are currently available for this mode. The run will automatically use that amount.`;
     }
@@ -608,7 +676,7 @@
     const selected = [];
 
     categoryTargets.forEach((categoryTarget) => {
-      const pool = loader.questions.filter((question) => question.categoryId === categoryTarget.id);
+      const pool = loader.questions.filter((question) => question.categoryId === categoryTarget.id && !isQuestionCleared(question.id));
       const strong = shuffleArray(pool.filter((question) => question.categoryConfidence >= OFFICIAL_SIMULATION_MIN_CONFIDENCE));
       const medium = shuffleArray(pool.filter((question) => question.categoryConfidence < OFFICIAL_SIMULATION_MIN_CONFIDENCE && question.categoryConfidence >= 1));
       const light = shuffleArray(pool.filter((question) => question.categoryConfidence < 1));
@@ -626,7 +694,7 @@
 
   function getRequestedCount(settings, poolLength) {
     if (settings.mode === "simulation") {
-      return Math.max(1, Math.min(settings.questionCount, MAX_SIMULATION_QUESTION_COUNT));
+      return Math.max(1, Math.min(settings.questionCount, Math.max(1, getMaxSimulationQuestionCount())));
     }
     return Math.max(1, Math.min(settings.questionCount, poolLength));
   }
@@ -637,7 +705,7 @@
     }
 
     if (settings.mode === "bank") {
-      return loader.questions.filter((question) => question.bankId === settings.bankId);
+      return loader.questions.filter((question) => question.bankId === settings.bankId && !isQuestionCleared(question.id));
     }
 
     return sortReviewQuestions(getReviewQuestions());
@@ -694,6 +762,11 @@
       ...collectPreferencesFromControls(),
       ...overrides,
     });
+
+    if (getAvailableCountForSettings(settings) === 0) {
+      renderSetup();
+      return;
+    }
 
     const pool = buildQuestionPool(settings);
     const requestedCount = getRequestedCount(settings, pool.length);

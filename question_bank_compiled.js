@@ -1,5 +1,5 @@
 window.FBLAIntlLoader = {
-  "generatedAt": "2026-06-23T05:55:38.584Z",
+  "generatedAt": "2026-06-24T17:54:53.087Z",
   "corpusId": "fbla-international-business-practice",
   "version": 2,
   "officialSimulation": {
@@ -88,10 +88,16 @@ window.FBLAIntlLoader = {
   },
   "summary": {
     "totalBanks": 12,
-    "totalQuestions": 940,
+    "totalQuestions": 929,
+    "excludedQuestionCount": 11,
     "duplicateGroupCount": 27,
     "duplicatedQuestionCount": 55,
     "answerAdjustments": [
+      {
+        "key": "FBLC_OT1_Bank.md#14",
+        "answerLetter": "A",
+        "reason": "WTO headquarters is Geneva, Switzerland; OT2 uses the correct location."
+      },
       {
         "key": "FBLC_OT1_Bank.md#68",
         "answerLetter": "A",
@@ -101,6 +107,332 @@ window.FBLAIntlLoader = {
         "key": "FBLC_OT3_Bank.md#29",
         "answerLetter": "C",
         "reason": "Aligned with the identical OT1 item and the standard sole-proprietorship disadvantage."
+      },
+      {
+        "key": "FBLC_OT4_Bank.md#12",
+        "answerLetter": "B",
+        "reason": "A multinational company does not maintain only a local perspective; choice C can still describe local-market adaptation."
+      }
+    ],
+    "excludedQuestions": [
+      {
+        "id": "fblc-ot1-bank--q36",
+        "bankShortLabel": "OT#1",
+        "bankFileName": "FBLC_OT1_Bank.md",
+        "questionNumber": 36,
+        "prompt": "Which of the following is not an extrinsic motivation?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Promotion"
+          },
+          {
+            "id": "B",
+            "text": "Bonuses"
+          },
+          {
+            "id": "C",
+            "text": "Status"
+          },
+          {
+            "id": "D",
+            "text": "Grades"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "Status",
+        "reason": "Broken item: promotion, bonuses, status, and grades are all extrinsic motivators."
+      },
+      {
+        "id": "fblc-ot2-bank--q6",
+        "bankShortLabel": "OT#2",
+        "bankFileName": "FBLC_OT2_Bank.md",
+        "questionNumber": 6,
+        "prompt": "The world's largest and most widely used network is the:",
+        "choices": [
+          {
+            "id": "A",
+            "text": "internet"
+          },
+          {
+            "id": "B",
+            "text": "World Wide Web"
+          },
+          {
+            "id": "C",
+            "text": "intranet"
+          },
+          {
+            "id": "D",
+            "text": "extranet"
+          }
+        ],
+        "sourceAnswerLetter": "B",
+        "effectiveAnswerLetter": "B",
+        "effectiveCorrectChoiceText": "World Wide Web",
+        "reason": "Ambiguous item: the Internet is the network, but the wording is sloppy enough that many readers will interpret it as the World Wide Web."
+      },
+      {
+        "id": "fblc-ot2-bank--q71",
+        "bankShortLabel": "OT#2",
+        "bankFileName": "FBLC_OT2_Bank.md",
+        "questionNumber": 71,
+        "prompt": "The most popularly spoken language in the world is:",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Spanish"
+          },
+          {
+            "id": "B",
+            "text": "Chinese (Mandarin)"
+          },
+          {
+            "id": "C",
+            "text": "English"
+          },
+          {
+            "id": "D",
+            "text": "Hindi"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "English",
+        "reason": "Ambiguous item: 'most popularly spoken language' does not distinguish native speakers from total speakers."
+      },
+      {
+        "id": "fblc-ot3-bank--q11",
+        "bankShortLabel": "OT#3",
+        "bankFileName": "FBLC_OT3_Bank.md",
+        "questionNumber": 11,
+        "prompt": "Which of the following is not a valid identification document for domestic travel?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "firearms license"
+          },
+          {
+            "id": "B",
+            "text": "birth certificate"
+          },
+          {
+            "id": "C",
+            "text": "hunting license"
+          },
+          {
+            "id": "D",
+            "text": "work permit"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "hunting license",
+        "reason": "Ambiguous item: the travel-ID context is unclear, and multiple answer choices can be invalid depending on the standard used."
+      },
+      {
+        "id": "fblc-ot3-bank--q37",
+        "bankShortLabel": "OT#3",
+        "bankFileName": "FBLC_OT3_Bank.md",
+        "questionNumber": 37,
+        "prompt": "What is generally an important indicator for a successful market?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "cheap labor costs"
+          },
+          {
+            "id": "B",
+            "text": "population size"
+          },
+          {
+            "id": "C",
+            "text": "per capita income"
+          },
+          {
+            "id": "D",
+            "text": "none of the above"
+          }
+        ],
+        "sourceAnswerLetter": "D",
+        "effectiveAnswerLetter": "D",
+        "effectiveCorrectChoiceText": "none of the above",
+        "reason": "Broken item: population size and per capita income can both be important market indicators, so 'none of the above' is not defensible."
+      },
+      {
+        "id": "fblc-ot3-bank--q60",
+        "bankShortLabel": "OT#3",
+        "bankFileName": "FBLC_OT3_Bank.md",
+        "questionNumber": 60,
+        "prompt": "What does the current account not include?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Bonds"
+          },
+          {
+            "id": "B",
+            "text": "Remittances"
+          },
+          {
+            "id": "C",
+            "text": "Factor income"
+          },
+          {
+            "id": "D",
+            "text": "Reserves"
+          }
+        ],
+        "sourceAnswerLetter": "A",
+        "effectiveAnswerLetter": "A",
+        "effectiveCorrectChoiceText": "Bonds",
+        "reason": "Ambiguous item: both bonds and reserves are outside the current account."
+      },
+      {
+        "id": "fblc-ot3-bank--q82",
+        "bankShortLabel": "OT#3",
+        "bankFileName": "FBLC_OT3_Bank.md",
+        "questionNumber": 82,
+        "prompt": "Which of the following does not contain 1 land, labor, and capital resource?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Wheat, blender, driver"
+          },
+          {
+            "id": "B",
+            "text": "Saw, wood, architect"
+          },
+          {
+            "id": "C",
+            "text": "Computer, programmer, paper"
+          },
+          {
+            "id": "D",
+            "text": "Water, chef, oven"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "Computer, programmer, paper",
+        "reason": "Broken item: every answer choice includes a land, labor, and capital example."
+      },
+      {
+        "id": "fblc-ot4-bank--q37",
+        "bankShortLabel": "OT#4",
+        "bankFileName": "FBLC_OT4_Bank.md",
+        "questionNumber": 37,
+        "prompt": "The language that has the greatest number of speakers throughout the world is",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Spanish"
+          },
+          {
+            "id": "B",
+            "text": "English"
+          },
+          {
+            "id": "C",
+            "text": "Chinese Mandarin"
+          },
+          {
+            "id": "D",
+            "text": "Hindi"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "Chinese Mandarin",
+        "reason": "Ambiguous item: 'greatest number of speakers throughout the world' does not distinguish native speakers from total speakers."
+      },
+      {
+        "id": "fblc-ot4-bank--q61",
+        "bankShortLabel": "OT#4",
+        "bankFileName": "FBLC_OT4_Bank.md",
+        "questionNumber": 61,
+        "prompt": "The World Trade Organization has more than",
+        "choices": [
+          {
+            "id": "A",
+            "text": "200 members."
+          },
+          {
+            "id": "B",
+            "text": "140 members."
+          },
+          {
+            "id": "C",
+            "text": "240 members."
+          },
+          {
+            "id": "D",
+            "text": "100 members."
+          }
+        ],
+        "sourceAnswerLetter": "B",
+        "effectiveAnswerLetter": "B",
+        "effectiveCorrectChoiceText": "140 members.",
+        "reason": "Outdated and ambiguous WTO membership threshold wording makes multiple choices true."
+      },
+      {
+        "id": "fblc-studyguide3-bank--q11",
+        "bankShortLabel": "Study Guide 3",
+        "bankFileName": "FBLC_StudyGuide3_Bank.md",
+        "questionNumber": 11,
+        "prompt": "The language that has the greatest number of speakers throughout the world is which one of the following?",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Hindi"
+          },
+          {
+            "id": "B",
+            "text": "Spanish"
+          },
+          {
+            "id": "C",
+            "text": "Chinese Mandarin"
+          },
+          {
+            "id": "D",
+            "text": "English"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "Chinese Mandarin",
+        "reason": "Ambiguous item: 'greatest number of speakers throughout the world' does not distinguish native speakers from total speakers."
+      },
+      {
+        "id": "fblc-studyguide3-bank--q27",
+        "bankShortLabel": "Study Guide 3",
+        "bankFileName": "FBLC_StudyGuide3_Bank.md",
+        "questionNumber": 27,
+        "prompt": "____ protect the rights to intellectual property in the United States but may not be honored in other parts of the world.",
+        "choices": [
+          {
+            "id": "A",
+            "text": "Trademarks"
+          },
+          {
+            "id": "B",
+            "text": "Patents"
+          },
+          {
+            "id": "C",
+            "text": "Copyrights"
+          },
+          {
+            "id": "D",
+            "text": "Trade secrets"
+          }
+        ],
+        "sourceAnswerLetter": "C",
+        "effectiveAnswerLetter": "C",
+        "effectiveCorrectChoiceText": "Copyrights",
+        "reason": "Ambiguous item: patents, trademarks, and copyrights all protect intellectual property rights."
       }
     ],
     "categorySummary": [
@@ -109,7 +441,7 @@ window.FBLAIntlLoader = {
         "label": "Basic International Concepts",
         "shortLabel": "Basic Concepts",
         "officialCount": 15,
-        "availableQuestionCount": 135
+        "availableQuestionCount": 134
       },
       {
         "id": "B",
@@ -123,21 +455,21 @@ window.FBLAIntlLoader = {
         "label": "Legal Issues",
         "shortLabel": "Legal",
         "officialCount": 5,
-        "availableQuestionCount": 75
+        "availableQuestionCount": 73
       },
       {
         "id": "D",
         "label": "Communication",
         "shortLabel": "Communication",
         "officialCount": 7,
-        "availableQuestionCount": 50
+        "availableQuestionCount": 47
       },
       {
         "id": "E",
         "label": "Marketing",
         "shortLabel": "Marketing",
         "officialCount": 15,
-        "availableQuestionCount": 125
+        "availableQuestionCount": 124
       },
       {
         "id": "F",
@@ -151,7 +483,7 @@ window.FBLAIntlLoader = {
         "label": "Treaties and Trade Agreements",
         "shortLabel": "Trade Agreements",
         "officialCount": 7,
-        "availableQuestionCount": 102
+        "availableQuestionCount": 101
       },
       {
         "id": "H",
@@ -165,14 +497,14 @@ window.FBLAIntlLoader = {
         "label": "Finance",
         "shortLabel": "Finance",
         "officialCount": 15,
-        "availableQuestionCount": 97
+        "availableQuestionCount": 96
       },
       {
         "id": "J",
         "label": "Human Resource Management",
         "shortLabel": "HR",
         "officialCount": 5,
-        "availableQuestionCount": 76
+        "availableQuestionCount": 75
       },
       {
         "id": "K",
@@ -186,7 +518,7 @@ window.FBLAIntlLoader = {
         "label": "International Travel",
         "shortLabel": "Travel",
         "officialCount": 3,
-        "availableQuestionCount": 22
+        "availableQuestionCount": 21
       },
       {
         "id": "M",
@@ -381,7 +713,7 @@ window.FBLAIntlLoader = {
       "categoryId": "objective-test",
       "categoryLabel": "Objective Test",
       "shortLabel": "OT#1",
-      "questionCount": 100
+      "questionCount": 99
     },
     {
       "id": "fblc-ot2-bank",
@@ -396,7 +728,7 @@ window.FBLAIntlLoader = {
       "categoryId": "objective-test",
       "categoryLabel": "Objective Test",
       "shortLabel": "OT#2",
-      "questionCount": 100
+      "questionCount": 98
     },
     {
       "id": "fblc-ot3-bank",
@@ -413,7 +745,7 @@ window.FBLAIntlLoader = {
       "categoryId": "objective-test",
       "categoryLabel": "Objective Test",
       "shortLabel": "OT#3",
-      "questionCount": 100
+      "questionCount": 96
     },
     {
       "id": "fblc-ot4-bank",
@@ -430,7 +762,7 @@ window.FBLAIntlLoader = {
       "categoryId": "objective-test",
       "categoryLabel": "Objective Test",
       "shortLabel": "OT#4",
-      "questionCount": 100
+      "questionCount": 98
     },
     {
       "id": "fblc-studyguide1-bank",
@@ -480,7 +812,7 @@ window.FBLAIntlLoader = {
       "categoryId": "study-guide",
       "categoryLabel": "Study Guide",
       "shortLabel": "Study Guide 3",
-      "questionCount": 30
+      "questionCount": 28
     }
   ],
   "duplicateGroups": [
@@ -4454,10 +4786,10 @@ window.FBLAIntlLoader = {
           "text": "Asia-Pacific"
         }
       ],
-      "answerLetter": "B",
-      "correctChoiceText": "Europe",
-      "correctChoiceNormalized": "europe",
-      "sourceAnswerLetter": "B",
+      "answerLetter": "C",
+      "correctChoiceText": "Antarctica",
+      "correctChoiceNormalized": "antarctica",
+      "sourceAnswerLetter": "C",
       "answerAdjusted": false,
       "answerAdjustmentReason": null,
       "sourceSignature": "which is not a major global trading region||antarctica|asia pacific|europe|north america",
@@ -29238,12 +29570,12 @@ window.FBLAIntlLoader = {
           "text": "New York, United States"
         }
       ],
-      "answerLetter": "C",
-      "correctChoiceText": "Vienna, Austria",
-      "correctChoiceNormalized": "vienna austria",
+      "answerLetter": "A",
+      "correctChoiceText": "Geneva, Switzerland",
+      "correctChoiceNormalized": "geneva switzerland",
       "sourceAnswerLetter": "C",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
+      "answerAdjusted": true,
+      "answerAdjustmentReason": "WTO headquarters is Geneva, Switzerland; OT2 uses the correct location.",
       "sourceSignature": "where is the world trade organization headquartered||geneva switzerland|new york united states|vienna austria|zurich switzerland",
       "duplicateGroupId": null,
       "duplicateGroupSize": 1,
@@ -30389,60 +30721,6 @@ window.FBLAIntlLoader = {
       "categoryShortLabel": "Currency",
       "categoryConfidence": 5.85,
       "categoryReason": "prompt:\\b(exchange rate|exchange rates|currency|currencies|foreign exchange|forex|appreciation|depreciation|floating|fixed exchange rate|convertible|nonconvertible|devaluation|revaluation|currency value|yuan|yen|euro|euros|rial|peso|pound|dollar|dollars|renminbi|strengthened|weakened)\\b",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 100.",
-        "No questions appear to be missing.",
-        "The answer key below follows the provided answer screenshot.",
-        "A later re-read of the original answer screenshot confirmed `#45 = A` and `#100 = C`."
-      ]
-    },
-    {
-      "id": "fblc-ot1-bank--q36",
-      "bankId": "fblc-ot1-bank",
-      "bankFileName": "FBLC_OT1_Bank.md",
-      "bankTitle": "FBLC OT#1 Bank",
-      "bankCategoryId": "objective-test",
-      "bankCategoryLabel": "Objective Test",
-      "bankShortLabel": "OT#1",
-      "preferredCategoryIds": [],
-      "questionNumber": 36,
-      "prompt": "Which of the following is not an extrinsic motivation?",
-      "promptNormalized": "which of the following is not an extrinsic motivation",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Promotion"
-        },
-        {
-          "id": "B",
-          "text": "Bonuses"
-        },
-        {
-          "id": "C",
-          "text": "Status"
-        },
-        {
-          "id": "D",
-          "text": "Grades"
-        }
-      ],
-      "answerLetter": "C",
-      "correctChoiceText": "Status",
-      "correctChoiceNormalized": "status",
-      "sourceAnswerLetter": "C",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "which of the following is not an extrinsic motivation||bonuses|grades|promotion|status",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "J",
-      "categoryLabel": "Human Resource Management",
-      "categoryShortLabel": "HR",
-      "categoryConfidence": 9.7,
-      "categoryReason": "prompt:\\b(human resource|recruitment|selection|employee development|compensation|promotion|benefits?|incentives?|motivation|staffing policy|host-country nationals|host country nationals|expatriate|polycentric|ethnocentric|geocentric|regiocentric|labor pool|working conditions|living conditions|health and safety|labor conflict|outsourcing|offshoring|international labour organization|international labor organization|labor standards|labour standards)\\b",
       "statusNotes": [
         "Question numbering is complete from 1 through 100.",
         "No questions appear to be missing.",
@@ -34201,60 +34479,6 @@ window.FBLAIntlLoader = {
       ]
     },
     {
-      "id": "fblc-ot2-bank--q6",
-      "bankId": "fblc-ot2-bank",
-      "bankFileName": "FBLC_OT2_Bank.md",
-      "bankTitle": "FBLC OT#2 Bank",
-      "bankCategoryId": "objective-test",
-      "bankCategoryLabel": "Objective Test",
-      "bankShortLabel": "OT#2",
-      "preferredCategoryIds": [],
-      "questionNumber": 6,
-      "prompt": "The world's largest and most widely used network is the:",
-      "promptNormalized": "the world's largest and most widely used network is the",
-      "choices": [
-        {
-          "id": "A",
-          "text": "internet"
-        },
-        {
-          "id": "B",
-          "text": "World Wide Web"
-        },
-        {
-          "id": "C",
-          "text": "intranet"
-        },
-        {
-          "id": "D",
-          "text": "extranet"
-        }
-      ],
-      "answerLetter": "B",
-      "correctChoiceText": "World Wide Web",
-      "correctChoiceNormalized": "world wide web",
-      "sourceAnswerLetter": "B",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "the world's largest and most widely used network is the||extranet|internet|intranet|world wide web",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "I",
-      "categoryLabel": "Finance",
-      "categoryShortLabel": "Finance",
-      "categoryConfidence": 0.45,
-      "categoryReason": "token_overlap",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 100.",
-        "No questions appear to be missing.",
-        "The answer key below follows the provided answer screenshot.",
-        "Questions `#29` and `#64` were normalized from screenshot formatting issues and now read cleanly."
-      ]
-    },
-    {
       "id": "fblc-ot2-bank--q7",
       "bankId": "fblc-ot2-bank",
       "bankFileName": "FBLC_OT2_Bank.md",
@@ -37723,60 +37947,6 @@ window.FBLAIntlLoader = {
       ]
     },
     {
-      "id": "fblc-ot2-bank--q71",
-      "bankId": "fblc-ot2-bank",
-      "bankFileName": "FBLC_OT2_Bank.md",
-      "bankTitle": "FBLC OT#2 Bank",
-      "bankCategoryId": "objective-test",
-      "bankCategoryLabel": "Objective Test",
-      "bankShortLabel": "OT#2",
-      "preferredCategoryIds": [],
-      "questionNumber": 71,
-      "prompt": "The most popularly spoken language in the world is:",
-      "promptNormalized": "the most popularly spoken language in the world is",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Spanish"
-        },
-        {
-          "id": "B",
-          "text": "Chinese (Mandarin)"
-        },
-        {
-          "id": "C",
-          "text": "English"
-        },
-        {
-          "id": "D",
-          "text": "Hindi"
-        }
-      ],
-      "answerLetter": "C",
-      "correctChoiceText": "English",
-      "correctChoiceNormalized": "english",
-      "sourceAnswerLetter": "C",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "the most popularly spoken language in the world is||chinese mandarin|english|hindi|spanish",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "D",
-      "categoryLabel": "Communication",
-      "categoryShortLabel": "Communication",
-      "categoryConfidence": 7.5,
-      "categoryReason": "prompt:\\b(nonverbal|verbal|communication|translation|translate|interpreter|interpreting|language|etiquette|protocol|gift giving|greetings?|introductions?|gestures?|body language|eye contact|negotiation|negotiating|video conferencing|webcast|podcast|blogging|electronic communication|cultural sensitivity|cross-cultural competence|cross cultural competence|high-context|high context|low-context|low context|stereotyping|multiculturalism)\\b",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 100.",
-        "No questions appear to be missing.",
-        "The answer key below follows the provided answer screenshot.",
-        "Questions `#29` and `#64` were normalized from screenshot formatting issues and now read cleanly."
-      ]
-    },
-    {
       "id": "fblc-ot2-bank--q72",
       "bankId": "fblc-ot2-bank",
       "bankFileName": "FBLC_OT2_Bank.md",
@@ -39903,62 +40073,6 @@ window.FBLAIntlLoader = {
       ]
     },
     {
-      "id": "fblc-ot3-bank--q11",
-      "bankId": "fblc-ot3-bank",
-      "bankFileName": "FBLC_OT3_Bank.md",
-      "bankTitle": "FBLC OT#3 Bank",
-      "bankCategoryId": "objective-test",
-      "bankCategoryLabel": "Objective Test",
-      "bankShortLabel": "OT#3",
-      "preferredCategoryIds": [],
-      "questionNumber": 11,
-      "prompt": "Which of the following is not a valid identification document for domestic travel?",
-      "promptNormalized": "which of the following is not a valid identification document for domestic travel",
-      "choices": [
-        {
-          "id": "A",
-          "text": "firearms license"
-        },
-        {
-          "id": "B",
-          "text": "birth certificate"
-        },
-        {
-          "id": "C",
-          "text": "hunting license"
-        },
-        {
-          "id": "D",
-          "text": "work permit"
-        }
-      ],
-      "answerLetter": "C",
-      "correctChoiceText": "hunting license",
-      "correctChoiceNormalized": "hunting license",
-      "sourceAnswerLetter": "C",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "which of the following is not a valid identification document for domestic travel||birth certificate|firearms license|hunting license|work permit",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "L",
-      "categoryLabel": "International Travel",
-      "categoryShortLabel": "Travel",
-      "categoryConfidence": 9.5,
-      "categoryReason": "prompt:\\b(travel|travel advisory|travel advisories|travel restrictions|visa|passport|passports|embassy|embassies|consulate|consulates|travel documents|health requirements|representational offices|located abroad|airline security)\\b",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 100.",
-        "No questions appear to be missing.",
-        "The answer key follows the provided answer screenshot.",
-        "The source answer screenshot omitted `#57`, so the saved key uses the question-content answer `D`.",
-        "`#95` only showed three visible answer choices in the source screenshot, so `d. Appreciation` was added as a plausible distractor while preserving the correct answer `A`.",
-        "Minor source typos/wording oddities were preserved unless needed for legibility."
-      ]
-    },
-    {
       "id": "fblc-ot3-bank--q12",
       "bankId": "fblc-ot3-bank",
       "bankFileName": "FBLC_OT3_Bank.md",
@@ -41377,62 +41491,6 @@ window.FBLAIntlLoader = {
       ]
     },
     {
-      "id": "fblc-ot3-bank--q37",
-      "bankId": "fblc-ot3-bank",
-      "bankFileName": "FBLC_OT3_Bank.md",
-      "bankTitle": "FBLC OT#3 Bank",
-      "bankCategoryId": "objective-test",
-      "bankCategoryLabel": "Objective Test",
-      "bankShortLabel": "OT#3",
-      "preferredCategoryIds": [],
-      "questionNumber": 37,
-      "prompt": "What is generally an important indicator for a successful market?",
-      "promptNormalized": "what is generally an important indicator for a successful market",
-      "choices": [
-        {
-          "id": "A",
-          "text": "cheap labor costs"
-        },
-        {
-          "id": "B",
-          "text": "population size"
-        },
-        {
-          "id": "C",
-          "text": "per capita income"
-        },
-        {
-          "id": "D",
-          "text": "none of the above"
-        }
-      ],
-      "answerLetter": "D",
-      "correctChoiceText": "none of the above",
-      "correctChoiceNormalized": "none of the above",
-      "sourceAnswerLetter": "D",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "what is generally an important indicator for a successful market||cheap labor costs|none of the above|per capita income|population size",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "E",
-      "categoryLabel": "Marketing",
-      "categoryShortLabel": "Marketing",
-      "categoryConfidence": 0,
-      "categoryReason": "token_overlap",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 100.",
-        "No questions appear to be missing.",
-        "The answer key follows the provided answer screenshot.",
-        "The source answer screenshot omitted `#57`, so the saved key uses the question-content answer `D`.",
-        "`#95` only showed three visible answer choices in the source screenshot, so `d. Appreciation` was added as a plausible distractor while preserving the correct answer `A`.",
-        "Minor source typos/wording oddities were preserved unless needed for legibility."
-      ]
-    },
-    {
       "id": "fblc-ot3-bank--q38",
       "bankId": "fblc-ot3-bank",
       "bankFileName": "FBLC_OT3_Bank.md",
@@ -42671,62 +42729,6 @@ window.FBLAIntlLoader = {
       ]
     },
     {
-      "id": "fblc-ot3-bank--q60",
-      "bankId": "fblc-ot3-bank",
-      "bankFileName": "FBLC_OT3_Bank.md",
-      "bankTitle": "FBLC OT#3 Bank",
-      "bankCategoryId": "objective-test",
-      "bankCategoryLabel": "Objective Test",
-      "bankShortLabel": "OT#3",
-      "preferredCategoryIds": [],
-      "questionNumber": 60,
-      "prompt": "What does the current account not include?",
-      "promptNormalized": "what does the current account not include",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Bonds"
-        },
-        {
-          "id": "B",
-          "text": "Remittances"
-        },
-        {
-          "id": "C",
-          "text": "Factor income"
-        },
-        {
-          "id": "D",
-          "text": "Reserves"
-        }
-      ],
-      "answerLetter": "A",
-      "correctChoiceText": "Bonds",
-      "correctChoiceNormalized": "bonds",
-      "sourceAnswerLetter": "A",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "what does the current account not include||bonds|factor income|remittances|reserves",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "A",
-      "categoryLabel": "Basic International Concepts",
-      "categoryShortLabel": "Basic Concepts",
-      "categoryConfidence": 0,
-      "categoryReason": "token_overlap",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 100.",
-        "No questions appear to be missing.",
-        "The answer key follows the provided answer screenshot.",
-        "The source answer screenshot omitted `#57`, so the saved key uses the question-content answer `D`.",
-        "`#95` only showed three visible answer choices in the source screenshot, so `d. Appreciation` was added as a plausible distractor while preserving the correct answer `A`.",
-        "Minor source typos/wording oddities were preserved unless needed for legibility."
-      ]
-    },
-    {
       "id": "fblc-ot3-bank--q61",
       "bankId": "fblc-ot3-bank",
       "bankFileName": "FBLC_OT3_Bank.md",
@@ -43898,62 +43900,6 @@ window.FBLAIntlLoader = {
       "categoryLabel": "Basic International Concepts",
       "categoryShortLabel": "Basic Concepts",
       "categoryConfidence": 2.58,
-      "categoryReason": "token_overlap",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 100.",
-        "No questions appear to be missing.",
-        "The answer key follows the provided answer screenshot.",
-        "The source answer screenshot omitted `#57`, so the saved key uses the question-content answer `D`.",
-        "`#95` only showed three visible answer choices in the source screenshot, so `d. Appreciation` was added as a plausible distractor while preserving the correct answer `A`.",
-        "Minor source typos/wording oddities were preserved unless needed for legibility."
-      ]
-    },
-    {
-      "id": "fblc-ot3-bank--q82",
-      "bankId": "fblc-ot3-bank",
-      "bankFileName": "FBLC_OT3_Bank.md",
-      "bankTitle": "FBLC OT#3 Bank",
-      "bankCategoryId": "objective-test",
-      "bankCategoryLabel": "Objective Test",
-      "bankShortLabel": "OT#3",
-      "preferredCategoryIds": [],
-      "questionNumber": 82,
-      "prompt": "Which of the following does not contain 1 land, labor, and capital resource?",
-      "promptNormalized": "which of the following does not contain 1 land labor and capital resource",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Wheat, blender, driver"
-        },
-        {
-          "id": "B",
-          "text": "Saw, wood, architect"
-        },
-        {
-          "id": "C",
-          "text": "Computer, programmer, paper"
-        },
-        {
-          "id": "D",
-          "text": "Water, chef, oven"
-        }
-      ],
-      "answerLetter": "C",
-      "correctChoiceText": "Computer, programmer, paper",
-      "correctChoiceNormalized": "computer programmer paper",
-      "sourceAnswerLetter": "C",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "which of the following does not contain 1 land labor and capital resource||computer programmer paper|saw wood architect|water chef oven|wheat blender driver",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "C",
-      "categoryLabel": "Legal Issues",
-      "categoryShortLabel": "Legal",
-      "categoryConfidence": 0,
       "categoryReason": "token_overlap",
       "statusNotes": [
         "Question numbering is complete from 1 through 100.",
@@ -45642,12 +45588,12 @@ window.FBLAIntlLoader = {
           "text": "coordination between international and local representation is crucial."
         }
       ],
-      "answerLetter": "C",
-      "correctChoiceText": "its strength is that it offers a different product in each market.",
-      "correctChoiceNormalized": "its strength is that it offers a different product in each market",
+      "answerLetter": "B",
+      "correctChoiceText": "it maintains only a local perspective to simplify processes.",
+      "correctChoiceNormalized": "it maintains only a local perspective to simplify processes",
       "sourceAnswerLetter": "C",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
+      "answerAdjusted": true,
+      "answerAdjustmentReason": "A multinational company does not maintain only a local perspective; choice C can still describe local-market adaptation.",
       "sourceSignature": "of the following statements the one that does not describe a multinational company is that||coordination between international and local representation is crucial|it maintains both an international and local perspective|it maintains only a local perspective to simplify processes|its strength is that it offers a different product in each market",
       "duplicateGroupId": null,
       "duplicateGroupSize": 1,
@@ -45657,7 +45603,7 @@ window.FBLAIntlLoader = {
       "categoryId": "B",
       "categoryLabel": "Ownership and Management",
       "categoryShortLabel": "Ownership",
-      "categoryConfidence": 0.22,
+      "categoryConfidence": 0.14,
       "categoryReason": "token_overlap",
       "statusNotes": [
         "Question numbering is complete from 1 through 100.",
@@ -47019,62 +46965,6 @@ window.FBLAIntlLoader = {
       ]
     },
     {
-      "id": "fblc-ot4-bank--q37",
-      "bankId": "fblc-ot4-bank",
-      "bankFileName": "FBLC_OT4_Bank.md",
-      "bankTitle": "FBLC OT#4 Bank",
-      "bankCategoryId": "objective-test",
-      "bankCategoryLabel": "Objective Test",
-      "bankShortLabel": "OT#4",
-      "preferredCategoryIds": [],
-      "questionNumber": 37,
-      "prompt": "The language that has the greatest number of speakers throughout the world is",
-      "promptNormalized": "the language that has the greatest number of speakers throughout the world is",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Spanish"
-        },
-        {
-          "id": "B",
-          "text": "English"
-        },
-        {
-          "id": "C",
-          "text": "Chinese Mandarin"
-        },
-        {
-          "id": "D",
-          "text": "Hindi"
-        }
-      ],
-      "answerLetter": "C",
-      "correctChoiceText": "Chinese Mandarin",
-      "correctChoiceNormalized": "chinese mandarin",
-      "sourceAnswerLetter": "C",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "the language that has the greatest number of speakers throughout the world is||chinese mandarin|english|hindi|spanish",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "D",
-      "categoryLabel": "Communication",
-      "categoryShortLabel": "Communication",
-      "categoryConfidence": 7.5,
-      "categoryReason": "prompt:\\b(nonverbal|verbal|communication|translation|translate|interpreter|interpreting|language|etiquette|protocol|gift giving|greetings?|introductions?|gestures?|body language|eye contact|negotiation|negotiating|video conferencing|webcast|podcast|blogging|electronic communication|cultural sensitivity|cross-cultural competence|cross cultural competence|high-context|high context|low-context|low context|stereotyping|multiculturalism)\\b",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 100.",
-        "No questions appear to be missing.",
-        "The answer key follows the provided answer screenshot.",
-        "I did not need to infer any missing answer-key letters.",
-        "`#95` had only three visible source choices, so `d. Manufacturer` was added as a plausible distractor while preserving the provided correct answer `B`.",
-        "`#90` was lightly rephrased so the provided correct answer `A` is unambiguous."
-      ]
-    },
-    {
       "id": "fblc-ot4-bank--q38",
       "bankId": "fblc-ot4-bank",
       "bankFileName": "FBLC_OT4_Bank.md",
@@ -48395,62 +48285,6 @@ window.FBLAIntlLoader = {
       "categoryShortLabel": "Government",
       "categoryConfidence": 7.85,
       "categoryReason": "prompt:\\b(tax|taxes|taxation|government agencies|department of commerce|export assistance|federal agencies|state agencies|constitutional monarchy|dictatorship|democracy|autocratic|types of governments?|government own all the major factors|transfer pricing|double taxation|economic freedom|private ownership|public ownership|government ownership)\\b | answer:\\b(tax|taxes|taxation|government agencies|department of commerce|export assistance|federal agencies|state agencies|constitutional monarchy|dictatorship|democracy|autocratic|types of governments?|government own all the major factors|transfer pricing|double taxation|economic freedom|private ownership|public ownership|government ownership)\\b",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 100.",
-        "No questions appear to be missing.",
-        "The answer key follows the provided answer screenshot.",
-        "I did not need to infer any missing answer-key letters.",
-        "`#95` had only three visible source choices, so `d. Manufacturer` was added as a plausible distractor while preserving the provided correct answer `B`.",
-        "`#90` was lightly rephrased so the provided correct answer `A` is unambiguous."
-      ]
-    },
-    {
-      "id": "fblc-ot4-bank--q61",
-      "bankId": "fblc-ot4-bank",
-      "bankFileName": "FBLC_OT4_Bank.md",
-      "bankTitle": "FBLC OT#4 Bank",
-      "bankCategoryId": "objective-test",
-      "bankCategoryLabel": "Objective Test",
-      "bankShortLabel": "OT#4",
-      "preferredCategoryIds": [],
-      "questionNumber": 61,
-      "prompt": "The World Trade Organization has more than",
-      "promptNormalized": "the world trade organization has more than",
-      "choices": [
-        {
-          "id": "A",
-          "text": "200 members."
-        },
-        {
-          "id": "B",
-          "text": "140 members."
-        },
-        {
-          "id": "C",
-          "text": "240 members."
-        },
-        {
-          "id": "D",
-          "text": "100 members."
-        }
-      ],
-      "answerLetter": "B",
-      "correctChoiceText": "140 members.",
-      "correctChoiceNormalized": "140 members",
-      "sourceAnswerLetter": "B",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "the world trade organization has more than||100 members|140 members|200 members|240 members",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "G",
-      "categoryLabel": "Treaties and Trade Agreements",
-      "categoryShortLabel": "Trade Agreements",
-      "categoryConfidence": 8.75,
-      "categoryReason": "prompt:\\b(wto|world trade organization|gatt|european union|eu\\b|nafta|usmca|mercosur|asean|tariffs?|quotas?|trade barriers?|customs service|customs regulations?|most[- ]favored[- ]nation|mfn|trade agreement|trade agreements|treaties|free trade area|customs union|single market|trade bloc)\\b",
       "statusNotes": [
         "Question numbering is complete from 1 through 100.",
         "No questions appear to be missing.",
@@ -54671,61 +54505,6 @@ window.FBLAIntlLoader = {
       ]
     },
     {
-      "id": "fblc-studyguide3-bank--q11",
-      "bankId": "fblc-studyguide3-bank",
-      "bankFileName": "FBLC_StudyGuide3_Bank.md",
-      "bankTitle": "FBLC Study Guide #3 Bank",
-      "bankCategoryId": "study-guide",
-      "bankCategoryLabel": "Study Guide",
-      "bankShortLabel": "Study Guide 3",
-      "preferredCategoryIds": [],
-      "questionNumber": 11,
-      "prompt": "The language that has the greatest number of speakers throughout the world is which one of the following?",
-      "promptNormalized": "the language that has the greatest number of speakers throughout the world is which one of the following",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Hindi"
-        },
-        {
-          "id": "B",
-          "text": "Spanish"
-        },
-        {
-          "id": "C",
-          "text": "Chinese Mandarin"
-        },
-        {
-          "id": "D",
-          "text": "English"
-        }
-      ],
-      "answerLetter": "C",
-      "correctChoiceText": "Chinese Mandarin",
-      "correctChoiceNormalized": "chinese mandarin",
-      "sourceAnswerLetter": "C",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "the language that has the greatest number of speakers throughout the world is which one of the following||chinese mandarin|english|hindi|spanish",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "D",
-      "categoryLabel": "Communication",
-      "categoryShortLabel": "Communication",
-      "categoryConfidence": 7.5,
-      "categoryReason": "prompt:\\b(nonverbal|verbal|communication|translation|translate|interpreter|interpreting|language|etiquette|protocol|gift giving|greetings?|introductions?|gestures?|body language|eye contact|negotiation|negotiating|video conferencing|webcast|podcast|blogging|electronic communication|cultural sensitivity|cross-cultural competence|cross cultural competence|high-context|high context|low-context|low context|stereotyping|multiculturalism)\\b",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 30.",
-        "No questions appear to be missing.",
-        "The answer key below was added from the provided \"Global Business Answer Key\" screenshot.",
-        "I did not infer any answer-key letters.",
-        "Minor source wording/grammar issues were preserved unless needed for readability."
-      ]
-    },
-    {
       "id": "fblc-studyguide3-bank--q12",
       "bankId": "fblc-studyguide3-bank",
       "bankFileName": "FBLC_StudyGuide3_Bank.md",
@@ -55596,61 +55375,6 @@ window.FBLAIntlLoader = {
       "categoryShortLabel": "Ethics",
       "categoryConfidence": 6.67,
       "categoryReason": "answer:\\b(ethic|ethics|ethical|social responsibility|honesty|integrity|compassion|justice|unethical|bribery|corruption|moral|code of ethics)\\b",
-      "statusNotes": [
-        "Question numbering is complete from 1 through 30.",
-        "No questions appear to be missing.",
-        "The answer key below was added from the provided \"Global Business Answer Key\" screenshot.",
-        "I did not infer any answer-key letters.",
-        "Minor source wording/grammar issues were preserved unless needed for readability."
-      ]
-    },
-    {
-      "id": "fblc-studyguide3-bank--q27",
-      "bankId": "fblc-studyguide3-bank",
-      "bankFileName": "FBLC_StudyGuide3_Bank.md",
-      "bankTitle": "FBLC Study Guide #3 Bank",
-      "bankCategoryId": "study-guide",
-      "bankCategoryLabel": "Study Guide",
-      "bankShortLabel": "Study Guide 3",
-      "preferredCategoryIds": [],
-      "questionNumber": 27,
-      "prompt": "____ protect the rights to intellectual property in the United States but may not be honored in other parts of the world.",
-      "promptNormalized": "protect the rights to intellectual property in the united states but may not be honored in other parts of the world",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Trademarks"
-        },
-        {
-          "id": "B",
-          "text": "Patents"
-        },
-        {
-          "id": "C",
-          "text": "Copyrights"
-        },
-        {
-          "id": "D",
-          "text": "Trade secrets"
-        }
-      ],
-      "answerLetter": "C",
-      "correctChoiceText": "Copyrights",
-      "correctChoiceNormalized": "copyrights",
-      "sourceAnswerLetter": "C",
-      "answerAdjusted": false,
-      "answerAdjustmentReason": null,
-      "sourceSignature": "protect the rights to intellectual property in the united states but may not be honored in other parts of the world||copyrights|patents|trade secrets|trademarks",
-      "duplicateGroupId": null,
-      "duplicateGroupSize": 1,
-      "duplicateBankIds": [],
-      "duplicateBankLabels": [],
-      "unresolvedConflict": false,
-      "categoryId": "C",
-      "categoryLabel": "Legal Issues",
-      "categoryShortLabel": "Legal",
-      "categoryConfidence": 8.78,
-      "categoryReason": "prompt:\\b(common law|civil law|statutory law|theocratic law|contract|contracts|liability|consumer protection|product liability|arbitration|mediation|litigation|copyright|trademark|patent|intellectual property|judicial|legal system|labor laws?|foreign corrupt practices act|fcpa|expropriation|choice of law|choice of forum|public domain)\\b",
       "statusNotes": [
         "Question numbering is complete from 1 through 30.",
         "No questions appear to be missing.",
